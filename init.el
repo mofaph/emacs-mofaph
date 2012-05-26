@@ -14,6 +14,9 @@
 (require 'conf-which-function-mode)
 (require 'conf-session)
 
+;; using el-get to manage all other third party packages
+(require 'conf-el-get)
+
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:

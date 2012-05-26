@@ -1,6 +1,12 @@
 auto-save-list/
 backup/
+el-get/
+elpa/
 
-.custom-file.el
+*.elc
 .bookmark
+.custom-file.el
 .emacs.desktop
+.emacs.desktop.lock
+
+ac-comphist.dat
