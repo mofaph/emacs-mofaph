@@ -8,7 +8,6 @@
       (global-set-key [?\H-m] 'set-mark-command)
       (global-set-key [?\H-i] 'align))
 
-(global-set-key (kbd "C-x C-z") 'execute-extended-command)
 (global-set-key (kbd "C-x t") 'untabify)
 (global-set-key (kbd "C-,") 'point-to-register)
 (global-set-key (kbd "C-.") 'jump-to-register)
@@ -26,10 +25,13 @@
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
 ;; key          command                         file
-;; =================================================
-;; C-x C-\      goto-last-change                init-goto-last-change
+;; =============================================================================
 ;; f11          toggle-fullscreen               conf-fullscreen
 ;; C-x C-b      ibuffer                         conf-ibuffer
 ;; C-x C-f      ido-find-file                   conf-ido
+;; C-x C-\      goto-last-change                init-goto-last-change
+;; M-x          smex                            init-smex
+;; M-X          smex-major-mode-commands        init-smex
+;; C-c C-c M-x  execute-extended-command        init-smex
 
 (provide 'conf-key-binding)

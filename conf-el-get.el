@@ -15,6 +15,7 @@
   (el-get 'sync packages)
   (el-get 'wait)
   (setq el-get-user-package-directory "~/.emacs.d")
-  (el-get-init "goto-last-change"))
+  (el-get-init "goto-last-change")
+  (el-get-init "smex"))
 
 (provide 'conf-el-get)
