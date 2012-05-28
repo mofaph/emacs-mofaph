@@ -14,6 +14,7 @@
 (require 'conf-which-function-mode)
 (require 'conf-session)
 (require 'conf-icomplete)
+(require 'conf-auto-revert)
 
 ;; using el-get to manage all other third party packages
 (require 'conf-el-get)
