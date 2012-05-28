@@ -15,6 +15,7 @@
 (require 'conf-session)
 (require 'conf-icomplete)
 (require 'conf-auto-revert)
+(require 'conf-hl-line)
 
 ;; using el-get to manage all other third party packages
 (require 'conf-el-get)
