@@ -16,6 +16,7 @@
 (require 'conf-icomplete)
 (require 'conf-auto-revert)
 (require 'conf-hl-line)
+(require 'conf-winner)
 
 ;; using el-get to manage all other third party packages
 (require 'conf-el-get)
