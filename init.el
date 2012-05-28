@@ -18,6 +18,7 @@
 (require 'conf-hl-line)
 (require 'conf-winner)
 (require 'conf-key-binding)
+(require 'conf-font)
 
 ;; using el-get to manage all other third party packages
 (require 'conf-el-get)
