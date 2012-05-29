@@ -58,7 +58,7 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 ;; 利用这个函数，Emacs 字体设置就是小菜一碟了
 (when (eq window-system 'x)
   (qiang-set-font
-   '("Consolas" "Monaco" "DejaVu Sans Mono" "Monospace" "Courier New") ":pixelsize=14"
-   '("Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体")))
+   '("文泉驿等宽正黑" "Monospace" "Consolas" "Monaco" "DejaVu Sans Mono" "Courier New") ":pixelsize=16"
+   '("文泉驿等宽正黑" "Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体") 16))
 
 (provide 'conf-font)
