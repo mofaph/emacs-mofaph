@@ -32,6 +32,6 @@
 ;; C-x C-\      goto-last-change                init-goto-last-change
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
-;; C-c C-c M-x  execute-extended-command        init-smex
+;; C-x M-x      execute-extended-command        init-smex
 
 (provide 'conf-key-binding)
