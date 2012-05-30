@@ -59,8 +59,8 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (when (eq window-system 'x)
   (qiang-set-font
    '("Monaco" "文泉驿等宽正黑" "Monospace" "Consolas" "DejaVu Sans Mono")
-   ":pixelsize=16"
+   ":pixelsize=14"
    '("DejaVu Sans YuanTi Mono" "文泉驿等宽正黑" "文泉驿等宽微米黑")
-   16))
+   14))
 
 (provide 'conf-font)
