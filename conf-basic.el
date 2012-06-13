@@ -38,7 +38,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; 制表符
-(setq-default tab-width 4)
+(setq-default tab-width 8)
 (setq-default indent-tabs-mode nil)
 (setq x-stretch-cursor t)
 
