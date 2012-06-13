@@ -21,5 +21,7 @@
     (open-line 1))))
 
 (global-set-key (kbd "M-j") 'open-newline-above)
+(add-hook 'c-mode-hook '(lambda () (define-key c-mode-map (kbd "M-j") 'open-newline-above)))
+(add-hook 'c++-mode-hook '(lambda () (define-key c++-mode-map (kbd "M-j") 'open-newline-above)))
 
 (provide 'conf-defun)
