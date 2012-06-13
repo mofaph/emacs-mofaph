@@ -11,9 +11,13 @@
 (defun open-newline-above ()
   "open a new line above current line."
   (interactive)
-  (previous-line 1)
-  (move-end-of-line 1)
-  (newline-and-indent))
+  (move-beginning-of-line 1)
+  (cond
+   ((> (point) (point-min))
+    (backward-char 1)
+    (newline-and-indent))
+   (t
+    (open-line 1))))
 
 (global-set-key (kbd "M-j") 'open-newline-above)
 
