@@ -11,6 +11,7 @@
 (defun open-newline-above ()
   "open a new line above current line."
   (interactive)
+  (delete-horizontal-space t)
   (move-beginning-of-line 1)
   (cond
    ((> (point) (point-min))
