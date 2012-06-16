@@ -4,11 +4,9 @@
 (ido-everywhere t)
 
 (setq ido-enable-flex-matching t)
-(setq ido-ignore-buffers '("\\` "
-                           "\\*scratch\\*"
-                           "Completions\\*$"
-                           "\\*Help\\*"
-                           "^\\*Ido"
-                           "^\\*Messages\\*"))
+(setq ido-ignore-buffers '(
+                           "\\` "
+                           "^\\*.*\\*$"
+                           ))
 
 (provide 'conf-ido)
