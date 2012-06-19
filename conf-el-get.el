@@ -1,3 +1,5 @@
+;; -*- coding: utf-8 -*-
+
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 ;; 安装 el-get
@@ -26,3 +28,7 @@
   )
 
 (provide 'conf-el-get)
+
+;; Local Variables:
+;; no-byte-compile: t
+;; End:
