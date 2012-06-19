@@ -8,6 +8,7 @@ elpa/
 .custom-file.el
 .emacs.desktop
 .emacs.desktop.lock
+.ido.last
 .smex-items
 
 ac-comphist.dat
