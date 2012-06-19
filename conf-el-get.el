@@ -15,11 +15,14 @@
                    el-get
                    goto-last-change
                    smex
+                   switch-window
                    ))
   (el-get 'sync packages)
   (el-get 'wait)
   (setq el-get-user-package-directory "~/.emacs.d")
   (el-get-init "goto-last-change")
-  (el-get-init "smex"))
+  (el-get-init "smex")
+  (el-get-init "switch-window")
+  )
 
 (provide 'conf-el-get)
