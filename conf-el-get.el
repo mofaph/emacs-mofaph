@@ -11,9 +11,11 @@
 
 ;; FIXME: 当没有安装el-get时，下面的代码将不能运行，将会出现竞争条件
 (when (require 'el-get nil t)
-  (setq packages '(el-get
+  (setq packages '(
+                   el-get
                    goto-last-change
-                   smex))
+                   smex
+                   ))
   (el-get 'sync packages)
   (el-get 'wait)
   (setq el-get-user-package-directory "~/.emacs.d")
