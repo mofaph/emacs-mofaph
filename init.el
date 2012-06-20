@@ -20,6 +20,7 @@
 (require 'conf-key-binding)
 (require 'conf-font)
 (require 'conf-defun)
+(require 'conf-misc)
 
 ;; using el-get to manage all other third party packages
 (require 'conf-el-get)
