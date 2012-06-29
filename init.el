@@ -21,6 +21,7 @@
 (require 'conf-font)
 (require 'conf-defun)
 (require 'conf-misc)
+(require 'conf-gui)
 (require 'conf-package)
 
 ;; using el-get to manage all other third party packages
