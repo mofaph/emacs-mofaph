@@ -43,6 +43,7 @@
   (setq packages
         (append
          '(
+           "auto-complete"
            "smex"
            "switch-window"
            )
