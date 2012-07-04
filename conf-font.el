@@ -1,4 +1,4 @@
-;;; Token from http://www.emacser.com
+;;; http://emacser.com/torture-emacs.htm
 
 ;; 首先，判断某个字体在系统中是否安装
 (defun qiang-font-existsp (font)
