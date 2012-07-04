@@ -19,5 +19,6 @@
 (setq ido-create-new-buffer 'always)
 (setq ido-file-extensions-order '(".c" ".h" ".el" ".sh" ".cpp" ".lisp"))
 (setq ido-max-directory-size 100000)
+(setq ido-use-virtual-buffers t)
 
 (provide 'conf-ido)
