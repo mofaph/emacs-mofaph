@@ -17,6 +17,7 @@
                            ".ido.last"
                            ".loaddefs.el"
                            "archive-contents"
+                           "cookies"
                            ))
 
 (setq ido-create-new-buffer 'always)
