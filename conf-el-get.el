@@ -5,6 +5,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
+;; 这些参数下面的代码需要用到
 (setq el-get-install-branch "master"
       el-get-user-package-directory "~/.emacs.d")
 
@@ -16,13 +17,14 @@
     (end-of-buffer)
     (eval-print-last-sexp)))
 
+;; 需要安装的插件列表
 (setq packages '(
                  goto-last-change
                  smex
                  switch-window
                  ))
 
-;; 使用 el-get 管理其他的插件
+;; 安装和初始化插件
 (when (require 'el-get nil t)
   (el-get 'sync packages))
 
