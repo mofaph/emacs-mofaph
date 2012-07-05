@@ -18,15 +18,27 @@
     (end-of-buffer)
     (eval-print-last-sexp)))
 
-;; 需要安装的插件列表
-(setq packages '(
-                 goto-last-change
-                 smex
-                 switch-window
-                 ))
-
-;; 安装和初始化插件
 (when (require 'el-get nil t)
+
+  ;; 额外的安装包信息（不是直接由 el-get 提供）
+  (setq el-get-sources
+        '((:name magit
+                 :after (lambda () (global-set-key (kbd "C-x C-z") 'magit-status)))
+
+          (:name lisppaste
+                 :type elpa)))
+
+  ;; 需要安装的插件列表
+  (setq packages
+        (append
+         '(
+           goto-last-change
+           smex
+           switch-window
+           )
+         (mapcar 'el-get-source-name el-get-sources)))
+
+  ;; 安装和初始化插件
   (el-get 'sync packages))
 
 (provide 'conf-el-get)
