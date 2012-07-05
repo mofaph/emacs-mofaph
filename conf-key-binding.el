@@ -29,6 +29,7 @@
 ;; C-j          open-newline-indent             conf-defun
 ;; M-j          open-newline-above              conf-defun
 ;; C-x C-/      goto-last-change                conf-el-get
+;; C-x C-z      magit-status                    conf-el-get
 ;; f11          toggle-fullscreen               conf-fullscreen
 ;; C-x C-b      ibuffer                         conf-ibuffer
 ;; C-x C-f      ido-find-file                   conf-ido
