@@ -7,6 +7,7 @@
 
 ;; 这些参数下面的代码需要用到
 (setq el-get-install-branch "master"
+      el-get-install-skip-emacswiki-recipes "yes"
       el-get-user-package-directory "~/.emacs.d")
 
 ;; 安装 el-get
