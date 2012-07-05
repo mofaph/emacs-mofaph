@@ -8,11 +8,6 @@
       (global-set-key [?\H-m] 'set-mark-command)
       (global-set-key [?\H-i] 'align))
 
-(global-set-key (kbd "C-x t") 'untabify)
-(global-set-key (kbd "C-,") 'point-to-register)
-(global-set-key (kbd "C-.") 'jump-to-register)
-(global-set-key (kbd "C-\\") 'delete-trailing-whitespace)
-
 ;; 用 Ctl 加上鼠标滚轮操作来设置字体大小
 (cond
  ((eq system-type 'gnu/linux)
@@ -21,6 +16,11 @@
  ((eq system-type 'windows-nt)
      (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
      (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)))
+
+(global-set-key (kbd "C-x t")           'untabify)
+(global-set-key (kbd "C-,")             'point-to-register)
+(global-set-key (kbd "C-.")             'jump-to-register)
+(global-set-key (kbd "C-\\")            'delete-trailing-whitespace)
 
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
