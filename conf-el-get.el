@@ -23,7 +23,7 @@
   ;; 额外的安装包信息（不是直接由 el-get 提供）
   (setq el-get-sources
         '((:name magit
-                 :after (lambda () (global-set-key (kbd "C-x C-z") 'magit-status)))
+                 :after (progn (global-set-key (kbd "C-x C-z") 'magit-status)))
 
           (:name lisppaste
                  :type elpa)))
