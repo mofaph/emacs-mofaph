@@ -28,10 +28,10 @@
 ;; =============================================================================
 ;; C-j          open-newline-indent             conf-defun
 ;; M-j          open-newline-above              conf-defun
+;; C-x C-/      goto-last-change                conf-el-get
 ;; f11          toggle-fullscreen               conf-fullscreen
 ;; C-x C-b      ibuffer                         conf-ibuffer
 ;; C-x C-f      ido-find-file                   conf-ido
-;; C-x C-\      goto-last-change                init-goto-last-change
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
 ;; C-x M-x      execute-extended-command        init-smex

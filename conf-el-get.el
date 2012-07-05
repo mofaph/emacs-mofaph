@@ -22,7 +22,11 @@
 
   ;; 额外的安装包信息（不是直接由 el-get 提供）
   (setq el-get-sources
-        '((:name magit
+        '(
+          (:name goto-last-change
+                 :after (progn (global-set-key (kbd "C-x C-/") 'goto-last-change)))
+
+          (:name magit
                  :after (progn (global-set-key (kbd "C-x C-z") 'magit-status)))
 
           (:name lisppaste
@@ -32,7 +36,6 @@
   (setq packages
         (append
          '(
-           "goto-last-change"
            "smex"
            "switch-window"
            )
