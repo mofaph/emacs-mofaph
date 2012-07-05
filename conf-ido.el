@@ -14,6 +14,9 @@
 (setq ido-ignore-buffers '(
                            "\\` "
                            "^\\*.*\\*$"
+                           ".ido.last"
+                           ".loaddefs.el"
+                           "archive-contents"
                            ))
 
 (setq ido-create-new-buffer 'always)
