@@ -24,13 +24,7 @@
 
 ;; 使用 el-get 管理其他的插件
 (when (require 'el-get nil t)
-  (el-get 'sync packages)
-  (el-get 'wait)
-
-  (el-get-init "goto-last-change")
-  (el-get-init "smex")
-  (el-get-init "switch-window")
-  )
+  (el-get 'sync packages))
 
 (provide 'conf-el-get)
 
