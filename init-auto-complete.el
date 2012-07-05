@@ -2,4 +2,8 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 
+(setq ac-auto-start nil)
+(ac-config-default)
+(define-key ac-mode-map (kbd "M-/") 'auto-complete)
+
 (provide 'init-auto-complete)
