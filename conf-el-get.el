@@ -32,9 +32,9 @@
   (setq packages
         (append
          '(
-           goto-last-change
-           smex
-           switch-window
+           "goto-last-change"
+           "smex"
+           "switch-window"
            )
          (mapcar 'el-get-source-name el-get-sources)))
 
