@@ -8,12 +8,6 @@
 (setq el-get-install-branch "master"
       el-get-user-package-directory "~/.emacs.d")
 
-(setq packages '(
-                 goto-last-change
-                 smex
-                 switch-window
-                 ))
-
 ;; 安装 el-get
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -21,6 +15,12 @@
        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
     (end-of-buffer)
     (eval-print-last-sexp)))
+
+(setq packages '(
+                 goto-last-change
+                 smex
+                 switch-window
+                 ))
 
 ;; 使用 el-get 管理其他的插件
 (when (require 'el-get nil t)
