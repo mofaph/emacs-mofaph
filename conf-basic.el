@@ -16,16 +16,10 @@
 (setq-default display-time-24hr-format t)
 (setq-default display-time-day-and-date nil)
 
-;; 语法高亮
-(if (fboundp 'global-font-lock-mode) (global-font-lock-mode t))
-
 ;; Mark
 (setq-default transient-mark-mode t)
 (setq-default set-mark-command-repeat-pop t)
 (setq-default mark-ring-max 32)
-
-;; 在左侧显示行号
-(if (fboundp 'global-linum-mode) (global-linum-mode t))
 
 ;; 在状态栏只显示列号
 (setq-default line-number-mode nil)
@@ -128,12 +122,6 @@
 (setq-default truncate-lines t)
 (setq-default truncate-partial-width-windows 200)
 (setq-default hscroll-step 5)
-
-;; 允许访问最近打开的文件
-(if (fboundp 'recentf-mode) (recentf-mode t))
-
-;; 高亮匹配的正则表达式
-(global-hi-lock-mode 1)
 
 ;; 取消原本不开启的命令
 (put 'narrow-to-region 'disabled nil)
