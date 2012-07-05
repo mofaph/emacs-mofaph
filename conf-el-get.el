@@ -6,9 +6,7 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (setq el-get-install-branch "master"
-      el-get-verbose t
-      el-get-user-package-directory "~/.emacs.d"
-      el-get-default-process-sync t)
+      el-get-user-package-directory "~/.emacs.d")
 
 (setq packages '(
                  goto-last-change
