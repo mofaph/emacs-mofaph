@@ -36,5 +36,6 @@
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
 ;; C-x M-x      execute-extended-command        init-smex
+;; M-/          auto-complete                   init-auto-complete
 
 (provide 'conf-key-binding)

@@ -1,3 +1,4 @@
+ac-dict/
 auto-save-list/
 backup/
 el-get/
@@ -7,6 +8,7 @@ url/
 *.elc
 .bookmark
 .custom-file.el
+.dict
 .emacs.desktop
 .emacs.desktop.lock
 .ido.last
