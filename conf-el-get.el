@@ -3,6 +3,7 @@
 ;;; 参考链接：
 ;; [1] https://github.com/DarwinAwardWinner/dotemacs/blob/master/site-lisp/el-get-init.el
 ;; [2] https://github.com/dimitri/el-get/blob/master/README.asciidoc
+;; [3] http://www.emacswiki.org/emacs/el-get
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
