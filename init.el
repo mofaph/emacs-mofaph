@@ -22,10 +22,9 @@
 (require 'conf-defun)
 (require 'conf-misc)
 (require 'conf-gui)
-(require 'conf-package)
 
-;; using el-get to manage all other third party packages
-(require 'conf-el-get)
+;; using package.el to manage all other third party packages
+(require 'conf-package)
 
 ;; Local Variables:
 ;; no-byte-compile: t
