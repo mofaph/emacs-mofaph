@@ -31,10 +31,11 @@
 ;; f11          toggle-fullscreen               conf-fullscreen
 ;; C-x C-b      ibuffer                         conf-ibuffer
 ;; C-x C-f      ido-find-file                   conf-ido
+;; M-/          auto-complete                   init-auto-complete
+;; C-x M-z      magit-status                    init-magit
 ;; f8           nav-toggle                      init-nav
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
 ;; C-x M-x      execute-extended-command        init-smex
-;; M-/          auto-complete                   init-auto-complete
 
 (provide 'conf-key-binding)
