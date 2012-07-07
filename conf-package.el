@@ -43,7 +43,8 @@
   (dolist (package '(nav
                      smex
                      switch-window
-                     auto-complete))
+                     auto-complete
+                     magit))
     (fetch-package package)))
 
 (provide 'conf-package)

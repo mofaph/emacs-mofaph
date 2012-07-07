@@ -31,6 +31,7 @@
 (require 'init-smex)
 (require 'switch-window)
 (require 'init-auto-complete)
+(require 'init-magit)
 
 ;; Local Variables:
 ;; no-byte-compile: t
