@@ -35,3 +35,5 @@
                            (add-to-list 'ac-sources mode)))))
 
 (ac-clear-dictionary-cache)
+
+(provide 'init-auto-complete)

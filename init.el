@@ -23,8 +23,13 @@
 (require 'conf-misc)
 (require 'conf-gui)
 
-;; using package.el to manage all other third party packages
+;; 使用 package.el 管理第三方插件
 (require 'conf-package)
+
+;; 配置 package.el 管理的插件
+(require 'init-nav)
+(require 'init-smex)
+(require 'init-auto-complete)
 
 ;; Local Variables:
 ;; no-byte-compile: t
