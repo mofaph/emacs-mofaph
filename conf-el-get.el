@@ -34,10 +34,7 @@
           (:name nav
                  :after (progn
                           (nav-disable-overeager-window-splitting)
-                          (global-set-key [f8] 'nav-toggle)))
-
-          (:name lisppaste
-                 :type elpa)))
+                          (global-set-key [f8] 'nav-toggle)))))
 
   ;; 需要安装的插件列表
   (setq packages
