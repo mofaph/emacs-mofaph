@@ -42,6 +42,7 @@
 
   (dolist (package '(nav
                      smex
+                     switch-window
                      auto-complete))
     (fetch-package package)))
 

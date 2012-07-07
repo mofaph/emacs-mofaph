@@ -29,6 +29,7 @@
 ;; 配置 package.el 管理的插件
 (require 'init-nav)
 (require 'init-smex)
+(require 'switch-window)
 (require 'init-auto-complete)
 
 ;; Local Variables:
