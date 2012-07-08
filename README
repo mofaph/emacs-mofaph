@@ -31,5 +31,12 @@ info，一个更加吸引人的优点是，el-get 可以在指定 recipe 时就�
     - 如果使用 package.el 安装了一个插件，应该在 ~/.emacs.d 中存放一个 init- 开
       头的配置文件
 
+    - 如果新安装了一个插件，那么需要修改一些文件使它能够正常工作，同时修改文档说
+      明。同理，如果需要删除一个插件，也需要修改这些文件。
+
+          - conf-package.el
+          - init.el
+          - installed-packages.txt
+
 mofaph
 2012/5/26

@@ -1,0 +1,14 @@
+
+这个文件列出了已经安装的第三方插件。
+
+使用包管理系统管理的插件：
+
+auto-complete
+magit
+nav
+smex
+switch-window
+
+没有使用包管理系统管理的插件：
+
+slime

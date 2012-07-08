@@ -4,7 +4,8 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Packages.html#Packages
 ;; http://ergoemacs.org/emacs/emacs_package_system.html
 
-;; 注意：使用 package.el 下载了插件之后，需要配置相应的插件
+;; 注意：使用 package.el 下载了插件之后，需要配置相应的插件，同时在
+;; installed-packages.txt 中更新已经安装的插件列表
 ;;
 ;; 以 nav 为例说明配置插件的方法，为了和内置的插件区别，使用 package.el 管理的插
 ;; 件以 init-* 开头
@@ -12,6 +13,10 @@
 ;; (require 'init-nav)
 ;;
 ;; 需要提供一个名为 init-nav.el 的文件在 ~/.emacs.d 目录下
+;; 同时在 installed-packages.txt 中增加一行 nav
+;;
+;; 如果是删除一个插件，那么需要修改这个文件。同时在 installed-packages.txt 中删除
+;; 对应的一行
 
 ;; https://github.com/purcell/emacs.d/blob/master/init-elpa.el
 (defun fetch-package (package &optional min-version no-refresh)
