@@ -23,6 +23,9 @@
 (require 'conf-misc)
 (require 'conf-gui)
 
+;; 暂时不能使用 package.el 管理的插件
+(require 'conf-slime)
+
 ;; 使用 package.el 管理第三方插件
 (require 'conf-package)
 
