@@ -42,6 +42,9 @@
 ;; 立即在回显区显示按键
 (setq-default echo-keystrokes -1)
 
+;; 在保存之前删除行末空白
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+
 ;; 总是以一个换行符结束文件
 (setq-default require-final-newline t)
 
