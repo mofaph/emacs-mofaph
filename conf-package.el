@@ -48,6 +48,7 @@
   (dolist (package '(nav
                      smex
                      switch-window
+                     undo-tree
                      auto-complete
                      magit))
     (fetch-package package)))

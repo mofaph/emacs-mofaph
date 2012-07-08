@@ -8,6 +8,7 @@ magit
 nav
 smex
 switch-window
+undo-tree
 
 没有使用包管理系统管理的插件：
 
