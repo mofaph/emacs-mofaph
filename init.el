@@ -21,6 +21,7 @@
 (require 'conf-font)
 (require 'conf-defun)
 (require 'conf-misc)
+(require 'conf-program)
 (require 'conf-gui)
 
 ;; 暂时不能使用 package.el 管理的插件
