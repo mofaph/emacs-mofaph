@@ -14,7 +14,6 @@
 (require 'conf-session)
 (require 'conf-icomplete)
 (require 'conf-auto-revert)
-(require 'conf-hl-line)
 (require 'conf-winner)
 (require 'conf-key-binding)
 (require 'conf-font)
