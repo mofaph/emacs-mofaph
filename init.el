@@ -11,7 +11,6 @@
 (require 'conf-uniquify)
 (require 'conf-fullscreen)
 (require 'conf-theme)
-(require 'conf-which-function-mode)
 (require 'conf-session)
 (require 'conf-icomplete)
 (require 'conf-auto-revert)
