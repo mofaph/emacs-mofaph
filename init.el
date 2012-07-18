@@ -34,6 +34,7 @@
 (require 'init-smex)
 (require 'switch-window)
 (require 'init-undo-tree)
+(require 'init-ace-jump-mode)
 (require 'init-auto-complete)
 (require 'init-magit)
 

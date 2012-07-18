@@ -3,6 +3,7 @@
 
 使用包管理系统管理的插件：
 
+ace-jump-mode
 auto-complete
 magit
 nav

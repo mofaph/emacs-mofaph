@@ -49,6 +49,7 @@
                      smex
                      switch-window
                      undo-tree
+                     ace-jump-mode
                      auto-complete
                      magit))
     (fetch-package package)))
