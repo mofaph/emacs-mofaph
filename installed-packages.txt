@@ -3,14 +3,14 @@
 
 使用包管理系统管理的插件：
 
-ace-jump-mode
-auto-complete
-magit
-nav
-smex
-switch-window
-undo-tree
+ace-jump-mode           https://github.com/winterTTr/ace-jump-mode
+auto-complete           http://cx4a.org/software/auto-complete/
+magit                   https://github.com/magit/magit
+nav                     http://code.google.com/p/emacs-nav/
+smex                    https://github.com/nonsequitur/smex
+switch-window           https://github.com/dimitri/switch-window
+undo-tree               http://www.dr-qubit.org/emacs.php
 
 没有使用包管理系统管理的插件：
 
-slime
+slime                   http://common-lisp.net/project/slime/
