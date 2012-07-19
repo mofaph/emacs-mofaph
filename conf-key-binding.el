@@ -31,6 +31,7 @@
 ;; f11          toggle-fullscreen               conf-fullscreen
 ;; C-x C-b      ibuffer                         conf-ibuffer
 ;; C-x C-f      ido-find-file                   conf-ido
+;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; C-x M-z      magit-status                    init-magit
 ;; f8           nav-toggle                      init-nav
