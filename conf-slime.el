@@ -8,7 +8,7 @@
       (add-to-list 'load-path (concat slime-dir "contrib") t)
 
       (setq inferior-lisp-program "sbcl")
-      (require 'slime)
+      (require 'slime-autoloads)
       (slime-setup '(slime-fancy)))
 
   (message "Warning: conf-slime: slime deosn't exist!"))
