@@ -15,9 +15,7 @@
 (require 'conf-icomplete)
 (require 'conf-auto-revert)
 (require 'conf-winner)
-(require 'conf-key-binding)
 (require 'conf-font)
-(require 'conf-defun)
 (require 'conf-misc)
 (require 'conf-program)
 (require 'conf-gui)
@@ -37,6 +35,9 @@
 (require 'init-ace-jump-mode)
 (require 'init-auto-complete)
 (require 'init-magit)
+
+(require 'conf-key-binding)
+(require 'conf-defun)
 
 ;; Local Variables:
 ;; no-byte-compile: t
