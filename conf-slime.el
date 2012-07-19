@@ -1,5 +1,8 @@
+;; http://common-lisp.net/project/slime/doc/html/
+
 (defconst slime-dir "~/opt/slime-2012-07-06/" "slime directory")
 
+;; http://common-lisp.net/project/slime/doc/html/Autoloading.html#Autoloading
 (if (file-directory-p slime-dir)
 
     (progn
