@@ -12,4 +12,8 @@
 (add-hook 'emacs-lisp-mode-hook (lambda () (eldoc-mode 1)))
 (add-hook 'lisp-interactive-mode-hook (lambda () (eldoc-mode 1)))
 
+;; find-func
+(require 'find-func)
+(find-function-setup-keys)
+
 (provide 'conf-program)
