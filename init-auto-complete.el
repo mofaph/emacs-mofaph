@@ -25,14 +25,14 @@
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
 
-(add-hook 'emacs-lisp-mode
-          '(lambda ()
-             (dolist (mode '(ac-source-features
-                             ac-source-functions
-                             ac-source-symbols
-                             ac-source-gtags
-                             ac-source-semantic)
-                           (add-to-list 'ac-sources mode)))))
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (dolist (mode '(ac-source-features
+                            ac-source-functions
+                            ac-source-symbols
+                            ac-source-gtags
+                            ac-source-semantic)
+                          (add-to-list 'ac-sources mode)))))
 
 (ac-clear-dictionary-cache)
 
