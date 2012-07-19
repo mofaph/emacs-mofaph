@@ -11,7 +11,6 @@
 (require 'conf-uniquify)
 (require 'conf-fullscreen)
 (require 'conf-theme)
-(require 'conf-session)
 (require 'conf-icomplete)
 (require 'conf-auto-revert)
 (require 'conf-winner)
@@ -38,6 +37,7 @@
 
 (require 'conf-key-binding)
 (require 'conf-defun)
+(require 'conf-session)
 
 ;; Local Variables:
 ;; no-byte-compile: t
