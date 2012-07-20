@@ -34,6 +34,11 @@
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; C-x M-z      magit-status                    init-magit
+;; C-x r t      inline-string-rectangle         init-mark-multiple
+;; C-<          mark-previous-like-this         init-mark-multiple
+;; C->          mark-next-like-this             init-mark-multiple
+;; C-*          mark-all-like-this              init-mark-multiple
+;; C-M-m        mark-more-like-this             init-mark-multiple
 ;; M-up         move-text-up                    init-move-text
 ;; M-down       move-text-down                  init-move-text
 ;; f8           nav-toggle                      init-nav

@@ -51,6 +51,7 @@
                      undo-tree
                      ace-jump-mode
                      move-text
+                     mark-multiple
                      auto-complete
                      magit))
     (fetch-package package)))
