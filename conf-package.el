@@ -51,6 +51,7 @@
                      undo-tree
                      ace-jump-mode
                      move-text
+                     expand-region
                      mark-multiple
                      auto-complete
                      magit))
