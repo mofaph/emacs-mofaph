@@ -50,6 +50,7 @@
                      switch-window
                      undo-tree
                      ace-jump-mode
+                     move-text
                      auto-complete
                      magit))
     (fetch-package package)))

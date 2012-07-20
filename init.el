@@ -32,6 +32,7 @@
 (require 'switch-window)
 (require 'init-undo-tree)
 (require 'init-ace-jump-mode)
+(require 'init-move-text)
 (require 'init-auto-complete)
 (require 'init-magit)
 

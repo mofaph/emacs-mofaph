@@ -34,6 +34,8 @@
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; C-x M-z      magit-status                    init-magit
+;; M-up         move-text-up                    init-move-text
+;; M-down       move-text-down                  init-move-text
 ;; f8           nav-toggle                      init-nav
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
