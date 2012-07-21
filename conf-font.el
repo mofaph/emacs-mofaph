@@ -77,11 +77,11 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
                         Chinese-font-list 14))
 
        ((string= machine "002")
-        (qiang-set-font English-font-list ":pixelsize=12"
-                        Chinese-font-list 12))
+        (qiang-set-font English-font-list ":pixelsize=13"
+                        Chinese-font-list 13))
 
        (t
-        (qiang-set-font English-font-list ":pixelsize=10"
-                        Chinese-font-list 10)))))
+        (qiang-set-font English-font-list ":pixelsize=12"
+                        Chinese-font-list 12)))))
 
 (provide 'conf-font)
