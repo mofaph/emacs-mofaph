@@ -1,3 +1,5 @@
+;;; -*- coding: utf-8 -*-
+
 ;;; http://emacser.com/torture-emacs.htm
 
 ;; 首先，判断某个字体在系统中是否安装
@@ -11,6 +13,16 @@
                     "黑体"
                     "新宋体"
                     "宋体"))
+
+(defvar English-font-list '("Monaco"
+                            "文泉驿等宽正黑"
+                            "Monospace"
+                            "Consolas"
+                            "DejaVu Sans Mono"))
+
+(defvar Chinese-font-list '("DejaVu Sans YuanTi Mono"
+                            "文泉驿等宽正黑"
+                            "文泉驿等宽微米黑"))
 
 ;; find-if is in common list package
 (eval-when-compile (require 'cl))
@@ -56,11 +68,20 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
                         zh-font))))
 
 ;; 利用这个函数，Emacs 字体设置就是小菜一碟了
-(when (eq window-system 'x)
-  (qiang-set-font
-   '("Monaco" "文泉驿等宽正黑" "Monospace" "Consolas" "DejaVu Sans Mono")
-   ":pixelsize=14"
-   '("DejaVu Sans YuanTi Mono" "文泉驿等宽正黑" "文泉驿等宽微米黑")
-   14))
+(let ((machine (getenv "EMACS_MACHINE")))
+  (if (eq window-system 'x)
+      (cond
+
+       ((string= machine "001")
+        (qiang-set-font English-font-list ":pixelsize=14"
+                        Chinese-font-list 14))
+
+       ((string= machine "002")
+        (qiang-set-font English-font-list ":pixelsize=12"
+                        Chinese-font-list 12))
+
+       (t
+        (qiang-set-font English-font-list ":pixelsize=10"
+                        Chinese-font-list 10)))))
 
 (provide 'conf-font)
