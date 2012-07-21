@@ -27,4 +27,15 @@
 (add-hook 'lisp-mode-hook (lambda () (define-key lisp-mode-map (kbd "RET") 'newline-and-indent)))
 (add-hook 'sh-mode-hook (lambda () (define-key sh-mode-map (kbd "RET") 'newline-and-indent)))
 
+;; 高亮 FIXME 关键字
+(dolist (mode '(c-mode
+                c++-mode
+                emacs-lisp-mode
+                lisp-mode
+                java-mode
+                sh-mode))
+  (font-lock-add-keywords mode
+ '(("\\<\\(FIXME\\)\\>" 1 font-lock-warning-face t))))
+
+
 (provide 'conf-program)
