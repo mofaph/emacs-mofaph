@@ -27,16 +27,12 @@ installed-packages.txt 这个文件列出了已经安装的插件列表。
 
 注意：
 
-    - 如果要修改键绑定（快捷键）的话，那么在相应的文件中绑定了按键之后，应该在
-      conf-key-binding.el 中说明相应的快捷键是什么。
-
-    - 如果使用 package.el 安装了一个插件，应该在 ~/.emacs.d 中存放一个 init- 开
-      头的配置文件
-
     - 如果新安装了一个插件，那么需要修改一些文件使它能够正常工作，同时修改文档说
       明。同理，如果需要删除一个插件，也需要修改这些文件。
 
+          - conf-key-binding.el         自定义了键绑定之后应该在这个文件说明
           - conf-package.el
+          - init-pkgname.el             插件的配置多于一条语句才建立这个文件
           - init.el
           - installed-packages.txt
 
