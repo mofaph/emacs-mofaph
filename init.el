@@ -37,6 +37,7 @@
 (require 'init-move-text)
 (require 'init-expand-region)
 (require 'init-mark-multiple)
+(require 'init-kill-ring-search)
 (require 'init-auto-complete)
 (require 'init-magit)
 

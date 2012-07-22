@@ -34,6 +34,7 @@
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; C-=          er/expand-region                init-expand-region
+;; C-M-y        kill-ring-search                init-kill-ring-search
 ;; C-x M-z      magit-status                    init-magit
 ;; C-x r t      inline-string-rectangle         init-mark-multiple
 ;; C-<          mark-previous-like-this         init-mark-multiple

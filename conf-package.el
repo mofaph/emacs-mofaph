@@ -53,6 +53,7 @@
                      move-text
                      expand-region
                      mark-multiple
+                     kill-ring-search
                      auto-complete
                      magit))
     (fetch-package package)))

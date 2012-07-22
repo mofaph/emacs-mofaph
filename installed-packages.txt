@@ -6,6 +6,7 @@
 ace-jump-mode           https://github.com/winterTTr/ace-jump-mode
 auto-complete           http://cx4a.org/software/auto-complete/
 expand-region           https://github.com/magnars/expand-region.el
+kill-ring-search        http://nschum.de/src/emacs/kill-ring-search/
 magit                   https://github.com/magit/magit
 mark-multiple           https://github.com/magnars/mark-multiple.el
 move-text               http://www.emacswiki.org/emacs/move-text.el
