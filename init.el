@@ -31,6 +31,7 @@
 ;; 同时需要更新 installed-packages.txt
 (require 'browse-kill-ring)
 (require 'switch-window)
+(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 
 (require 'init-nav)
 (require 'init-smex)

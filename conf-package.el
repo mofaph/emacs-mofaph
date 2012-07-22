@@ -54,6 +54,7 @@
                      expand-region
                      mark-multiple
                      kill-ring-search
+                     c-eldoc
                      auto-complete
                      magit))
     (fetch-package package)))
