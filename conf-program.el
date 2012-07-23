@@ -37,5 +37,13 @@
   (font-lock-add-keywords mode
                           '(("\\<\\(FIXME\\)\\>" 1 font-lock-warning-face t))))
 
+;; https://github.com/purcell/emacs.d/blob/master/init-editing-utils.el
+(defun highlight-80+-column ()
+  (when (= show-trailing-whitespace 1)  ; conf-basic.el
+    (set (make-local-variable 'whitespace-style) '(face trailing lines-tail))
+    (whitespace-mode 0)
+    (whitespace-mode 1)))
+
+(add-hook 'prog-mode-hook 'highlight-80+-column)
 
 (provide 'conf-program)
