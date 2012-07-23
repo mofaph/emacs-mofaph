@@ -53,6 +53,7 @@
                      move-text
                      expand-region
                      mark-multiple
+                     browse-kill-ring
                      kill-ring-search
                      c-eldoc
                      auto-complete
