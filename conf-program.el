@@ -35,7 +35,7 @@
                 java-mode
                 sh-mode))
   (font-lock-add-keywords mode
- '(("\\<\\(FIXME\\)\\>" 1 font-lock-warning-face t))))
+                          '(("\\<\\(FIXME\\)\\>" 1 font-lock-warning-face t))))
 
 
 (provide 'conf-program)
