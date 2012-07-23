@@ -19,4 +19,5 @@ undo-tree               http://www.dr-qubit.org/emacs.php
 
 没有使用包管理系统管理的插件：
 
+qmake-mode              https://github.com/Sectoid/qmake-mode.git
 slime                   http://common-lisp.net/project/slime/

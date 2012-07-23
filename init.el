@@ -3,6 +3,10 @@
 ;;; mofaph@gmail.com
 ;;; 2009-7-13
 
+(defvar elisp-dir "~/.emacs.d/elisp"
+  "The directory holds the Emacs Lisp code.")
+
+(add-to-list 'load-path elisp-dir)
 (add-to-list 'load-path "~/.emacs.d")
 
 (require 'conf-basic)
@@ -22,6 +26,7 @@
 (require 'conf-cc-mode)
 
 ;; 暂时不能使用 package.el 管理的插件
+(require 'conf-qmake-mode)
 (require 'conf-slime)
 
 ;; 使用 package.el 管理第三方插件
