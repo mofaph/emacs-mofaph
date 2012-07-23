@@ -10,5 +10,6 @@
 
 (delete-selection-mode t)
 (recentf-mode t)
+(setq recentf-save-file "~/.emacs.d/.recentf")
 
 (provide 'conf-misc)

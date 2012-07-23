@@ -13,6 +13,7 @@ url/
 .emacs.desktop
 .emacs.desktop.lock
 .ido.last
+.recentf
 .smex-items
 
 ac-comphist.dat
