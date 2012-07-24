@@ -1,0 +1,30 @@
+
+假设有这样一个 C 文件：
+
+#include <stdio.h>              /* I/O header file */
+
+int main(void)                  /* main function */
+{
+        printf("hello world\n"); /* print some character in screen */
+        return 0;               /* the end of program */
+}
+
+我们想把这个文件的注释对齐，对齐之后的效果如下所示：
+
+#include <stdio.h>               /* I/O header file                */
+
+int main(void)                   /* main function                  */
+{
+        printf("hello world\n"); /* print some character in screen */
+        return 0;                /* the end of program             */
+}
+
+--------------------------------------------------------------------------------
+
+为了达到这样的效果，我们可以使用 align-regex 这个命令：
+
+    C-x h M-x align-regex RET /\*SPC
+    C-x h M-x align-regex RET \*/
+
+这样就可以成功地对齐 C 语言注释的左边界和右边界了。但是，这种方法还不能应付所有
+的情况。比如，如果有多行注释在程序中的话，那么这种方法将不能工作。
