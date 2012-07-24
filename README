@@ -21,12 +21,10 @@ info，el-get 可以在指定 recipe 时就指定配置的方法。这对于一�
 而言非常方便。
 
 另外，el-get 一个更加吸引人的优点是：el-get 比 package.el 多了很多的插件
-（package.el: 500+，el-get: 2000+），并且，el-get 能够更方便更快地使用最新的插件。
+（package.el: 700+，el-get: 2000+），并且，el-get 能够更方便更快地使用最新的插件。
 
-即使 el-get 具有这样的优点，但是我还是决定使用 package.el 进行管理。因为我想象到
-了在 Windows 或者 Mac 下的情形，许多 GNU/Linux 桌面也没有 git svn bzr hg 这些工具。
-
-installed-packages.txt 这个文件列出了已经安装的插件列表。
+即使 el-get 具有这样的优点，但是我还是决定使用 package.el 进行管理。因为在
+Windows 或者 Mac 下，甚至许多 GNU/Linux 桌面也没有 git svn bzr hg 这些工具。
 
 注意：
 
@@ -34,10 +32,10 @@ installed-packages.txt 这个文件列出了已经安装的插件列表。
       明。同理，如果需要删除一个插件，也需要修改这些文件。
 
           - conf-key-binding.el         自定义了键绑定之后应该在这个文件说明
-          - conf-package.el
+          - conf-package.el             使用 package.el 安装插件后，需要更新这个文件的安装插件列表
           - init-pkgname.el             插件的配置多于一条语句才建立这个文件
-          - init.el
-          - installed-packages.txt
+          - init.el                     安装插件后，应该在这个文件中启用插件
+          - installed-packages.txt      安装插件后，应该更新这个文件，加入插件的名字和官网
 
 mofaph
 2012/5/26
