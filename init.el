@@ -3,7 +3,7 @@
 ;;; mofaph@gmail.com
 ;;; 2009-7-13
 
-(defvar elisp-dir "~/.emacs.d/elisp"
+(defvar elisp-dir "~/.emacs.d/elisp/"
   "The directory holds the Emacs Lisp code.")
 
 (add-to-list 'load-path elisp-dir)
