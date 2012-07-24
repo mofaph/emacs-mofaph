@@ -1,0 +1,50 @@
+
+可能你经常会在一些文件的第一行中看到这样的东西：
+
+;;; -*- coding: utf-8; fill-column: 80 -*-
+
+或者在文件的最后几行，甚至十几行中看到这样的东西：
+
+;; Local Variables:
+;; hl-line-face: blue
+;; no-byte-compile: t
+;; coding: utf-8
+;; End:
+
+这些行都是 Emacs 中的文件局部变量（Local variables in Files）。当 Emacs 读取这些
+文件的时候，它将会应用这些变量。如果这些变量是有潜在危险的，Emacs 将会询问你是否
+要应用这些变量。
+
+增加文件局部变量的方式就是上面给出的两种方式。第一种方式称为首行（first line），第二种
+方式称为变量列表（variables list）。
+
+除了手动添加这些行之外，你可以使用 Emacs 提供的命令来做这些事情。如果打算添加的文
+件是一个脚本文件，那么需要在第二行添加。添加一个首行的局部变量可以使用
+add-file-local-variable-prog-line 这个命令，用法如下：
+
+    M-x add-file-local-variable-prog-line RET coding RET utf-8 RET
+
+删除一个首行文件局部变量，使用 delete-file-local-variable-prog-line 来完成。用法
+如下：
+
+    M-x delete-file-local-variable-prog-line RET coding RET
+
+这样就可以删除一个文件局部变量了。我们还可以使用
+copy-dir-locals-to-file-locals-prog-line 将目录局部变量（Per-Directory Local
+Variables）复制到文件局部变量中：
+
+    M-x copy-dir-locals-to-file-locals-prog-line RET
+
+使用第二种方式变量列表添加文件局部变量，可以使用 add-file-local-variable 添加一
+个变量列表。用法如下：
+
+    M-x add-file-local-variable RET coding RET utf-8 RET
+
+删除一个变量列表，使用 delete-file-local-variable 完成。用法如下：
+
+    M-x delete-file-local-variable RET coding RET
+
+如果要将目录局部变量复制到变量列表中，可以使用 copy-dir-locals-to-file-locals。
+用法如下：
+
+    M-x copy-dir-locals-to-file-locals RET
