@@ -56,6 +56,7 @@
                      browse-kill-ring
                      kill-ring-search
                      c-eldoc
+                     highlight-symbol
                      auto-complete
                      magit))
     (fetch-package package)))
