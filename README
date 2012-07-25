@@ -26,6 +26,8 @@ info，el-get 可以在指定 recipe 时就指定配置的方法。这对于一�
 即使 el-get 具有这样的优点，但是我还是决定使用 package.el 进行管理。因为在
 Windows 或者 Mac 下，甚至许多 GNU/Linux 桌面也没有 git svn bzr hg 这些工具。
 
+emacs-blog.txt 这个文件记录了关于 Emacs 的一些有用的博客。
+
 tips/ 目录存放了关于使用 Emacs 的一些技巧。
 
 注意：

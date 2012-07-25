@@ -1,0 +1,8 @@
+
+这个文件记录了有关 Emacs 的博客：
+
+http://emacser.com/
+http://ergoemacs.org/emacs/emacs.html
+http://emacsrocks.com/
+http://www.masteringemacs.org/
+http://planet.emacsen.org/
