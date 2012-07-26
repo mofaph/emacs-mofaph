@@ -24,3 +24,21 @@ t       当前 Info 文件的顶层目录
 进阶的命令：
 
 s       查找匹配字符串
+g       查找节点
+M-n     克隆一个 Info 系统缓冲区
+C-u m   提示菜单入口，新建一个 Info 系统缓冲区
+C-u g   提示节点入口，新建一个 Info 系统缓冲区
+C-u N C-h i     切换 Info 缓冲区（新建缓冲区命令将会建立类似于 *info<1..9>* 的缓冲区）
+
+配置 Info 的变量：
+
+Info-directory-list
+Info-additional-directory-list
+Info-mode-hook
+Info-fontify-maximum-menu-size
+Info-fontify-visited-nodes
+Info-use-header-line
+Info-hide-note-references
+Info-scroll-prefer-subnodes
+Info-isearch-search
+Info-enable-active-nodes
