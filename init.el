@@ -23,6 +23,7 @@
 (require 'conf-program)
 (require 'conf-gui)
 
+(require 'conf-info)
 (require 'conf-cc-mode)
 
 ;; 暂时不能使用 package.el 管理的插件
