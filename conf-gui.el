@@ -13,6 +13,11 @@
 (when window-system
   (global-set-key [f11] 'fullscreen-toggle)
   (setq-default indicate-buffer-boundaries 'left)
+  (setq default-frame-alist
+        '((cursor-color . "black")
+          (cursor-type . box)
+          (foreground-color . "black")
+          (background-color . "#CCE8CF")))
   )
 
 (provide 'conf-gui)
