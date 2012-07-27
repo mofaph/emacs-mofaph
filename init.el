@@ -16,7 +16,6 @@
 (require 'conf-fullscreen)
 (require 'conf-theme)
 (require 'conf-icomplete)
-(require 'conf-winner)
 (require 'conf-font)
 (require 'conf-misc)
 (require 'conf-program)
