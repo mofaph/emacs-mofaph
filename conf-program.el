@@ -35,7 +35,7 @@
                 java-mode
                 sh-mode))
   (font-lock-add-keywords mode
-                          '(("\\<\\(FIXME\\)\\>" 1 font-lock-warning-face t))))
+                          '(("\\<\\(FIXME\\):?\\>" 1 font-lock-warning-face t))))
 
 ;; https://github.com/purcell/emacs.d/blob/master/init-editing-utils.el
 (defun highlight-80+-column ()
