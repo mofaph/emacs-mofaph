@@ -40,7 +40,7 @@
 ;; M-F3         highlight-symbol-prev           init-highlight-symbol
 ;; C-S-F3       highlight-symbol-query-replace  init-highlight-symbol
 ;; C-M-y        kill-ring-search                init-kill-ring-search
-;; C-x M-z      magit-status                    init-magit
+;; C-x C-z      magit-status                    init-magit
 ;; C-x r t      inline-string-rectangle         init-mark-multiple
 ;; C-<          mark-previous-like-this         init-mark-multiple
 ;; C->          mark-next-like-this             init-mark-multiple
