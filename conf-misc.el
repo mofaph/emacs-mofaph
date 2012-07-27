@@ -7,6 +7,7 @@
 (global-font-lock-mode t)
 (global-linum-mode t)
 (global-hi-lock-mode t)
+(global-auto-revert-mode 1)
 
 (delete-selection-mode t)
 (recentf-mode t)
