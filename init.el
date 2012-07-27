@@ -12,7 +12,6 @@
 (require 'conf-basic)
 (require 'conf-ido)
 (require 'conf-ibuffer)
-(require 'conf-fullscreen)
 (require 'conf-theme)
 (require 'conf-icomplete)
 (require 'conf-font)
