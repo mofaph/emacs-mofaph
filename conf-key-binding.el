@@ -21,6 +21,8 @@
 (global-set-key (kbd "C-,")             'point-to-register)
 (global-set-key (kbd "C-.")             'jump-to-register)
 (global-set-key (kbd "C-\\")            'delete-trailing-whitespace)
+(global-set-key (kbd "<f5>")            'previous-buffer)
+(global-set-key (kbd "<f6>")            'next-buffer)
 
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
