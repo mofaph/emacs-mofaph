@@ -50,7 +50,7 @@
 ;; C-M-m        mark-more-like-this             init-mark-multiple
 ;; M-up         move-text-up                    init-move-text
 ;; M-down       move-text-down                  init-move-text
-;; f8           nav-toggle                      init-nav
+;; f9           nav-toggle                      init-nav
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
 ;; C-x M-x      execute-extended-command        init-smex
