@@ -26,6 +26,7 @@
 (add-hook 'c++-mode-hook        (lambda () (define-key c++-mode-map        (kbd "RET") 'newline-and-indent)))
 (add-hook 'lisp-mode-hook       (lambda () (define-key lisp-mode-map       (kbd "RET") 'newline-and-indent)))
 (add-hook 'sh-mode-hook         (lambda () (define-key sh-mode-map         (kbd "RET") 'newline-and-indent)))
+(add-hook 'objc-mode-hook       (lambda () (define-key objc-mode-map       (kbd "RET") 'newline-and-indent)))
 
 ;; 高亮 FIXME 关键字
 (dolist (mode '(c-mode

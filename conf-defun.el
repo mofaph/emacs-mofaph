@@ -23,6 +23,7 @@
 (global-set-key (kbd "M-j") 'open-newline-above)
 (add-hook 'c-mode-hook (lambda () (define-key c-mode-map (kbd "M-j") 'open-newline-above)))
 (add-hook 'c++-mode-hook (lambda () (define-key c++-mode-map (kbd "M-j") 'open-newline-above)))
+(add-hook 'objc-mode-hook (lambda () (define-key objc-mode-map (kbd "M-j") 'open-newline-above)))
 
 ;; 使用 lambda 替代 _lambda_ （加下划线是因为在 Emacs 中设置会原地生效）
 ;; http://stackoverflow.com/questions/154097/whats-in-your-emacs

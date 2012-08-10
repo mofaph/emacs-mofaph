@@ -1,6 +1,7 @@
 (setq c-default-style '((awk-mode       . "awk")
                         (c-mode         . "linux")
                         (c++-mode       . "stroustrup")
+                        (objc-mode      . "cc-mode")
                         (java-mode      . "java")
                         (other          . "gnu")))
 
