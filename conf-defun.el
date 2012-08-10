@@ -21,9 +21,14 @@
     (open-line 1))))
 
 (global-set-key (kbd "M-j") 'open-newline-above)
-(add-hook 'c-mode-hook (lambda () (define-key c-mode-map (kbd "M-j") 'open-newline-above)))
-(add-hook 'c++-mode-hook (lambda () (define-key c++-mode-map (kbd "M-j") 'open-newline-above)))
-(add-hook 'objc-mode-hook (lambda () (define-key objc-mode-map (kbd "M-j") 'open-newline-above)))
+(dolist (hook '(emacs-lisp-mode-hook
+                c-mode-hook
+                c++-mode-hook
+                lisp-mode-hook
+                objc-mode-hook
+                java-mode
+                sh-mode-hook))
+  (local-set-key (kbd "M-j") 'open-newline-above))
 
 ;; 使用 lambda 替代 _lambda_ （加下划线是因为在 Emacs 中设置会原地生效）
 ;; http://stackoverflow.com/questions/154097/whats-in-your-emacs
@@ -34,10 +39,11 @@
                                     ,(make-char 'greek-iso8859-7 107))
                     nil))))))
 
-(add-hook 'emacs-lisp-mode-hook 'sm-lambda-mode-hook)
-(add-hook 'lisp-mode-hook 'sm-lambda-mode-hook)
-(add-hook 'lisp-interactive-mode-hook 'sm-lamba-mode-hook)
-(add-hook 'scheme-mode-hook 'sm-lambda-mode-hook)
+(dolist (lisp-hook '(emacs-lisp-mode-hook
+                     lisp-mode-hook
+                     lisp-interactive-mode-hook
+                     scheme-mode-hook))
+  (add-hook lisp-hook 'sm-lambda-mode-hook))
 
 ;; 拷贝正则匹配的文本到 kill-ring，同时匹配的文本显示在一个缓冲区中
 ;; http://stackoverflow.com/questions/2289883/emacs-copy-matching-lines
