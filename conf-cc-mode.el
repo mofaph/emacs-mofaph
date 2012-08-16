@@ -44,7 +44,8 @@
 (add-hook 'c-initialization-hook 'setup-c-initialization-hook)
 
 (defun setup-c-mode-common-hook ()
-  (c-toggle-hungry-state 1))
+  (c-toggle-hungry-state 1)
+  (subword-mode 1))
 
 (add-hook 'c-mode-common-hook 'setup-c-mode-common-hook)
 
