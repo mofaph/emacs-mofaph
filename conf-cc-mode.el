@@ -1,3 +1,5 @@
+;; -*- coding: utf-8; -*-
+
 (setq c-default-style '((awk-mode       . "awk")
                         (c-mode         . "linux")
                         (c++-mode       . "stroustrup")
@@ -31,6 +33,15 @@
                         (setq tab-width 8)
                         (setq indent-tabs-mode nil)
                         (c-set-style "gnu")))))))
+
+;; Token from the cc-mode manual
+;; Make a non-standard key binding.  We can put this in
+;; c-mode-base-map because c-mode-map, c++-mode-map, and so on,
+;; inherit from it.
+(defun setup-c-initialization-hook ()
+  (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
+
+(add-hook 'c-initialization-hook 'setup-c-initialization-hook)
 
 (defun setup-c-mode-common-hook ()
   (c-toggle-hungry-state 1))
