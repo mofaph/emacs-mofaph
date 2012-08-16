@@ -32,8 +32,9 @@
                         (setq indent-tabs-mode nil)
                         (c-set-style "gnu")))))))
 
-(dolist (mode '(c-mode-hook
-                c++-mode-hook))
-  (add-hook mode (lambda () (c-toggle-hungry-state 1))))
+(defun setup-c-mode-common-hook ()
+  (c-toggle-hungry-state 1))
+
+(add-hook 'c-mode-common-hook 'setup-c-mode-common-hook)
 
 (provide 'conf-cc-mode)
