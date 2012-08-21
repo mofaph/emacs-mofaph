@@ -21,6 +21,7 @@
                             "DejaVu Sans Mono"))
 
 (defvar Chinese-font-list '("DejaVu Sans YuanTi Mono"
+			    "华文黑体"
                             "文泉驿等宽正黑"
                             "文泉驿等宽微米黑"))
 
@@ -69,14 +70,18 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 
 ;; 利用这个函数，Emacs 字体设置就是小菜一碟了
 (let ((machine (getenv "EMACS_MACHINE")))
-  (if (eq window-system 'x)
+  (when window-system
       (cond
 
-       ((string= machine "001")
+       ((string= machine "1920x1080")
+        (qiang-set-font English-font-list ":pixelsize=15"
+                        Chinese-font-list 15))
+
+       ((string= machine "1440x900")
         (qiang-set-font English-font-list ":pixelsize=14"
                         Chinese-font-list 14))
 
-       ((string= machine "002")
+       ((string= machine "800x600")
         (qiang-set-font English-font-list ":pixelsize=13"
                         Chinese-font-list 13))
 
