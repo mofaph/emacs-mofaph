@@ -1,0 +1,39 @@
+
+在这里，介绍 Emacs 中的一个技巧：append-next-kill。默认的快捷键是 C-M-w。
+
+hello 1
+hello 2
+hello 3
+hello 4
+hello 5
+
+在 Emacs 中，在上面的示例文本中。删除两行，结果如下：
+
+hello 3
+hello 4
+hello 5
+
+如果我们再删除两行，也就是第 4 行和第 5 行。结果如下：
+
+hello 3
+
+这时，如果我们使用 C-y 的话，那么结果将会这样：
+
+hello 3
+hello 4
+hello 5
+
+但是，如果在删除第 4 行和第 5 行之前，使用 append-next-kill，也就是按下快捷键
+C-M-w 的话，那么结果将会这样：
+
+hello 3
+hello 1
+hello 2
+hello 4
+hello 5
+
+这样，删除的文本就插入到最后了。
+
+参考链接：
+
+[1] http://ergoemacs.org/emacs/blog.html
