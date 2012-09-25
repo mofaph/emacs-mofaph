@@ -33,6 +33,8 @@
 ;; f11          toggle-fullscreen               conf-gui
 ;; C-x C-b      ibuffer                         conf-ibuffer
 ;; C-x C-f      ido-find-file                   conf-ido
+;; C-c a        org-agenda                      conf-org-mode
+;; C-c l        org-store-link                  conf-org-mode
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; C-=          er/expand-region                init-expand-region
