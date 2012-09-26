@@ -66,6 +66,17 @@
             (make-local-variable 'ac-ignores)
             (add-to-list 'ac-ignores "end")))
 
+;; Objctive-C
+;; http://www.yifeiyang.net/iphone-development-techniques-of-environmental-articles-1-use-emacs-development-iphone-application/
+(add-to-list 'ac-modes 'objc-mode)
+(if (require 'ac-company "ac-company.el" nil) ; elisp/ac-company.el
+    (progn
+      (ac-company-define-source ac-source-company-xcode company-xcode)
+      (add-hook 'objc-mode-hook
+                (lambda ()
+                  (add-to-list 'ac-sources 'ac-source-company-xcode))))
+  (message "Warning: No Objective-C auto completion."))
+
 (ac-clear-dictionary-cache)
 
 (provide 'init-auto-complete)

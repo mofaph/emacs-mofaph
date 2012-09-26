@@ -57,6 +57,7 @@
                      kill-ring-search
                      c-eldoc
                      highlight-symbol
+                     company
                      auto-complete
                      auto-complete-clang
                      magit))
