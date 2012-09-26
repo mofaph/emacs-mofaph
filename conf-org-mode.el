@@ -1,5 +1,7 @@
 ;; -*- coding: utf-8; -*-
 
+;; http://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
+
 (require 'org-install)
 
 (setq org-log-done t)
