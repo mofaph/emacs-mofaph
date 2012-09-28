@@ -72,6 +72,7 @@
 (if (require 'ac-company "ac-company.el" t) ; elisp/ac-company.el
     (progn
       (ac-company-define-source ac-source-company-xcode company-xcode)
+      ;; FIXME: load two times, something went wrong
       (add-hook 'objc-mode-hook
                 (lambda ()
                   (add-to-list 'ac-sources 'ac-source-company-xcode))))
