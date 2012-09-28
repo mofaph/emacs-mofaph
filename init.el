@@ -46,6 +46,7 @@
 (require 'init-kill-ring-search)
 (require 'init-highlight-symbol)
 (require 'init-auto-complete)
+(require 'init-auto-complete-clang)
 (require 'init-magit)
 
 (require 'conf-key-binding)

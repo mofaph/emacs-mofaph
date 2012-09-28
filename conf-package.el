@@ -58,6 +58,7 @@
                      c-eldoc
                      highlight-symbol
                      auto-complete
+                     auto-complete-clang
                      magit))
     (fetch-package package)))
 
