@@ -81,7 +81,7 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
         (qiang-set-font English-font-list ":pixelsize=14"
                         Chinese-font-list 14))
 
-       ((string= machine "800x600")
+       ((string= machine "1024x600")
         (qiang-set-font English-font-list ":pixelsize=13"
                         Chinese-font-list 13))
 
