@@ -34,6 +34,8 @@
 ;; C-x C-b      ibuffer                         conf-ibuffer
 ;; C-x C-f      ido-find-file                   conf-ido
 ;; C-c a        org-agenda                      conf-org-mode
+;; C-c b        org-iswitchb                    conf-org-mode
+;; C-c c        org-capture                     conf-org-mode
 ;; C-c l        org-store-link                  conf-org-mode
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
