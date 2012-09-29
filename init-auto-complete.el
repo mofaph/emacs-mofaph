@@ -69,7 +69,7 @@
 ;; Objctive-C
 ;; http://www.yifeiyang.net/iphone-development-techniques-of-environmental-articles-1-use-emacs-development-iphone-application/
 (add-to-list 'ac-modes 'objc-mode)
-(if (require 'ac-company "ac-company.el" nil) ; elisp/ac-company.el
+(if (require 'ac-company "ac-company.el" t) ; elisp/ac-company.el
     (progn
       (ac-company-define-source ac-source-company-xcode company-xcode)
       (add-hook 'objc-mode-hook
