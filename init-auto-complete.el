@@ -4,17 +4,21 @@
 (require 'auto-complete-config)
 (ac-config-default) ; also enable global-auto-complete-mode
 
+(setq ac-auto-start nil)
+(setq ac-auto-show-menu nil)
+(ac-set-trigger-key "TAB")
+(define-key ac-mode-map (kbd "M-/") 'auto-complete)
+
+(setq ac-use-menu-map t) ; recommended by the manual
+(define-key ac-menu-map (kbd "C-n") 'ac-next)
+(define-key ac-menu-map (kbd "C-p") 'ac-previous)
+
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/.ac-dict")
 (setq ac-user-dictionary-files "~/.emacs.d/.dict")
 
-(setq ac-auto-show-menu nil)
-(setq ac-auto-start nil)
 (setq ac-dwim nil)
-
-(ac-set-trigger-key "TAB")
-(define-key ac-mode-map (kbd "M-/") 'auto-complete)
-(define-key ac-completing-map (kbd "C-n") 'ac-next)
-(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(setq ac-use-quick-help nil)
+(setq ac-menu-height 7)
 
 ;; default sources:
 ;;     ac-source-abbrev
