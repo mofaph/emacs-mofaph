@@ -60,6 +60,12 @@
                                         ac-source-yasnippet))))
 (add-hook 'python-mode-hook 'ac-python-mode-setup)
 
+;; ruby
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (make-local-variable 'ac-ignores)
+            (add-to-list 'ac-ignores "end")))
+
 (ac-clear-dictionary-cache)
 
 (provide 'init-auto-complete)
