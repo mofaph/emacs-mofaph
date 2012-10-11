@@ -63,4 +63,26 @@ putting the matching lines in a buffer named *matching*"
                  result-buffer))))
     (pop-to-buffer result-buffer)))
 
+(defun move-beginning-of-line-enhance ()
+  "Enhance the default move-beginning-of-line.
+
+When the cursor looks like:
+
+`'    hello w|orld`'
+
+you pressed `'C-a`', and the cursor move to the real beginning of line.
+
+If you pressed `'C-a`' again, you will get the cursor at the
+first non-whitespace char:
+
+`'    |hello world`'
+"
+  (interactive)
+  (let ((column (- (point) (point-at-bol))))
+    (cond
+     ((/= column 0) (move-beginning-of-line nil))
+     (t (back-to-indentation)))))
+
+(global-set-key (kbd "C-a") 'move-beginning-of-line-enhance)
+
 (provide 'conf-defun)
