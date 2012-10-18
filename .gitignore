@@ -4,6 +4,7 @@ backup/
 el-get/
 elisp/
 elpa/
+eshell/
 url/
 
 *.elc
