@@ -28,6 +28,7 @@
 
 ;; key          command                         file
 ;; =============================================================================
+;; C-x C-c      give-tips-when-want-quit-emacs  conf-defun
 ;; C-j          open-newline-indent             conf-defun
 ;; M-j          open-newline-above              conf-defun
 ;; f11          toggle-fullscreen               conf-gui

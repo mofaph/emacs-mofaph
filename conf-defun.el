@@ -85,4 +85,11 @@ first non-whitespace char:
 
 (global-set-key (kbd "C-a") 'move-beginning-of-line-enhance)
 
+(defun give-tips-when-want-quit-emacs ()
+  "Prevent ancident hit C-x C-c."
+  (interactive)
+  (message "Please using save-buffers-kill-terminal to quit Emacs."))
+
+(global-set-key (kbd "C-x C-c") 'give-tips-when-want-quit-emacs)
+
 (provide 'conf-defun)
