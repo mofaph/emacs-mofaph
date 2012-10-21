@@ -15,8 +15,7 @@
 
 ;; 首先，判断某个字体在系统中是否安装
 (defun qiang-font-existsp (font)
-  (if (null (x-list-fonts font))
-      nil t))
+  (not (null (x-list-fonts font))))
 
 ;; 还要有个辅助函数，用来生产带上 font size 信息的 font 描述文本
 (defun qiang-make-font-string (font-name font-size)
@@ -46,8 +45,7 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
     ;; (add-to-list 'default-frame-alist '(font . "Consolas:pixelsize=18"))
     ;; We have to use set-face-attribute
     (message "Set English Font to %s" en-font)
-    (set-face-attribute
-     'default nil :font en-font)
+    (set-face-attribute 'default nil :font en-font)
 
     ;; Set Chinese font
     ;; Do not use 'unicode charset, it will cause the english font setting invalid
