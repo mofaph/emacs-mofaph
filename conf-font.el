@@ -2,18 +2,6 @@
 
 ;;; http://emacser.com/torture-emacs.htm
 
-;; 首先，判断某个字体在系统中是否安装
-(defun qiang-font-existsp (font)
-  (if (null (x-list-fonts font))
-      nil t))
-
-;; 其次，要按顺序找到一个字体列表中第一个已经安装可用的字体
-(defvar font-list '("Microsoft Yahei"
-                    "文泉驿等宽微米黑"
-                    "黑体"
-                    "新宋体"
-                    "宋体"))
-
 (defvar English-font-list '("Monaco"
                             "文泉驿等宽正黑"
                             "Monospace"
@@ -21,13 +9,14 @@
                             "DejaVu Sans Mono"))
 
 (defvar Chinese-font-list '("DejaVu Sans YuanTi Mono"
-			    "华文黑体"
+                            "华文黑体"
                             "文泉驿等宽正黑"
                             "文泉驿等宽微米黑"))
 
-;; find-if is in common list package
-(eval-when-compile (require 'cl))
-(if window-system (find-if #'qiang-font-existsp font-list))
+;; 首先，判断某个字体在系统中是否安装
+(defun qiang-font-existsp (font)
+  (if (null (x-list-fonts font))
+      nil t))
 
 ;; 还要有个辅助函数，用来生产带上 font size 信息的 font 描述文本
 (defun qiang-make-font-string (font-name font-size)
@@ -43,7 +32,7 @@
                        &optional chinese-font-size)
   "english-font-size could be set to \":pixelsize=18\" or a integer.
 If set/leave chinese-font-size to nil, it will follow english-font-size"
-  (require 'cl)                         ; for find if
+  (require 'cl)                         ; for find-if
   (let ((en-font (qiang-make-font-string
                   (find-if #'qiang-font-existsp english-fonts)
                   english-font-size))
