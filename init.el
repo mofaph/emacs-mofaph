@@ -41,6 +41,7 @@
 (require 'init-smex)
 (require 'init-undo-tree)
 (require 'init-ace-jump-mode)
+(require 'init-hungry-delete)
 (require 'init-move-text)
 (require 'init-expand-region)
 (require 'init-mark-multiple)

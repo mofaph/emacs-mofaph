@@ -50,6 +50,7 @@
                      switch-window
                      undo-tree
                      ace-jump-mode
+                     hungry-delete
                      move-text
                      expand-region
                      mark-multiple

@@ -11,6 +11,7 @@ c-eldoc                 http://github.com/nflath/c-eldoc
 company-mode            http://nschum.de/src/emacs/company-mode/
 expand-region           https://github.com/magnars/expand-region.el
 highlight-symbol        http://nschum.de/src/emacs/highlight-symbol/
+hungry-delete           http://github.com/nflath/hungry-delete
 kill-ring-search        http://nschum.de/src/emacs/kill-ring-search/
 magit                   https://github.com/magit/magit
 mark-multiple           https://github.com/magnars/mark-multiple.el
