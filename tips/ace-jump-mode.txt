@@ -1,0 +1,19 @@
+ace-jump-mode 的官网在 installed-packages.txt 中可以找到。
+
+ace-jump-mode 这个插件可以在页面中快速定位。快速定位的意思，就是运行
+ace-jump-mode 这个命令后，根据提示输入一个字符，然后根据程序的提示再次输入一个字
+符就可以去到屏幕的任何地方。
+
+ace-jump-mode 提供了三种快速定位的方法：
+
+        根据单词定位
+        根据字符定位
+        根据行定位
+
+单词定位：C-c SPC
+字符定位：C-u C-c SPC
+行定位：C-u C-u C-c SPC
+
+现在可以看到，ace-jump-mode 完全包含了 jump-char 的功能了。
+
+2012/10/24
