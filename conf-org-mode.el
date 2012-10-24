@@ -7,7 +7,7 @@
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (setq org-log-done t)
-(setq org-agenda-files '("~/org/work.org" "~/org/home.org"))
+(setq org-agenda-files '("~/org/"))
 
 ;; Token from Org-mode manual
 (global-set-key (kbd "C-c a") 'org-agenda)
