@@ -1,7 +1,7 @@
 ;; 分离 C-m C-i C-[，只能在图形下工作
 ;; 摘自 http://blog.nguyenvq.com/2011/02/24/875/
 ;; Translate the problematic keys to the function key Hyper
-(when (eq window-system 'x)
+(when window-system
       (keyboard-translate ?\C-i ?\H-i)
       (keyboard-translate ?\C-m ?\H-m)
       (keyboard-translate ?\C-[ ?\H-[)
