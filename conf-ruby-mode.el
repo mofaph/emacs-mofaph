@@ -2,10 +2,6 @@
 
 (require 'conf-defun) ; open-newline-indent
 
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (local-set-key (kbd "C-j") 'open-newline-indent)))
-
 (defun reindent-current-line-and-then-open-newline-above ()
   "Reindent current line, and then open newlline above current line."
   (interactive)
@@ -19,12 +15,11 @@
    (t
     (open-line 1))))
 
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (local-set-key (kbd "M-j") 'reindent-current-line-and-then-open-newline-above)))
+(defun make-personal-ruby-key-binding ()
+  (local-set-key (kbd "C-j") 'open-newline-indent)
+  (local-set-key (kbd "M-j") 'reindent-current-line-and-then-open-newline-above)
+  (local-set-key (kbd "RET") 'reindent-then-newline-and-indent))
 
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (local-set-key (kbd "RET") 'reindent-then-newline-and-indent)))
+(add-hook 'ruby-mode-hook 'make-personal-ruby-key-binding)
 
 (provide 'conf-ruby-mode)
