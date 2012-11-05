@@ -18,6 +18,9 @@
 (require 'find-func)
 (find-function-setup-keys)
 
+;; man
+(setq Man-switches "-a")
+
 ;;; 定义一些语言相关的变量
 
 (defvar c-related-mode '(c-mode
