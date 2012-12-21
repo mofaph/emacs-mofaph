@@ -11,14 +11,11 @@
 (defun open-newline-above ()
   "open a new line above current line."
   (interactive)
+  (move-end-of-line 1)
   (delete-horizontal-space t)
   (move-beginning-of-line 1)
-  (cond
-   ((> (point) (point-min))
-    (backward-char 1)
-    (newline-and-indent))
-   (t
-    (open-line 1))))
+  (open-line 1)
+  (indent-according-to-mode))
 
 (global-set-key (kbd "M-j") 'open-newline-above)
 (dolist (hook '(emacs-lisp-mode-hook
