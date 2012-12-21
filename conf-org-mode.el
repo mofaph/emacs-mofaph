@@ -21,6 +21,15 @@
 
 (setq org-enforce-todo-dependencies t)  ; 当子任务还有 TODO 标志时，不能将任务设置为 DONE
 
+;; Org(Top) -> TODO Items -> Breaking down tasks
+;; 当子任务完成时，自动地将任务设置为完成
+(defun org-summary-todo (n-done n-not-done)
+  "Switch entry to DONE when all subentries are done, to TODO otherwise."
+  (let (org-log-done org-log-states)   ; turn off logging
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+
+(add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+
 
 
 ;;; Date/Times
