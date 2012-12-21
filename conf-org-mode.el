@@ -21,6 +21,16 @@
 
 (setq org-enforce-todo-dependencies t)  ; 当子任务还有 TODO 标志时，不能将任务设置为 DONE
 
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "WAIT(w@/!)" "WORKING(W)" "|" "DONE(d@/!)")
+        (sequence "|" "CANCELED(c@/!)")))
+
+(setq org-todo-keyword-faces
+      '(("TODO"         . (:foreground "red" :weight bold))
+        ("CANCELED"     . (:foreground "dodger blue" :weight bold))
+        ("WAIT"         . (:foreground "yellow" :weight bold))
+        ("WORKING"      . (:foreground "magenta" :weight bold))))
+
 ;; Org(Top) -> TODO Items -> Breaking down tasks
 ;; 当子任务完成时，自动地将任务设置为完成
 (defun org-summary-todo (n-done n-not-done)
