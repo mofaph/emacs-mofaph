@@ -26,10 +26,10 @@ tips/ 目录存放了关于使用 Emacs 的一些技巧。
       明。同理，如果需要删除一个插件，也需要修改这些文件。
 
           - conf-key-binding.el         自定义了键绑定之后应该在这个文件说明
-          - conf-package.el             使用 package.el 安装插件后，需要更新这个文件的安装插件列表
+          - conf-package.el             安装插件后，需要更新安装插件列表
           - init-pkgname.el             插件的配置多于一条语句才建立这个文件
-          - init.el                     安装插件后，应该在这个文件中启用插件
-          - installed-packages.txt      安装插件后，应该更新这个文件，加入插件的名字和官网
+          - init.el                     启用插件
+          - installed-packages.txt      插件的名字和官网
 
 mofaph
 2012/5/26
