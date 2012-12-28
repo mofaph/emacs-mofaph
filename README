@@ -9,6 +9,11 @@
     - 容易迁移
     - 使用包管理系统管理第三方扩展
 
+这个配置的目录结构是参考 Steve Purcell 的配置，他的网站和 Github 如下：
+
+website: www.sanityinc.com
+github:  https://github.com/purcell/emacs.d
+
 当前使用 package.el 对第三方插件进行管理，因为 package.el 不依赖任何第三方工具，
 并且是 Emacs-24 自带的。
 
