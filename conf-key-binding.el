@@ -59,5 +59,6 @@
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
 ;; C-x M-x      execute-extended-command        init-smex
+;; M-R          paredit-raise-sexp              init-paredit
 
 (provide 'conf-key-binding)

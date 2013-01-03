@@ -51,6 +51,7 @@
 (require 'init-auto-complete-clang)
 (require 'init-magit)
 (require 'init-company-mode)
+(require 'init-paredit)
 
 (require 'conf-key-binding)
 (require 'conf-defun)

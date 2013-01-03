@@ -17,6 +17,7 @@ magit                   https://github.com/magit/magit
 mark-multiple           https://github.com/magnars/mark-multiple.el
 move-text               http://www.emacswiki.org/emacs/move-text.el
 nav                     http://code.google.com/p/emacs-nav/
+paredit                 http://mumble.net/~campbell/emacs/paredit.el
 smex                    https://github.com/nonsequitur/smex
 switch-window           https://github.com/dimitri/switch-window
 undo-tree               http://www.dr-qubit.org/emacs.php
