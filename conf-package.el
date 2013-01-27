@@ -59,6 +59,7 @@
                      kill-ring-search
                      c-eldoc
                      highlight-symbol
+                     lua-mode
                      company
                      auto-complete
                      auto-complete-clang

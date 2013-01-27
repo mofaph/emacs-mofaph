@@ -36,6 +36,7 @@
 (require 'browse-kill-ring)
 (require 'switch-window)
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
+(require 'lua-mode)
 
 (require 'init-nav)
 (require 'init-smex)
