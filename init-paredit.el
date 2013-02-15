@@ -1,5 +1,7 @@
 ;; -*- coding: utf-8; -*-
 
+(require 'paredit nil t)
+
 (eval-after-load 'paredit
   '(progn
      (define-key paredit-mode-map (kbd "M-r") 'move-to-window-line-top-bottom)
