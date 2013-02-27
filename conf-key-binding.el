@@ -41,11 +41,11 @@
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; C-=          er/expand-region                init-expand-region
-;; C-F3         highlight-symbol-at-point       init-highlight-symbol
-;; F3           highlight-symbol-next           init-highlight-symbol
-;; S-F3         highlight-symbol-prev           init-highlight-symbol
-;; M-F3         highlight-symbol-prev           init-highlight-symbol
-;; C-S-F3       highlight-symbol-query-replace  init-highlight-symbol
+;; C-F7         highlight-symbol-at-point       init-highlight-symbol
+;; F7           highlight-symbol-next           init-highlight-symbol
+;; S-F7         highlight-symbol-prev           init-highlight-symbol
+;; M-F7         highlight-symbol-prev           init-highlight-symbol
+;; C-S-F7       highlight-symbol-query-replace  init-highlight-symbol
 ;; C-M-y        kill-ring-search                init-kill-ring-search
 ;; C-x C-z      magit-status                    init-magit
 ;; C-x r t      inline-string-rectangle         init-mark-multiple
