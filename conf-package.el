@@ -43,7 +43,8 @@
   (add-to-list 'package-archives '("tromey"             . "http://tromey.com/elpa/") t)
   (add-to-list 'package-archives '("marmalade"          . "http://marmalade-repo.org/packages/") t)
 
-  (package-initialize)
+  (setq package-enable-at-startup nil)  ; 避免在处理完 init.el 后再次加载扩展包
+  (package-initialize)                  ; 由于在启动时就配置包了，所以应该加载包
 
   (dolist (package '(nav
                      smex
