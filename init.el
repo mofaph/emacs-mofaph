@@ -40,6 +40,7 @@
 
 (require 'init-nav)
 (require 'init-smex)
+(require 'init-ido-complete-space-or-hyphen)
 (require 'init-undo-tree)
 (require 'init-ace-jump-mode)
 (require 'init-hungry-delete)

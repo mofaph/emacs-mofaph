@@ -12,6 +12,7 @@ company-mode            http://nschum.de/src/emacs/company-mode/
 expand-region           https://github.com/magnars/expand-region.el
 highlight-symbol        http://nschum.de/src/emacs/highlight-symbol/
 hungry-delete           http://github.com/nflath/hungry-delete
+ido-complete-space-or-hyphen    https://github.com/doitian/ido-complete-space-or-hyphen/blob/master/ido-complete-space-or-hyphen.el
 kill-ring-search        http://nschum.de/src/emacs/kill-ring-search/
 lua-mode                http://immerrr.github.com/lua-mode/
 magit                   https://github.com/magit/magit

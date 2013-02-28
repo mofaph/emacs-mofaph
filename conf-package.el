@@ -47,6 +47,7 @@
 
   (dolist (package '(nav
                      smex
+                     ido-complete-space-or-hyphen
                      switch-window
                      undo-tree
                      ace-jump-mode
