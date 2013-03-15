@@ -8,6 +8,16 @@
 
 (global-set-key (kbd "C-j") 'open-newline-indent)
 
+(dolist (hook '(asm-mode-hook
+                emacs-lisp-mode-hook
+                c-mode-hook
+                c++-mode-hook
+                lisp-mode-hook
+                objc-mode-hook
+                java-mode
+                sh-mode-hook))
+  (add-hook hook (lambda () (local-set-key (kbd "C-j") 'open-newline-indent))))
+
 (defun open-newline-above ()
   "open a new line above current line."
   (interactive)
