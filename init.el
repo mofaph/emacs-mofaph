@@ -19,6 +19,7 @@
 (require 'conf-gui)
 
 (require 'conf-info)
+(require 'conf-dired)
 (require 'conf-cc-mode)
 (require 'conf-ruby-mode)
 (require 'conf-org-mode)

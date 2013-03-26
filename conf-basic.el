@@ -98,10 +98,6 @@
 ;; 递归使用 minibuffer
 (setq-default enable-recursive-minibuffers t)
 
-;; 让 dired 可以递归的拷贝和删除目录
-(setq-default dired-recursive-copies 'top)
-(setq-default dired-recursive-deletes 'top)
-
 ;; 在标题栏显示 buffer 的名字
 (setq-default frame-title-format '(buffer-file-name "%f" ("%b")))
 
