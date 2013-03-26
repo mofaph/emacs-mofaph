@@ -54,12 +54,14 @@
                       '(sh-mode-hook)))
   (add-hook hook (lambda () (local-set-key (kbd "RET") 'newline-and-indent))))
 
-;; 高亮 FIXME 关键字
+;; 高亮 FIXME|WARNING|BUG|NOTE 关键字
 (dolist (mode (append c-related-mode
                       lisp-related-mode
                       '(sh-mode)))
   (font-lock-add-keywords mode
-                          '(("\\<\\(FIXME\\):?\\>" 1 font-lock-warning-face t))))
+                          '(("\\<\\(FIXME\\|WARNING\\|BUG\\|NOTE\\):?\\>"
+                             1
+                             font-lock-warning-face t))))
 
 ;; https://github.com/purcell/emacs.d/blob/master/init-editing-utils.el
 (defun highlight-80+-column ()
