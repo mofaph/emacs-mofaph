@@ -21,9 +21,9 @@
 (defun open-newline-above ()
   "open a new line above current line."
   (interactive)
+  (indent-according-to-mode)
   (move-end-of-line 1)
   (delete-horizontal-space t)
-  (indent-according-to-mode)
   (move-beginning-of-line 1)
   (open-line 1)
   (indent-according-to-mode))
