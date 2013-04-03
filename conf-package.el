@@ -46,7 +46,8 @@
   (setq package-enable-at-startup nil)  ; 避免在处理完 init.el 后再次加载扩展包
   (package-initialize)                  ; 由于在启动时就配置包了，所以应该加载包
 
-  (dolist (package '(nav
+  (dolist (package '(
+                     nav
                      smex
                      ido-complete-space-or-hyphen
                      switch-window
@@ -65,7 +66,8 @@
                      company
                      auto-complete
                      auto-complete-clang
-                     magit))
+                     magit
+                     ))
     (fetch-package package)))
 
 (provide 'conf-package)
