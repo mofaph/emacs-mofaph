@@ -9,10 +9,7 @@
 (global-hi-lock-mode t)
 (global-auto-revert-mode 1)
 (winner-mode 1)
-
 (delete-selection-mode t)
-(recentf-mode t)
-(setq recentf-save-file "~/.emacs.d/.recentf")
 
 (require 'uniquify)
 ;; 当寻找一个同名的文件，改变两个 buffer 的名字，前面加上目录名

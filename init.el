@@ -7,6 +7,7 @@
 
 (require 'conf-basic)
 (require 'conf-ido)
+(require 'conf-recentf)
 (require 'conf-ibuffer)
 (require 'conf-icomplete)
 (require 'conf-font)
