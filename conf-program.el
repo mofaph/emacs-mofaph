@@ -21,32 +21,6 @@
 ;; man
 (setq Man-switches "-a")
 
-;;; 定义一些语言相关的变量
-
-(defvar c-related-mode '(c-mode
-                         c++-mode
-                         java-mode
-                         objc-mode)
-  "The C related mode.")
-
-(defvar c-related-mode-hook
-  (mapcar (lambda (mode)
-            (intern (concat (symbol-name mode) "-hook")))
-          c-related-mode)
-  "The C related mode hook.")
-
-(defvar lisp-related-mode '(emacs-lisp-mode
-                            lisp-mode
-                            lisp-interaction-mode
-                            scheme-mode)
-  "The Lisp related mode.")
-
-(defvar lisp-related-mode-hook
-  (mapcar (lambda (mode)
-            (intern (concat (symbol-name mode) "-hook")))
-          lisp-related-mode)
-  "The Lisp related mode hook.")
-
 ;; 自动缩进
 ;; 这里没有使用 electric-indent-mode，因为这个次模式在自动缩进方面有问题
 ;; 它不能很好地处理在行末或者是空白行的行首键入 C-o，它总是会缩进不该缩进的行

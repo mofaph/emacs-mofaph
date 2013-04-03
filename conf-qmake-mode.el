@@ -1,6 +1,6 @@
 ;; -*- coding: utf-8 -*-
 
-;; elisp-dir 已经在 ~/.emacs.d/init.el 中定义了
+;; elisp-dir: global-variable.el
 (when (file-exists-p (expand-file-name (concat elisp-dir "qmake.el")))
   (require 'qmake-mode "qmake.el"))
 
