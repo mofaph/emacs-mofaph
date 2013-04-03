@@ -54,12 +54,12 @@
                       '(sh-mode-hook)))
   (add-hook hook (lambda () (local-set-key (kbd "RET") 'newline-and-indent))))
 
-;; 高亮 FIXME|WARNING|BUG|NOTE 关键字
+;; 高亮 FIXME|WARNING|BUG|NOTE|TODO 关键字
 (dolist (mode (append c-related-mode
                       lisp-related-mode
                       '(sh-mode)))
   (font-lock-add-keywords mode
-                          '(("\\<\\(FIXME\\|WARNING\\|BUG\\|NOTE\\):?\\>"
+                          '(("\\<\\(FIXME\\|WARNING\\|BUG\\|NOTE\\|TODO\\):?\\>"
                              1
                              font-lock-warning-face t))))
 
