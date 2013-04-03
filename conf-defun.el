@@ -8,14 +8,12 @@
 
 (global-set-key (kbd "C-j") 'open-newline-indent)
 
-(dolist (hook '(asm-mode-hook
-                emacs-lisp-mode-hook
-                c-mode-hook
-                c++-mode-hook
-                lisp-mode-hook
-                objc-mode-hook
-                java-mode
-                sh-mode-hook))
+(dolist (hook (append c-related-mode-hook
+                      lisp-related-mode-hook
+                      '(
+                        asm-mode-hook
+                        sh-mode-hook
+                        )))
   (add-hook hook (lambda () (local-set-key (kbd "C-j") 'open-newline-indent))))
 
 (defun open-newline-above ()
@@ -29,14 +27,13 @@
   (indent-according-to-mode))
 
 (global-set-key (kbd "M-j") 'open-newline-above)
-(dolist (hook '(asm-mode-hook
-                emacs-lisp-mode-hook
-                c-mode-hook
-                c++-mode-hook
-                lisp-mode-hook
-                objc-mode-hook
-                java-mode
-                sh-mode-hook))
+
+(dolist (hook (append c-related-mode-hook
+                      lisp-related-mode-hook
+                      '(
+                        asm-mode-hook
+                        sh-mode-hook
+                        )))
   (add-hook hook (lambda () (local-set-key (kbd "M-j") 'open-newline-above))))
 
 ;; 使用 lambda 替代 _lambda_ （加下划线是因为在 Emacs 中设置会原地生效）
