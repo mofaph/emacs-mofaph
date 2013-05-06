@@ -50,6 +50,7 @@
                      nav
                      smex
                      ido-complete-space-or-hyphen
+                     ido-vertical-mode
                      switch-window
                      undo-tree
                      ace-jump-mode
