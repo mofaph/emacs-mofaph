@@ -21,6 +21,16 @@
 ;; man
 (setq Man-switches "-a")
 
+;; 当编译失败时,跳转到第一个错误
+(setq compilation-auto-jump-to-first-error t)
+
+;; 当编译成功时，自动关闭编译消息窗口
+(setq compilation-finish-functions
+      (lambda (buf str)
+        (when (and (string= (buffer-name buf) "*compilation*")
+                   (not (string-match "exited abnormally" str)))
+          (run-at-time 0.0 nil 'delete-windows-on buf))))
+
 ;; 自动缩进
 ;; 这里没有使用 electric-indent-mode，因为这个次模式在自动缩进方面有问题
 ;; 它不能很好地处理在行末或者是空白行的行首键入 C-o，它总是会缩进不该缩进的行
