@@ -54,6 +54,7 @@
                      switch-window
                      undo-tree
                      ace-jump-mode
+                     popwin
                      paredit
                      hungry-delete
                      move-text
