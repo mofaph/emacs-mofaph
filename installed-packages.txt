@@ -17,8 +17,8 @@ ido-vertical-model      https://github.com/rson/ido-vertical-mode.el
 kill-ring-search        http://nschum.de/src/emacs/kill-ring-search/
 lua-mode                http://immerrr.github.com/lua-mode/
 magit                   https://github.com/magit/magit
-mark-multiple           https://github.com/magnars/mark-multiple.el
 move-text               http://www.emacswiki.org/emacs/move-text.el
+multiple-cursors        https://github.com/magnars/multiple-cursors.el
 nav                     http://code.google.com/p/emacs-nav/
 paredit                 http://mumble.net/~campbell/emacs/paredit.el
 popwin                  https://github.com/m2ym/popwin-el

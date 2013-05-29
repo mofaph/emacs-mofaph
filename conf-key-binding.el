@@ -48,11 +48,9 @@
 ;; C-S-F7       highlight-symbol-query-replace  init-highlight-symbol
 ;; C-M-y        kill-ring-search                init-kill-ring-search
 ;; C-x C-z      magit-status                    init-magit
-;; C-x r t      inline-string-rectangle         init-mark-multiple
-;; C-<          mark-previous-like-this         init-mark-multiple
-;; C->          mark-next-like-this             init-mark-multiple
-;; C-*          mark-all-like-this              init-mark-multiple
-;; C-M-m        mark-more-like-this             init-mark-multiple
+;; C-<          mc/mark-previous-like-this      init-multiple-cursors
+;; C->          mc/mark-next-like-this          init-multiple-cursors
+;; C-*          mc/mark-all-like-this           init-multiple-cursors
 ;; M-up         move-text-up                    init-move-text
 ;; M-down       move-text-down                  init-move-text
 ;; f9           nav-toggle                      init-nav

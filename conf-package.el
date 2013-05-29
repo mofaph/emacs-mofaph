@@ -53,13 +53,13 @@
                      ido-vertical-mode
                      switch-window
                      undo-tree
+                     multiple-cursors
                      ace-jump-mode
                      popwin
                      paredit
                      hungry-delete
                      move-text
                      expand-region
-                     mark-multiple
                      browse-kill-ring
                      kill-ring-search
                      c-eldoc
