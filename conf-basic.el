@@ -128,5 +128,6 @@
 (put 'downcase-region 'disabled nil)
 (put 'scroll-left 'disabled nil)
 (put 'narrow-to-page 'disabled nil)
+(put 'erase-buffer 'disabled nil)
 
 (provide 'conf-basic)
