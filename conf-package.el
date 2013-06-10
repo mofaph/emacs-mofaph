@@ -63,6 +63,7 @@
                      browse-kill-ring
                      kill-ring-search
                      c-eldoc
+                     show-marks
                      highlight-symbol
                      lua-mode
                      company

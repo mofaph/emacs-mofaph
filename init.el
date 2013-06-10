@@ -48,6 +48,7 @@
 (require 'init-move-text)
 (require 'init-expand-region)
 (require 'init-kill-ring-search)
+(require 'init-show-marks)
 (require 'init-highlight-symbol)
 (require 'init-auto-complete)
 (require 'init-auto-complete-clang)

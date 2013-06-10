@@ -22,6 +22,7 @@ multiple-cursors        https://github.com/magnars/multiple-cursors.el
 nav                     http://code.google.com/p/emacs-nav/
 paredit                 http://mumble.net/~campbell/emacs/paredit.el
 popwin                  https://github.com/m2ym/popwin-el
+show-marks              https://github.com/vapniks/mark
 smex                    https://github.com/nonsequitur/smex
 switch-window           https://github.com/dimitri/switch-window
 undo-tree               http://www.dr-qubit.org/emacs.php
