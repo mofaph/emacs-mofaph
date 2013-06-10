@@ -70,6 +70,7 @@
                      auto-complete
                      auto-complete-clang
                      magit
+                     keyfreq
                      ))
     (fetch-package package)))
 
