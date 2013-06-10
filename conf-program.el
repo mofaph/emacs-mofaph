@@ -8,7 +8,7 @@
 (setq imenu-auto-rescan t)
 
 ;; hl-line
-(global-hl-line-mode 1)
+(if window-system (global-hl-line-mode 1))
 
 ;; eldoc
 (add-hook 'emacs-lisp-mode-hook (lambda () (eldoc-mode 1)))
