@@ -56,6 +56,7 @@
 (require 'init-company-mode)
 (require 'init-paredit)
 (require 'init-keyfreq)
+(require 'init-buffer-move)
 
 (require 'conf-key-binding)
 (require 'conf-defun)

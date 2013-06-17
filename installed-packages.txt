@@ -7,6 +7,7 @@ ace-jump-mode           https://github.com/winterTTr/ace-jump-mode
 auto-complete           http://cx4a.org/software/auto-complete/
 auto-complete-clang     https://github.com/brianjcj/auto-complete-clang
 browse-kill-ring        http://www.fan.gr.jp/~ring/doc/browse-kill-ring.html
+buffer-move             http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
 c-eldoc                 http://github.com/nflath/c-eldoc
 company-mode            http://nschum.de/src/emacs/company-mode/
 expand-region           https://github.com/magnars/expand-region.el

@@ -59,6 +59,7 @@
                      paredit
                      hungry-delete
                      move-text
+                     buffer-move
                      expand-region
                      browse-kill-ring
                      kill-ring-search
