@@ -4,6 +4,15 @@
 (require 'auto-complete-config)
 (ac-config-default) ; also enable global-auto-complete-mode
 
+(dolist (hook '(
+                text-mode-hook
+                org-mode-hook
+                ))
+  (add-hook hook 'auto-complete-mode))
+
+(defun ac-common-setup ()
+  (add-to-list 'ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers)))
+
 (setq ac-auto-start nil)
 (setq ac-auto-show-menu nil)
 (ac-set-trigger-key "TAB")
