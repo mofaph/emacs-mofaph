@@ -47,6 +47,7 @@
   (package-initialize)                  ; 由于在启动时就配置包了，所以应该加载包
 
   (dolist (package '(
+                     ido-ubiquitous
                      nav
                      smex
                      ido-complete-space-or-hyphen
