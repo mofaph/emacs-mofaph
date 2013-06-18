@@ -55,6 +55,7 @@
 (require 'init-auto-complete)
 (require 'init-auto-complete-clang)
 (require 'init-magit)
+(require 'init-imenu-anywhere)
 (require 'init-company-mode)
 (require 'init-paredit)
 (require 'init-keyfreq)

@@ -59,6 +59,7 @@
                      ace-jump-mode
                      popwin
                      paredit
+                     imenu-anywhere
                      hungry-delete
                      move-text
                      buffer-move
