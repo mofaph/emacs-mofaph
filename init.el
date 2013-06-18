@@ -42,6 +42,7 @@
 (require 'init-ido-vertical-mode)
 (require 'init-undo-tree)
 (require 'init-multiple-cursors)
+(require 'init-region-bindings-mode)
 (require 'init-ace-jump-mode)
 (require 'init-popwin)
 (require 'init-hungry-delete)

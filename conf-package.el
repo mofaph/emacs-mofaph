@@ -54,6 +54,7 @@
                      switch-window
                      undo-tree
                      multiple-cursors
+                     region-bindings-mode
                      ace-jump-mode
                      popwin
                      paredit
