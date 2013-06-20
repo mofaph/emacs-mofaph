@@ -6,6 +6,7 @@
 
 ;; imenu
 (setq imenu-auto-rescan t)
+(global-set-key (kbd "C-c C-j") 'imenu)
 
 ;; hl-line
 (if window-system (global-hl-line-mode 1))

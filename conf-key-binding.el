@@ -39,6 +39,7 @@
 ;; C-c b        org-iswitchb                    conf-org-mode
 ;; C-c c        org-capture                     conf-org-mode
 ;; C-c l        org-store-link                  conf-org-mode
+;; C-c C-j      imenu                           conf-program
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; M-S-up       buf-move-up                     init-buffer-move
