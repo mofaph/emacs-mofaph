@@ -46,6 +46,7 @@
 (require 'init-region-bindings-mode)
 (require 'init-ace-jump-mode)
 (require 'init-popwin)
+(require 'init-indent-guide)
 (require 'init-hungry-delete)
 (require 'init-move-text)
 (require 'init-expand-region)

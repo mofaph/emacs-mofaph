@@ -59,6 +59,7 @@
                      ace-jump-mode
                      popwin
                      paredit
+                     indent-guide
                      imenu-anywhere
                      hungry-delete
                      move-text
