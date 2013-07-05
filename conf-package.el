@@ -59,6 +59,7 @@
                      ace-jump-mode
                      popwin
                      paredit
+                     highlight-parentheses
                      indent-guide
                      imenu-anywhere
                      hungry-delete
