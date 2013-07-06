@@ -38,6 +38,7 @@
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 (require 'lua-mode)
 
+(require 'init-goto-last-change)
 (require 'init-nav)
 (require 'init-smex)
 (require 'init-ido-complete-space-or-hyphen)

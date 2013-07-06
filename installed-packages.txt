@@ -11,6 +11,7 @@ buffer-move             http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
 c-eldoc                 http://github.com/nflath/c-eldoc
 company-mode            http://nschum.de/src/emacs/company-mode/
 expand-region           https://github.com/magnars/expand-region.el
+goto-last-change        http://www.emacswiki.org/emacs/goto-last-change.el
 highlight-parentheses   http://nschum.de/src/emacs/highlight-parentheses/
 highlight-symbol        http://nschum.de/src/emacs/highlight-symbol/
 hungry-delete           http://github.com/nflath/hungry-delete
