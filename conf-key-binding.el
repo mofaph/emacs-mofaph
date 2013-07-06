@@ -56,6 +56,10 @@
 ;; C-c j        imenu-anywhere                  init-imenu-anywhere
 ;; C-M-y        kill-ring-search                init-kill-ring-search
 ;; C-x C-z      magit-status                    init-magit
+;; C-c m s      magit-status                    init-magit
+;; C-c m g      magit-grep                      init-magit
+;; C-c m b      magit-branch-manager            init-magit
+;; C-c m l      magit-log                       init-magit
 ;; C-<          mc/mark-previous-like-this      init-multiple-cursors
 ;; C->          mc/mark-next-like-this          init-multiple-cursors
 ;; C-*          mc/mark-all-like-this           init-multiple-cursors
