@@ -78,6 +78,7 @@
                      auto-complete-clang
                      magit
                      keyfreq
+                     sicp
                      ))
     (fetch-package package)))
 
