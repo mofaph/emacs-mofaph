@@ -26,8 +26,4 @@
              " "
              filename-and-process)))
 
-(when (require 'ibuf-ext nil t)
-
-  (add-to-list 'ibuffer-never-show-predicates "^\\*"))
-
 (provide 'conf-ibuffer)
