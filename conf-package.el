@@ -59,6 +59,7 @@
                      region-bindings-mode
                      ace-jump-mode
                      popwin
+                     projectile
                      paredit
                      highlight-parentheses
                      indent-guide
