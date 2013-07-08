@@ -23,3 +23,5 @@ url/
 ac-comphist.dat
 org-clock-save.el
 tramp
+/projectile-bookmarks.eld
+/projectile.cache
