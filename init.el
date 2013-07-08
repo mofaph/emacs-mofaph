@@ -31,7 +31,6 @@
 (require 'conf-package)
 
 ;; 配置 package.el 管理的插件
-;; 同时需要更新 installed-packages.txt
 (ido-ubiquitous)
 (require 'browse-kill-ring)
 (require 'switch-window)

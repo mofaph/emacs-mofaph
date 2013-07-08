@@ -1,4 +1,4 @@
-ace-jump-mode 的官网在 installed-packages.txt 中可以找到。
+ace-jump-mode 的官网在 conf-packages.el 中可以找到。
 
 ace-jump-mode 这个插件可以在页面中快速定位。快速定位的意思，就是运行
 ace-jump-mode 这个命令后，根据提示输入一个字符，然后根据程序的提示再次输入一个字

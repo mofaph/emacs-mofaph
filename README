@@ -32,7 +32,6 @@ tips/ 目录存放了关于使用 Emacs 的一些技巧。
     - conf-package.el             安装插件后，需要更新安装插件列表
     - init-pkgname.el             插件的配置多于一条语句才建立这个文件
     - init.el                     启用插件
-    - installed-packages.txt      插件的名字和官网
 
 mofaph
 2012/5/26

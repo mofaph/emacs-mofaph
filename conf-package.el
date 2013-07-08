@@ -4,8 +4,7 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Packages.html#Packages
 ;; http://ergoemacs.org/emacs/emacs_package_system.html
 
-;; 注意：使用 package.el 下载了插件之后，需要配置相应的插件，同时在
-;; installed-packages.txt 中更新已经安装的插件列表
+;; 注意：使用 package.el 下载了插件之后，需要配置相应的插件
 ;;
 ;; 以 nav 为例说明配置插件的方法，为了和内置的插件区别，使用 package.el 管理的插
 ;; 件以 init-* 开头
@@ -13,10 +12,6 @@
 ;; (require 'init-nav)
 ;;
 ;; 需要提供一个名为 init-nav.el 的文件在 ~/.emacs.d 目录下
-;; 同时在 installed-packages.txt 中增加一行 nav
-;;
-;; 如果是删除一个插件，那么需要修改这个文件。同时在 installed-packages.txt 中删除
-;; 对应的一行
 
 ;; https://github.com/purcell/emacs.d/blob/master/init-elpa.el
 (defun fetch-package (package &optional min-version no-refresh)
@@ -47,39 +42,39 @@
   (package-initialize)                  ; 由于在启动时就配置包了，所以应该加载包
 
   (dolist (package '(
-                     goto-last-change
-                     ido-ubiquitous
-                     nav
-                     smex
-                     ido-complete-space-or-hyphen
-                     ido-vertical-mode
-                     switch-window
-                     undo-tree
-                     multiple-cursors
-                     region-bindings-mode
-                     ace-jump-mode
-                     popwin
-                     projectile
-                     paredit
-                     highlight-parentheses
-                     indent-guide
-                     imenu-anywhere
-                     hungry-delete
-                     move-text
-                     buffer-move
-                     expand-region
-                     browse-kill-ring
-                     kill-ring-search
-                     c-eldoc
-                     show-marks
-                     highlight-symbol
-                     lua-mode
-                     company
-                     auto-complete
-                     auto-complete-clang
-                     magit
-                     keyfreq
-                     sicp
+                     ace-jump-mode                      ; https://github.com/winterTTr/ace-jump-mode
+                     auto-complete                      ; http://cx4a.org/software/auto-complete/
+                     auto-complete-clang                ; https://github.com/brianjcj/auto-complete-clang
+                     browse-kill-ring                   ; http://www.fan.gr.jp/~ring/doc/browse-kill-ring.html
+                     buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
+                     c-eldoc                            ; http://github.com/nflath/c-eldoc
+                     company                            ; http://nschum.de/src/emacs/company-mode/
+                     expand-region                      ; https://github.com/magnars/expand-region.el
+                     goto-last-change                   ; http://www.emacswiki.org/emacs/goto-last-change.el
+                     highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
+                     highlight-symbol                   ; http://nschum.de/src/emacs/highlight-symbol/
+                     hungry-delete                      ; http://github.com/nflath/hungry-delete
+                     ido-complete-space-or-hyphen       ; https://github.com/doitian/ido-complete-space-or-hyphen/blob/master/ido-complete-space-or-hyphen.el
+                     ido-ubiquitous                     ; https://github.com/DarwinAwardWinner/ido-ubiquitous
+                     ido-vertical-mode                  ; https://github.com/rson/ido-vertical-mode.el
+                     imenu-anywhere                     ; https://github.com/vitoshka/imenu-anywhere
+                     indent-guide                       ; https://github.com/zk-phi/indent-guide
+                     keyfreq                            ; https://github.com/dacap/keyfreq
+                     kill-ring-search                   ; http://nschum.de/src/emacs/kill-ring-search/
+                     lua-mode                           ; http://immerrr.github.com/lua-mode/
+                     magit                              ; https://github.com/magit/magit
+                     move-text                          ; http://www.emacswiki.org/emacs/move-text.el
+                     multiple-cursors                   ; https://github.com/magnars/multiple-cursors.el
+                     nav                                ; http://code.google.com/p/emacs-nav/
+                     paredit                            ; http://mumble.net/~campbell/emacs/paredit.el
+                     popwin                             ; https://github.com/m2ym/popwin-el
+                     projectile                         ; https://github.com/bbatsov/projectile
+                     region-bindings-mode               ; https://github.com/fgallina/region-bindings-mode
+                     show-marks                         ; https://github.com/vapniks/mark
+                     sicp                               ; http://www.neilvandyke.org/sicp-texi/
+                     smex                               ; https://github.com/nonsequitur/smex
+                     switch-window                      ; https://github.com/dimitri/switch-window
+                     undo-tree                          ; http://www.dr-qubit.org/emacs.php
                      ))
     (fetch-package package)))
 
