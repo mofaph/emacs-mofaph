@@ -5,7 +5,7 @@
 (setq hl-paren-colors '("black" "black" "black" "black"))
 
 (setq hl-paren-background-colors '(
-                                   "turquoise"
+                                   "light goldenrod"
                                    "salmon"
                                    "orchid"
                                    "light pink"
