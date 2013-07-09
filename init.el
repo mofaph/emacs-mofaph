@@ -32,11 +32,11 @@
 
 ;; 配置 package.el 管理的插件
 (ido-ubiquitous)
-(require 'browse-kill-ring)
 (require 'switch-window)
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 (require 'lua-mode)
 
+(require 'init-browse-kill-ring)
 (require 'init-goto-last-change)
 (require 'init-nav)
 (require 'init-smex)
