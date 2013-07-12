@@ -80,4 +80,17 @@ first non-whitespace char:
 
 (global-set-key (kbd "C-x C-c") 'give-tips-when-want-quit-emacs)
 
+;; http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/
+(defun visit-term-buffer ()
+  "Create or visit a terminal buffer."
+  (interactive)
+  (if (not (get-buffer "*ansi-term*"))
+      (progn
+        (split-window-sensibly (selected-window))
+        (other-window 1)
+        (ansi-term (getenv "SHELL")))
+    (switch-to-buffer-other-window "*ansi-term*")))
+
+(global-set-key (kbd "C-c t") 'visit-term-buffer)
+
 (provide 'conf-defun)
