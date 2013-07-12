@@ -64,6 +64,7 @@
 (require 'init-paredit)
 (require 'init-keyfreq)
 (require 'init-buffer-move)
+(require 'init-smartrep)
 
 (require 'conf-key-binding)
 (require 'conf-defun)

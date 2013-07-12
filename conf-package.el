@@ -72,6 +72,7 @@
                      region-bindings-mode               ; https://github.com/fgallina/region-bindings-mode
                      show-marks                         ; https://github.com/vapniks/mark
                      sicp                               ; http://www.neilvandyke.org/sicp-texi/
+                     smartrep                           ; https://github.com/myuhe/smartrep.el
                      smex                               ; https://github.com/nonsequitur/smex
                      switch-window                      ; https://github.com/dimitri/switch-window
                      undo-tree                          ; http://www.dr-qubit.org/emacs.php
