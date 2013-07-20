@@ -21,6 +21,7 @@
 (require 'conf-ruby-mode)
 (require 'conf-org-mode)
 (require 'conf-cmake-mode)
+(require 'conf-find-file)
 
 ;; 暂时不能使用 package.el 管理的插件
 (require 'conf-qmake-mode)
