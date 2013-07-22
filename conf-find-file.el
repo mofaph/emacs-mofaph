@@ -22,4 +22,6 @@
   (add-to-list 'cc-search-directories (concat skybility-ha "/include/*") 'end)
   (add-to-list 'cc-search-directories (concat skybility-ha "/src/*") 'end))
 
+(global-set-key (kbd "C-c o") 'ff-find-other-file)
+
 (provide 'conf-find-file)
