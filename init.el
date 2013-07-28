@@ -34,6 +34,7 @@
 
 ;; 配置 package.el 管理的插件
 (ido-ubiquitous)
+(require 'init-ido-sort-mtime)
 (require 'switch-window)
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 (require 'lua-mode)

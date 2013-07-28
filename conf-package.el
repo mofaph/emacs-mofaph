@@ -55,6 +55,7 @@
                      highlight-symbol                   ; http://nschum.de/src/emacs/highlight-symbol/
                      hungry-delete                      ; http://github.com/nflath/hungry-delete
                      ido-complete-space-or-hyphen       ; https://github.com/doitian/ido-complete-space-or-hyphen/blob/master/ido-complete-space-or-hyphen.el
+                     ido-sort-mtime                     ; https://github.com/pkkm/ido-sort-mtime
                      ido-ubiquitous                     ; https://github.com/DarwinAwardWinner/ido-ubiquitous
                      ido-vertical-mode                  ; https://github.com/rson/ido-vertical-mode.el
                      imenu-anywhere                     ; https://github.com/vitoshka/imenu-anywhere
