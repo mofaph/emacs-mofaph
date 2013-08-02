@@ -70,6 +70,7 @@
                      paredit                            ; http://mumble.net/~campbell/emacs/paredit.el
                      popwin                             ; https://github.com/m2ym/popwin-el
                      projectile                         ; https://github.com/bbatsov/projectile
+                     protobuf-mode                      ; https://code.google.com/p/protobuf/
                      region-bindings-mode               ; https://github.com/fgallina/region-bindings-mode
                      show-marks                         ; https://github.com/vapniks/mark
                      sicp                               ; http://www.neilvandyke.org/sicp-texi/

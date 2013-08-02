@@ -68,6 +68,7 @@
 (require 'init-keyfreq)
 (require 'init-buffer-move)
 (require 'init-smartrep)
+(require 'init-protobuf-mode)
 
 (require 'conf-key-binding)
 (require 'conf-defun)
