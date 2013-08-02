@@ -69,6 +69,7 @@
 (require 'init-buffer-move)
 (require 'init-smartrep)
 (require 'init-protobuf-mode)
+(require 'init-git-messenger)
 
 (require 'conf-key-binding)
 (require 'conf-defun)
