@@ -50,6 +50,7 @@
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
                      company                            ; http://nschum.de/src/emacs/company-mode/
                      expand-region                      ; https://github.com/magnars/expand-region.el
+                     gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
                      git-messenger                      ; https://github.com/syohex/emacs-git-messenger
                      goto-last-change                   ; http://www.emacswiki.org/emacs/goto-last-change.el
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
