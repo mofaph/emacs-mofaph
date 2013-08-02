@@ -1,0 +1,9 @@
+
+这个文件描述了如何在 org-mode 中使用 org-export-as-pdf 命令将文本导出为 pdf 文件。
+
+        http://blog.qinjian.me/2013/02/20/chinese_latex_in_org_mode/
+
+在相应的 org 文件加入下面的代码：
+
+        #+LATEX_HEADER: \usepackage{xeCJK}
+        #+LATEX_HEADER: \setCJKmainfont{文泉驿微米黑}
