@@ -93,4 +93,17 @@ first non-whitespace char:
 
 (global-set-key (kbd "C-c t") 'visit-term-buffer)
 
+;;;###autoload
+(defun random-theme()
+  "Random select theme
+
+Token from: https://github.com/baohaojun/system-config/blob/master/.emacs_d/lisp/bhj-defines.el
+"
+  (interactive)
+  (dolist (theme custom-enabled-themes)
+    (disable-theme theme))
+  (load-theme (let ((theme (nth (random (length (custom-available-themes))) (custom-available-themes))))
+                (message "loaded theme: %s" theme)
+                theme)))
+
 (provide 'conf-defun)
