@@ -139,4 +139,14 @@ Token from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
 
 (global-set-key (kbd "C-^") 'top-join-line)
 
+;;;###autoload
+(defun find-user-init-file ()
+  "Find emacs init file, usually called init.el.
+
+Token from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/"
+  (interactive)
+  (find-file user-init-file))
+
+(global-set-key (kbd "C-c I") 'find-user-init-file)
+
 (provide 'conf-defun)
