@@ -127,4 +127,14 @@ Token from: http://whattheemacsd.com/file-defuns.el-01.html#disqus_thread
           (message "File '%s' successfully renamed to '%s'"
                    name (file-name-nondirectory new-name)))))))
 
+;;;###autoload
+(defun top-join-line ()
+  "Join the current line with the line beneath it.
+
+Token from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
+  (interactive)
+  (delete-indentation 1))
+
+(global-set-key (kbd "C-^") 'top-join-line)
+
 (provide 'conf-defun)
