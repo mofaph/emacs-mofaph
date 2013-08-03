@@ -80,9 +80,11 @@ first non-whitespace char:
 
 (global-set-key (kbd "C-x C-c") 'give-tips-when-want-quit-emacs)
 
-;; http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/
+;;;###autoload
 (defun visit-term-buffer ()
-  "Create or visit a terminal buffer."
+  "Create or visit a terminal buffer.
+
+Token from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
   (interactive)
   (if (not (get-buffer "*ansi-term*"))
       (progn
