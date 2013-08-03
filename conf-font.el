@@ -56,19 +56,20 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
                         zh-font))))
 
 ;; 利用这个函数，Emacs 字体设置就是小菜一碟了
-(let ((machine (getenv "EMACS_MACHINE")))
-  (when window-system
+(if window-system
+    (let ((height (display-pixel-height))
+          (width  (display-pixel-width)))
       (cond
 
-       ((string= machine "1920x1080")
+       ((and (>= width 1920) (>= height 1080))
         (qiang-set-font English-font-list ":pixelsize=15"
                         Chinese-font-list 15))
 
-       ((string= machine "1440x900")
+       ((and (>= width 1366) (>= height 768))
         (qiang-set-font English-font-list ":pixelsize=14"
                         Chinese-font-list 14))
 
-       ((string= machine "1024x600")
+       ((and (>= width 1024) (>= height 600))
         (qiang-set-font English-font-list ":pixelsize=13"
                         Chinese-font-list 13))
 
