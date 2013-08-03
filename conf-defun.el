@@ -149,4 +149,11 @@ Token from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/
 
 (global-set-key (kbd "C-c I") 'find-user-init-file)
 
+;;;###autoload
+(defun find-key-binding-record ()
+  (interactive)
+  (find-file (concat user-emacs-directory "conf-key-binding.el")))
+
+(global-set-key (kbd "C-c K") 'find-key-binding-record)
+
 (provide 'conf-defun)

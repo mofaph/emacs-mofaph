@@ -35,6 +35,7 @@
 ;; M-j          open-newline-above              conf-defun
 ;; C-^          top-join-line                   conf-defun
 ;; C-c I        find-user-init-file             conf-defun
+;; C-c K        find-key-binding-record         conf-defun
 ;; C-c o        ff-find-other-file              conf-find-file
 ;; f11          toggle-fullscreen               conf-gui
 ;; C-x C-b      ibuffer                         conf-ibuffer
