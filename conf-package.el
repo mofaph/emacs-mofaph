@@ -4,18 +4,10 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Packages.html#Packages
 ;; http://ergoemacs.org/emacs/emacs_package_system.html
 
-;; 注意：使用 package.el 下载了插件之后，需要配置相应的插件
-;;
-;; 以 nav 为例说明配置插件的方法，为了和内置的插件区别，使用 package.el 管理的插
-;; 件以 init-* 开头
-;;
-;; (require 'init-nav)
-;;
-;; 需要提供一个名为 init-nav.el 的文件在 ~/.emacs.d 目录下
-
-;; https://github.com/purcell/emacs.d/blob/master/init-elpa.el
 (defun fetch-package (package &optional min-version no-refresh)
-  "Ask elpa to install given PACKAGE."
+  "Ask elpa to install given PACKAGE.
+
+Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
   (if (package-installed-p package min-version)
       t
     (if (or (assoc package package-archive-contents) no-refresh)
