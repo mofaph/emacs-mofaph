@@ -39,9 +39,6 @@
 ;; 每次卷动一行
 (setq-default scroll-conservatively 100)
 
-;; 立即在回显区显示按键
-(setq-default echo-keystrokes -1)
-
 ;; 在保存之前删除行末空白
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
