@@ -63,8 +63,7 @@ you pressed `'C-a`', and the cursor move to the real beginning of line.
 If you pressed `'C-a`' again, you will get the cursor at the
 first non-whitespace char:
 
-`'    |hello world`'
-"
+`'    |hello world`'"
   (interactive)
   (let ((column (- (point) (point-at-bol))))
     (cond
@@ -99,8 +98,7 @@ Token from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
 (defun random-theme()
   "Random select theme
 
-Token from: https://github.com/baohaojun/system-config/blob/master/.emacs_d/lisp/bhj-defines.el
-"
+Token from: https://github.com/baohaojun/system-config/blob/master/.emacs_d/lisp/bhj-defines.el"
   (interactive)
   (dolist (theme custom-enabled-themes)
     (disable-theme theme))
@@ -112,8 +110,7 @@ Token from: https://github.com/baohaojun/system-config/blob/master/.emacs_d/lisp
 (defun rename-current-buffer-file ()
   "Renames current buffer and file it is visiting.
 
-Token from: http://whattheemacsd.com/file-defuns.el-01.html#disqus_thread
-"
+Token from: http://whattheemacsd.com/file-defuns.el-01.html#disqus_thread"
   (interactive)
   (let ((name (buffer-name))
         (filename (buffer-file-name)))
@@ -151,6 +148,7 @@ Token from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/
 
 ;;;###autoload
 (defun find-key-binding-record ()
+  "Find personal key binding configuration file."
   (interactive)
   (find-file (concat user-emacs-directory "conf-key-binding.el")))
 
