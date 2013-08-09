@@ -1,12 +1,3 @@
-;; 分离 C-m C-i C-[，只能在图形下工作
-;; 摘自 http://blog.nguyenvq.com/2011/02/24/875/
-;; Translate the problematic keys to the function key Hyper
-(when window-system
-      (keyboard-translate ?\C-i ?\H-i)
-      (keyboard-translate ?\C-m ?\H-m)
-      (keyboard-translate ?\C-[ ?\H-[)
-      (global-set-key [?\H-m] 'set-mark-command)
-      (global-set-key [?\H-i] 'align))
 
 ;; 用 Ctl 加上鼠标滚轮操作来设置字体大小
 (cond
