@@ -45,8 +45,10 @@
                              1
                              font-lock-warning-face t))))
 
-;; https://github.com/purcell/emacs.d/blob/master/init-editing-utils.el
 (defun highlight-80+-column ()
+  "Highlight characters which exceed 80.
+
+Token from https://github.com/purcell/emacs.d/blob/master/init-editing-utils.el"
   (when (= show-trailing-whitespace 1)  ; conf-basic.el
     (set (make-local-variable 'whitespace-style) '(face trailing lines-tail))
     (whitespace-mode 0)
