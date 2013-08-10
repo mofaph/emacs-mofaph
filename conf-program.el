@@ -8,9 +8,6 @@
 (setq imenu-auto-rescan t)
 (global-set-key (kbd "C-c C-j") 'imenu)
 
-;; hl-line
-(if window-system (global-hl-line-mode 1))
-
 ;; eldoc
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'lisp-interactive-mode-hook 'turn-on-eldoc-mode)
