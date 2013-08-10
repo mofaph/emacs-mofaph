@@ -12,8 +12,8 @@
 (if window-system (global-hl-line-mode 1))
 
 ;; eldoc
-(add-hook 'emacs-lisp-mode-hook (lambda () (eldoc-mode 1)))
-(add-hook 'lisp-interactive-mode-hook (lambda () (eldoc-mode 1)))
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'lisp-interactive-mode-hook 'turn-on-eldoc-mode)
 
 ;; find-func
 (require 'find-func)
