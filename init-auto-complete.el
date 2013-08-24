@@ -12,7 +12,7 @@
 
 (setq ac-auto-start nil)
 (setq ac-auto-show-menu nil)
-(ac-set-trigger-key "TAB")
+;(ac-set-trigger-key "TAB")
 (define-key ac-mode-map (kbd "M-/") 'auto-complete)
 
 (setq ac-use-menu-map t) ; recommended by the manual
