@@ -51,4 +51,8 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
+;;; export
+
+(setq org-latex-to-pdf-process '("xelatex %f"))
+
 (provide 'conf-org-mode)
