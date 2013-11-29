@@ -73,6 +73,7 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      smex                               ; https://github.com/nonsequitur/smex
                      switch-window                      ; https://github.com/dimitri/switch-window
                      undo-tree                          ; http://www.dr-qubit.org/emacs.php
+                     xcscope                            ; http://cscope.sourceforge.net/
                      ))
     (fetch-package package)))
 

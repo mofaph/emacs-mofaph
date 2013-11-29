@@ -71,6 +71,7 @@
 (require 'init-protobuf-mode)
 (require 'init-git-messenger)
 (require 'init-skeleton-complete)
+(require 'init-xcscope)
 
 (require 'conf-key-binding)
 (require 'conf-defun)
