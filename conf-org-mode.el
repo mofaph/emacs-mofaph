@@ -22,11 +22,12 @@
 (setq org-enforce-todo-dependencies t)  ; 当子任务还有 TODO 标志时，不能将任务设置为 DONE
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAIT(w@/!)" "WORKING(W)" "|" "DONE(d@/!)")
+      '((sequence "TODO(t)" "WAIT(w@/!)" "FAIL(f@/!)" "WORKING(W)" "|" "DONE(d@/!)")
         (sequence "|" "CANCELED(c@/!)")))
 
 (setq org-todo-keyword-faces
       '(("TODO"         . (:foreground "red" :weight bold))
+        ("FAIL"         . (:foreground "red4" :weight bold))
         ("CANCELED"     . (:foreground "dodger blue" :weight bold))
         ("WAIT"         . (:foreground "yellow" :weight bold))
         ("WORKING"      . (:foreground "magenta" :weight bold))))
