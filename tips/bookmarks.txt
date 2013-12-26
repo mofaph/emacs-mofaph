@@ -1,0 +1,30 @@
+
+* Bookmarks
+
+C-x r m BOOKMARK-NAME <RET> ; 以 BOOKMARK-NAME 作为书签名新增一个书签
+C-x r l ; 在一个新的缓冲区中列出所有的书签
+
+在列出的书签缓冲区中，默认有两项内容：
+
+  struct file                   ~/hack/linux-3.2/include/linux/fs.h
+  struct file_operations        ~/hack/linux-3.2/include/linux/fs.h
+  struct gendisk                ~/hack/linux-3.2/include/linux/genhd.h
+
+在上面的示例中，第一项内容是书签名：struct file；第二项内容是书签的路径
+名：~/hack/linux-3.2/include/linux/fs.h。
+
+这时候，如果书签名太长，就会截断：
+
+  struct block_device_operatio  ~/hack/linux-3.2/include/linux/blkdev.h
+
+上面的 block_device_operations 被截断为 block_device_operatio 了，这时候，可以输
+入 t 命令，就可以只显示书签名：
+
+  struct block_device
+  struct block_device_operations
+  struct file
+
+可以看到，block_device_operations 可以完整显示了。
+
+mofaph
+2013/12/26
