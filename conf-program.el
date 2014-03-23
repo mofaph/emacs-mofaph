@@ -56,4 +56,18 @@ Token from https://github.com/purcell/emacs.d/blob/master/init-editing-utils.el"
 
 (add-hook 'prog-mode-hook 'highlight-80+-column)
 
+;;; 在以下的模式中，不要显示行尾的空白
+;;; https://github.com/purcell/emacs.d/blob/master/lisp/init-editing-utils.el
+(dolist (hook '(special-mode-hook
+                eshell-mode-hook
+                eww-mode
+                slime-repl-mode-hook
+                term-mode-hook
+                comint-mode-hook
+                compilation-mode-hook
+                twittering-mode-hook
+                minibuffer-setup-hook))
+  (add-hook hook
+            (lambda () (setq show-trailing-whitespace nil))))
+
 (provide 'conf-program)
