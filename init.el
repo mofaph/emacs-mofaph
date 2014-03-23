@@ -39,6 +39,7 @@
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 (require 'lua-mode)
 
+(require 'init-helm)
 (require 'init-browse-kill-ring)
 (require 'init-goto-last-change)
 (require 'init-nav)

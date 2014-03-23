@@ -46,6 +46,7 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes
                      git-messenger                      ; https://github.com/syohex/emacs-git-messenger
                      goto-last-change                   ; http://www.emacswiki.org/emacs/goto-last-change.el
+                     helm                               ; http://emacs-helm.github.io/helm/
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
                      highlight-symbol                   ; http://nschum.de/src/emacs/highlight-symbol/
                      hungry-delete                      ; http://github.com/nflath/hungry-delete
