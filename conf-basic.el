@@ -114,11 +114,6 @@
 ;; 提示文件结尾的空行
 (setq-default indicate-empty-lines 1)
 
-;; 不显示逻辑行
-(setq-default truncate-lines t)
-(setq-default truncate-partial-width-windows 200)
-(setq-default hscroll-step 5)
-
 ;; 取消原本不开启的命令
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
