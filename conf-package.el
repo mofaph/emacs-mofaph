@@ -41,6 +41,7 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
                      company                            ; http://nschum.de/src/emacs/company-mode/
+                     diminish                           ; http://www.eskimo.com/~seldon
                      expand-region                      ; https://github.com/magnars/expand-region.el
                      gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes

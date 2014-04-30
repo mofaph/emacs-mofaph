@@ -73,6 +73,7 @@
 (require 'init-git-messenger)
 ;; (require 'init-skeleton-complete)
 (require 'init-xcscope)
+(require 'init-diminish)
 
 (require 'conf-key-binding)
 (require 'conf-defun)
