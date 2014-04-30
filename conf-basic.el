@@ -21,8 +21,8 @@
 (setq-default set-mark-command-repeat-pop t)
 (setq-default mark-ring-max 32)
 
-;; 在状态栏只显示列号
-(setq-default line-number-mode nil)
+;; 在状态栏显示行号和列号
+(setq-default line-number-mode t)
 (setq-default column-number-mode t)
 
 ;; 关闭烦人的出错时的提示声
