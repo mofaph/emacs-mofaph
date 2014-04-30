@@ -154,4 +154,12 @@ Token from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/
 
 (global-set-key (kbd "C-c K") 'find-key-binding-record)
 
+(defun kill-buffer-no-comfirm ()
+  "Kill buffer, no comfirm."
+  (interactive)
+  (kill-buffer nil))
+
+(global-unset-key (kbd "M-k"))
+(global-set-key (kbd "M-k") 'kill-buffer-no-comfirm)
+
 (provide 'conf-defun)

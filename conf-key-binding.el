@@ -24,6 +24,7 @@
 ;; C-x C-c      give-tips-when-want-quit-emacs  conf-defun
 ;; C-j          open-newline-indent             conf-defun
 ;; M-j          open-newline-above              conf-defun
+;; M-k          kill-buffer-no-comfirm          conf-defun
 ;; C-^          top-join-line                   conf-defun
 ;; C-c I        find-user-init-file             conf-defun
 ;; C-c K        find-key-binding-record         conf-defun
