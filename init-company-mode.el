@@ -2,8 +2,8 @@
 
 (require 'company)
 
-(global-unset-key (kbd "M-/"))
-(global-set-key (kbd "M-/") 'company-complete)
+(global-unset-key (kbd "C-M-/"))
+(global-set-key (kbd "C-M-/") 'company-complete)
 
 ;;; never complete automatically
 (setq company-idle-delay nil)

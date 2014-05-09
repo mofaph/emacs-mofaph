@@ -2,8 +2,8 @@
 
 (require 'hippie-exp)
 
-(global-unset-key (kbd "C-M-/"))
-(global-set-key (kbd "C-M-/") 'hippie-expand)
+(global-unset-key (kbd "M-/"))
+(global-set-key (kbd "M-/") 'hippie-expand)
 
 (setq hippie-expand-try-functions-list
       '(try-expand-dabbrev
