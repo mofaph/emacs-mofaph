@@ -8,5 +8,6 @@
 (diminish 'undo-tree-mode)
 (diminish 'highlight-parentheses-mode)
 (diminish 'abbrev-mode)
+(diminish 'magit-auto-revert-mode)
 
 (provide 'init-diminish)
