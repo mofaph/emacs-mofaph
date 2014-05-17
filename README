@@ -17,21 +17,16 @@ github:  https://github.com/purcell/emacs.d
 当前使用 package.el 对第三方插件进行管理，因为 package.el 不依赖任何第三方工具，
 并且是 Emacs-24 自带的。
 
-在这个配置文件目录下，以 conf- 开头的配置文件是对 Emacs 发行版的配置。以 init- 开
-头的配置文件是第三方插件的配置文件。其他的文件或者目录说明如下：
-
-BLOG 这个文件记录了关于 Emacs 的一些有用的博客。
-PEOPLE 这个文件记录了一些 Emacser 的配置。
-
+personal/ 目录存放了个人的配置文件
 tips/ 目录存放了关于使用 Emacs 的一些技巧。
 
 如果新安装了一个插件，那么需要修改一些文件使它能够正常工作，同时修改文档说
 明。同理，如果需要删除一个插件，也需要修改这些文件。
 
-    - conf-key-binding.el         自定义了键绑定之后应该在这个文件说明
-    - conf-package.el             安装插件后，需要更新安装插件列表
-    - init-pkgname.el             插件的配置多于一条语句才建立这个文件
-    - init.el                     启用插件
+    - personal/conf-key-binding.el      自定义了键绑定之后应该在这个文件说明
+    - personal/conf-package.el          安装插件后，需要更新安装插件列表
+    - personal/init-pkgname.el          插件的配置多于一条语句才建立这个文件
+    - personal/init.el                  启用插件
 
 mofaph
 2012/5/26

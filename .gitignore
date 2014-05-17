@@ -1,6 +1,7 @@
 ac-dict/
 auto-save-list/
 backup/
+backups/
 el-get/
 elisp/
 elpa/
@@ -23,5 +24,6 @@ url/
 ac-comphist.dat
 org-clock-save.el
 tramp
+places
 /projectile-bookmarks.eld
 /projectile.cache

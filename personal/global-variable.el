@@ -3,8 +3,11 @@
 (defvar elisp-dir "~/.emacs.d/elisp/"
   "The directory holds the Emacs Lisp code.")
 
+(defvar personal-dir "~/.emacs.d/personal/"
+  "The directory holds personal configuration.")
+
 (add-to-list 'load-path elisp-dir)
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path personal-dir)
 
 (defvar c-related-mode '(
                          c++-mode
