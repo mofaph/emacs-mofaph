@@ -150,7 +150,7 @@ Token from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/
 (defun find-key-binding-record ()
   "Find personal key binding configuration file."
   (interactive)
-  (find-file (concat user-emacs-directory "conf-key-binding.el")))
+  (find-file (concat personal-dir "conf-key-binding.el")))
 
 (global-set-key (kbd "C-c K") 'find-key-binding-record)
 
