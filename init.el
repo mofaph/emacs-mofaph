@@ -33,6 +33,7 @@
 (require 'conf-package)
 
 ;; 配置 package.el 管理的插件
+(require 'better-defaults)
 (ido-ubiquitous)
 (require 'init-flx-ido)
 (require 'init-ido-sort-mtime)
