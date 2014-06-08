@@ -2,6 +2,9 @@
 
 (require 'company)
 
+(global-unset-key (kbd "M-6"))
+(global-set-key (kbd "M-6") 'company-complete)
+
 (global-unset-key (kbd "C-M-/"))
 (global-set-key (kbd "C-M-/") 'company-complete)
 
