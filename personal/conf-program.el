@@ -36,6 +36,8 @@
                       '(sh-mode-hook)))
   (add-hook hook (lambda () (local-set-key (kbd "RET") 'newline-and-indent))))
 
+(electric-pair-mode 1)
+
 ;; 高亮 FIXME|WARNING|BUG|NOTE|TODO 关键字
 (dolist (mode (append c-related-mode
                       lisp-related-mode
