@@ -56,7 +56,7 @@
 ;; 设置缩略词的文件
 (setq-default abbrev-file-name "~/.emacs.d/.abbrev_defs")
 (setq-default abbrev-mode t)
-(read-abbrev-file "~/.emacs.d/.abbrev_defs")
+(if (file-exists-p abbrev-file-name) (read-abbrev-file abbrev-file-name))
 (setq-default save-abbrevs t)
 
 ;; 由菜单修改配置的东西将会保存在 custom-file 里
