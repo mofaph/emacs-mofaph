@@ -26,7 +26,7 @@ tips/ 目录存放了关于使用 Emacs 的一些技巧。
     - personal/conf-key-binding.el      自定义了键绑定之后应该在这个文件说明
     - personal/conf-package.el          安装插件后，需要更新安装插件列表
     - personal/init-pkgname.el          插件的配置多于一条语句才建立这个文件
-    - personal/init.el                  启用插件
+    - init.el                           启用插件
 
 mofaph
 2012/5/26
