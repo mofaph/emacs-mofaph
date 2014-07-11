@@ -2,6 +2,6 @@
 
 (projectile-global-mode)
 
-(global-set-key (kbd "M-4") 'helm-projectile)
+(global-set-key (kbd "M-3") 'helm-projectile)
 
 (provide 'init-projectile)

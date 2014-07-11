@@ -73,4 +73,10 @@
 ;; C-x M-x      execute-extended-command        init-smex
 ;; M-R          paredit-raise-sexp              init-paredit
 
+;;; M-1         helm-imenu                      init-helm
+;;; M-2         helm-buffers-list               init-helm
+;;; M-3         helm-projectile                 init-projectile
+;;; M-4         helm-bookmarks                  init-helm
+;;; M-5         tv-view-history                 conf-tags-view
+
 (provide 'conf-key-binding)
