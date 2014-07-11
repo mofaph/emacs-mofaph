@@ -1,5 +1,8 @@
 ;; -*- coding: utf-8 -*-
 
+(electric-pair-mode 1)
+(superword-mode 1)
+
 ;; which-function
 (setq which-func-modes t)
 (which-function-mode t)
@@ -28,15 +31,6 @@
         (when (and (string= (buffer-name buf) "*compilation*")
                    (not (string-match "exited abnormally" str)))
           (run-at-time 0.0 nil 'delete-windows-on buf))))
-
-;; 自动缩进
-;; 这里没有使用 electric-indent-mode，因为这个次模式在自动缩进方面有问题
-;; 它不能很好地处理在行末或者是空白行的行首键入 C-o，它总是会缩进不该缩进的行
-(dolist (hook (append lisp-related-mode-hook
-                      '(sh-mode-hook)))
-  (add-hook hook (lambda () (local-set-key (kbd "RET") 'newline-and-indent))))
-
-(electric-pair-mode 1)
 
 ;; 高亮 FIXME|WARNING|BUG|NOTE|TODO 关键字
 (dolist (mode (append c-related-mode
