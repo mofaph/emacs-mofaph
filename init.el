@@ -28,6 +28,7 @@
 (require 'conf-qmake-mode)
 (require 'conf-slime)
 ; elisp/ac-company
+(require 'conf-tags-view)
 
 ;; 使用 package.el 管理第三方插件
 (require 'conf-package)
