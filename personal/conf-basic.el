@@ -39,8 +39,9 @@
 ;; 每次卷动一行
 (setq-default scroll-conservatively 100)
 
-;; 在保存之前删除行末空白
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; 行末空白
+; (setq-default show-trailing-whitespace 1)
+; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; 总是以一个换行符结束文件
 (setq-default require-final-newline t)
@@ -107,9 +108,6 @@
 
 ;; 比较差异文件时启动 -u 模式
 (setq-default diff-switches "-u")
-
-;; 显示行尾的空白字符
-(setq-default show-trailing-whitespace 1)
 
 ;; 提示文件结尾的空行
 (setq-default indicate-empty-lines 1)

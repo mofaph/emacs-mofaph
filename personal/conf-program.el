@@ -41,29 +41,4 @@
                              1
                              font-lock-warning-face t))))
 
-(defun highlight-80+-column ()
-  "Highlight characters which exceed 80.
-
-Token from https://github.com/purcell/emacs.d/blob/master/init-editing-utils.el"
-  (when (= show-trailing-whitespace 1)  ; conf-basic.el
-    (set (make-local-variable 'whitespace-style) '(face trailing lines-tail))
-    (whitespace-mode 0)
-    (whitespace-mode 1)))
-
-(add-hook 'prog-mode-hook 'highlight-80+-column)
-
-;;; 在以下的模式中，不要显示行尾的空白
-;;; https://github.com/purcell/emacs.d/blob/master/lisp/init-editing-utils.el
-(dolist (hook '(special-mode-hook
-                eshell-mode-hook
-                eww-mode
-                slime-repl-mode-hook
-                term-mode-hook
-                comint-mode-hook
-                compilation-mode-hook
-                twittering-mode-hook
-                minibuffer-setup-hook))
-  (add-hook hook
-            (lambda () (setq show-trailing-whitespace nil))))
-
 (provide 'conf-program)
