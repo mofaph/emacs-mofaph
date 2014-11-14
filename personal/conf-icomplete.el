@@ -1,3 +1,3 @@
-(icomplete-mode 1)
+(icomplete-mode 0)
 
 (provide 'conf-icomplete)
