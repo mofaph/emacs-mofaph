@@ -7,4 +7,6 @@
 (setq-default dired-recursive-copies            'top
               dired-recursive-deletes           'top)
 
+(setq enable-remote-dir-locals t)
+
 (provide 'conf-dired)
