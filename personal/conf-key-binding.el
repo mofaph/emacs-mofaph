@@ -75,8 +75,10 @@
 
 ;;; M-1         helm-imenu                      init-helm
 ;;; M-2         helm-buffers-list               init-helm
-;;; M-3         helm-projectile                 init-projectile
-;;; M-4         helm-bookmarks                  init-helm
-;;; M-5         tv-view-history                 conf-tags-view
+;;; M-3         helm-find-files                 init-helm
+;;; M-4         helm-projectile                 init-projectile
+;;; M-5         helm-bookmarks                  init-helm
+;;; M-6         tv-view-history                 conf-tags-view
+;;; M-7         company-complete                init-company-mode
 
 (provide 'conf-key-binding)
