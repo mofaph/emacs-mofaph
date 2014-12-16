@@ -40,7 +40,7 @@
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
 ;; M-/          auto-complete                   init-auto-complete
 ;; M-S-up       buf-move-up                     init-buffer-move
-;; M-y          init-browse-king-righ           init-browse-kill-ring
+;; M-y          helm-show-kill-ring             init-helm
 ;; M-S-down     buf-move-down                   init-buffer-move
 ;; M-S-left     buf-move-left                   init-buffer-move
 ;; M-S-right    buf-move-right                  init-buffer-move

@@ -15,4 +15,7 @@
 (global-set-key (kbd "C-c h o") 'helm-occur)
 (global-set-key (kbd "C-c h r") 'helm-register)
 
+(global-unset-key (kbd "M-y"))
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
 (provide 'init-helm)

@@ -38,7 +38,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      auto-complete                      ; http://cx4a.org/software/auto-complete/
                      auto-complete-clang                ; https://github.com/brianjcj/auto-complete-clang
                      better-defaults                    ; https://github.com/technomancy/better-defaults
-                     browse-kill-ring                   ; http://www.fan.gr.jp/~ring/doc/browse-kill-ring.html
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
                      company                            ; http://nschum.de/src/emacs/company-mode/
@@ -62,7 +61,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      imenu-anywhere                     ; https://github.com/vitoshka/imenu-anywhere
                      indent-guide                       ; https://github.com/zk-phi/indent-guide
                      keyfreq                            ; https://github.com/dacap/keyfreq
-                     kill-ring-search                   ; http://nschum.de/src/emacs/kill-ring-search/
                      lua-mode                           ; http://immerrr.github.com/lua-mode/
                      magit                              ; https://github.com/magit/magit
                      move-text                          ; http://www.emacswiki.org/emacs/move-text.el
