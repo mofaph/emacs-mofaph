@@ -9,5 +9,6 @@
 (diminish 'highlight-parentheses-mode)
 (diminish 'abbrev-mode)
 (diminish 'magit-auto-revert-mode)
+(diminish 'helm-gtags-mode)
 
 (provide 'init-diminish)

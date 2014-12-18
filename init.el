@@ -43,6 +43,7 @@
 (require 'lua-mode)
 
 (require 'init-helm)
+(require 'init-helm-gtags)
 ;; (require 'init-goto-last-change)
 ;; (require 'init-nav)
 (require 'init-smex)
