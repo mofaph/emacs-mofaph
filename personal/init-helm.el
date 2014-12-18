@@ -15,6 +15,10 @@
 (global-set-key (kbd "C-c h o") 'helm-occur)
 (global-set-key (kbd "C-c h r") 'helm-register)
 
+(global-unset-key (kbd "M-x"))
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x M-x") 'execute-extended-command)
+
 (global-unset-key (kbd "M-y"))
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 

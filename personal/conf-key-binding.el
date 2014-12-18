@@ -76,5 +76,6 @@
 ;;; M-5         helm-bookmarks                  init-helm
 ;;; M-6         tv-view-history                 conf-tags-view
 ;;; M-7         company-complete                init-company-mode
+;;; M-8         helm-gtags-select               init-helm-gtags
 
 (provide 'conf-key-binding)

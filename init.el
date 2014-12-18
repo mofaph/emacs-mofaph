@@ -46,7 +46,7 @@
 (require 'init-helm-gtags)
 ;; (require 'init-goto-last-change)
 ;; (require 'init-nav)
-(require 'init-smex)
+;; (require 'init-smex)
 (require 'init-ido-complete-space-or-hyphen)
 (require 'init-ido-vertical-mode)
 (require 'init-undo-tree)
