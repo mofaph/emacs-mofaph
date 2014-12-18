@@ -10,5 +10,6 @@
 (diminish 'abbrev-mode)
 (diminish 'magit-auto-revert-mode)
 (diminish 'helm-gtags-mode)
+(diminish 'helm-mode)
 
 (provide 'init-diminish)
