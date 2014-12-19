@@ -81,6 +81,8 @@
 (require 'conf-defun)
 (require 'conf-session)
 
+(run-at-time 5 nil 'next-review-day)
+
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
