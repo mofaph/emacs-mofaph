@@ -50,6 +50,7 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      git-messenger                      ; https://github.com/syohex/emacs-git-messenger
                      goto-last-change                   ; http://www.emacswiki.org/emacs/goto-last-change.el
                      helm                               ; http://emacs-helm.github.io/helm/
+                     helm-gtags                         ; https://github.com/syohex/emacs-helm-gtags
                      helm-projectile                    ; https://github.com/bbatsov/projectile
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
                      highlight-symbol                   ; http://nschum.de/src/emacs/highlight-symbol/
