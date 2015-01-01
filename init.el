@@ -56,7 +56,6 @@
 (require 'init-expand-region)
 (require 'init-highlight-parentheses)
 (require 'init-highlight-symbol)
-;; (require 'init-auto-complete)
 (require 'init-magit)
 (require 'init-imenu-anywhere)
 (require 'init-company-mode)
