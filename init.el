@@ -72,7 +72,6 @@
 (require 'init-smartrep)
 ;; (require 'init-protobuf-mode)
 ;; (require 'init-git-messenger)
-;; (require 'init-skeleton-complete)
 (require 'init-xcscope)
 (require 'init-diminish)
 
