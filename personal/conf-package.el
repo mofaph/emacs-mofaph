@@ -36,7 +36,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
   (dolist (package '(
                      ace-jump-mode                      ; https://github.com/winterTTr/ace-jump-mode
                      auto-complete                      ; http://cx4a.org/software/auto-complete/
-                     auto-complete-clang                ; https://github.com/brianjcj/auto-complete-clang
                      better-defaults                    ; https://github.com/technomancy/better-defaults
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
