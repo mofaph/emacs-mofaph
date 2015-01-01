@@ -69,7 +69,6 @@
 (require 'init-buffer-move)
 (require 'init-smartrep)
 ;; (require 'init-protobuf-mode)
-;; (require 'init-git-messenger)
 (require 'init-xcscope)
 (require 'init-diminish)
 
