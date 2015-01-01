@@ -59,7 +59,6 @@
 (require 'init-hungry-delete)
 ;; (require 'init-move-text)
 (require 'init-expand-region)
-;; (require 'init-show-marks)
 (require 'init-highlight-parentheses)
 (require 'init-highlight-symbol)
 ;; (require 'init-auto-complete)

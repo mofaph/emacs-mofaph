@@ -61,9 +61,6 @@
 ;; M-up         move-text-up                    init-move-text
 ;; M-down       move-text-down                  init-move-text
 ;; f9           nav-toggle                      init-nav
-;; C-c f        forward-mark                    init-show-marks
-;; C-c b        backward-mark                   init-show-marks
-;; C-c s        show-marks                      init-show-marks
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
 ;; C-x M-x      execute-extended-command        init-smex
