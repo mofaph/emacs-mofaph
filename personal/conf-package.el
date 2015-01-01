@@ -60,7 +60,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      ido-ubiquitous                     ; https://github.com/DarwinAwardWinner/ido-ubiquitous
                      ido-vertical-mode                  ; https://github.com/rson/ido-vertical-mode.el
                      imenu-anywhere                     ; https://github.com/vitoshka/imenu-anywhere
-                     indent-guide                       ; https://github.com/zk-phi/indent-guide
                      keyfreq                            ; https://github.com/dacap/keyfreq
                      lua-mode                           ; http://immerrr.github.com/lua-mode/
                      magit                              ; https://github.com/magit/magit

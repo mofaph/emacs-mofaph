@@ -55,7 +55,6 @@
 (require 'init-ace-jump-mode)
 (require 'init-popwin)
 (require 'init-projectile)
-;; (require 'init-indent-guide)
 (require 'init-hungry-delete)
 ;; (require 'init-move-text)
 (require 'init-expand-region)
