@@ -60,9 +60,6 @@
 ;; C-*          mc/mark-all-like-this           init-multiple-cursors
 ;; M-up         move-text-up                    init-move-text
 ;; M-down       move-text-down                  init-move-text
-;; M-x          smex                            init-smex
-;; M-X          smex-major-mode-commands        init-smex
-;; C-x M-x      execute-extended-command        init-smex
 ;; M-R          paredit-raise-sexp              init-paredit
 
 ;;; M-1         helm-imenu                      init-helm
