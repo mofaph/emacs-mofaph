@@ -47,7 +47,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      flx-ido                            ; https://github.com/lewang/flx
                      gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes
-                     goto-last-change                   ; http://www.emacswiki.org/emacs/goto-last-change.el
                      helm                               ; http://emacs-helm.github.io/helm/
                      helm-gtags                         ; https://github.com/syohex/emacs-helm-gtags
                      helm-projectile                    ; https://github.com/bbatsov/projectile
