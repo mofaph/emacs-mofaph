@@ -60,7 +60,6 @@
 ;; C-*          mc/mark-all-like-this           init-multiple-cursors
 ;; M-up         move-text-up                    init-move-text
 ;; M-down       move-text-down                  init-move-text
-;; f9           nav-toggle                      init-nav
 ;; M-x          smex                            init-smex
 ;; M-X          smex-major-mode-commands        init-smex
 ;; C-x M-x      execute-extended-command        init-smex

@@ -64,7 +64,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      magit                              ; https://github.com/magit/magit
                      move-text                          ; http://www.emacswiki.org/emacs/move-text.el
                      multiple-cursors                   ; https://github.com/magnars/multiple-cursors.el
-                     nav                                ; http://code.google.com/p/emacs-nav/
                      paredit                            ; http://mumble.net/~campbell/emacs/paredit.el
                      popwin                             ; https://github.com/m2ym/popwin-el
                      projectile                         ; https://github.com/bbatsov/projectile
