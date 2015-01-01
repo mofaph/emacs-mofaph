@@ -70,7 +70,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      popwin                             ; https://github.com/m2ym/popwin-el
                      projectile                         ; https://github.com/bbatsov/projectile
                      protobuf-mode                      ; https://code.google.com/p/protobuf/
-                     region-bindings-mode               ; https://github.com/fgallina/region-bindings-mode
                      sicp                               ; http://www.neilvandyke.org/sicp-texi/
                      smartrep                           ; https://github.com/myuhe/smartrep.el
                      switch-window                      ; https://github.com/dimitri/switch-window
