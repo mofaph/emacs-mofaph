@@ -68,7 +68,6 @@
 (require 'init-keyfreq)
 (require 'init-buffer-move)
 (require 'init-smartrep)
-;; (require 'init-protobuf-mode)
 (require 'init-xcscope)
 (require 'init-diminish)
 

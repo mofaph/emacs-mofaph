@@ -68,7 +68,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      paredit                            ; http://mumble.net/~campbell/emacs/paredit.el
                      popwin                             ; https://github.com/m2ym/popwin-el
                      projectile                         ; https://github.com/bbatsov/projectile
-                     protobuf-mode                      ; https://code.google.com/p/protobuf/
                      sicp                               ; http://www.neilvandyke.org/sicp-texi/
                      smartrep                           ; https://github.com/myuhe/smartrep.el
                      switch-window                      ; https://github.com/dimitri/switch-window
