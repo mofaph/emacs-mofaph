@@ -52,7 +52,7 @@
 (require 'init-popwin)
 (require 'init-projectile)
 (require 'init-hungry-delete)
-;; (require 'init-move-text)
+(require 'init-move-text)
 (require 'init-expand-region)
 (require 'init-highlight-parentheses)
 (require 'init-highlight-symbol)
