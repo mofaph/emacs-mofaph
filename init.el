@@ -24,16 +24,16 @@
 (require 'conf-find-file)
 (require 'conf-hippie-expand)
 
-;; 暂时不能使用 package.el 管理的插件
+;;; manual
+
 (require 'conf-qmake-mode)
 (require 'conf-slime)
-; elisp/ac-company
 (require 'conf-tags-view)
 
-;; 使用 package.el 管理第三方插件
+;;; package.el
+
 (require 'conf-package)
 
-;; 配置 package.el 管理的插件
 (require 'better-defaults)
 (ido-ubiquitous)
 (require 'init-flx-ido)
