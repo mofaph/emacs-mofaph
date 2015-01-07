@@ -29,6 +29,7 @@
 (require 'conf-qmake-mode)
 (require 'conf-slime)
 (require 'conf-tags-view)
+(require 'elpa-mirror "elpa-mirror.el" 'dont-singal-error-if-file-not-found)
 
 ;;; package.el
 
