@@ -55,7 +55,7 @@
 (setq-default bookmark-save-flag 1) ; 立即保存书签
 
 ;; 设置缩略词的文件
-(setq-default abbrev-file-name "~/.emacs.d/.abbrev_defs")
+(setq-default abbrev-file-name (concat user-emacs-directory "abbrev_defs"))
 (setq-default abbrev-mode t)
 (if (file-exists-p abbrev-file-name) (read-abbrev-file abbrev-file-name))
 (setq-default save-abbrevs t)
