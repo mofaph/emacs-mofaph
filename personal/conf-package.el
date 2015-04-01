@@ -52,7 +52,6 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      ido-sort-mtime                     ; https://github.com/pkkm/ido-sort-mtime
                      ido-ubiquitous                     ; https://github.com/DarwinAwardWinner/ido-ubiquitous
                      ido-vertical-mode                  ; https://github.com/rson/ido-vertical-mode.el
-                     imenu-anywhere                     ; https://github.com/vitoshka/imenu-anywhere
                      keyfreq                            ; https://github.com/dacap/keyfreq
                      lua-mode                           ; http://immerrr.github.com/lua-mode/
                      magit                              ; https://github.com/magit/magit

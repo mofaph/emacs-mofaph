@@ -46,7 +46,6 @@
 ;; M-F7         highlight-symbol-prev           init-highlight-symbol
 ;; C-S-F7       highlight-symbol-query-replace  init-highlight-symbol
 ;; C-x w *      highlight-symbol-at-point       init-highlight-symbol
-;; C-c j        imenu-anywhere                  init-imenu-anywhere
 ;; C-M-y        kill-ring-search                init-kill-ring-search
 ;; C-x C-z      magit-status                    init-magit
 ;; C-c m s      magit-status                    init-magit

@@ -56,7 +56,6 @@
 (require 'init-highlight-parentheses)
 (require 'init-highlight-symbol)
 (require 'init-magit)
-(require 'init-imenu-anywhere)
 (require 'init-company-mode)
 (require 'init-paredit)
 (require 'init-keyfreq)
