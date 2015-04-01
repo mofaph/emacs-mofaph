@@ -51,7 +51,7 @@
 (put 'view-lossage 'isearch-scroll t)
 
 ;; 设置书签文件，Emacs 默认的位置是 ~/.emacs.bmk
-(setq-default bookmark-default-file "~/.emacs.d/.bookmark")
+(setq-default bookmark-default-file (concat user-emacs-directory "bookmark"))
 (setq-default bookmark-save-flag 1) ; 立即保存书签
 
 ;; 设置缩略词的文件
