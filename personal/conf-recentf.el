@@ -1,7 +1,7 @@
 (require 'ido)
 
 (recentf-mode t)
-(setq recentf-save-file "~/.emacs.d/.recentf")
+(setq recentf-save-file (concat user-emacs-directory "recentf"))
 (global-set-key (kbd "C-c r") 'recentf-open-files)
 
 ;;; http://www.masteringemacs.org/articles/2011/01/27/find-files-faster-recent-files-package/
