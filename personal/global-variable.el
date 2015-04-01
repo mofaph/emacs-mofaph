@@ -1,9 +1,9 @@
 ;; -*- coding: utf-8; -*-
 
-(defvar elisp-dir "~/.emacs.d/elisp/"
+(defvar elisp-dir (concat user-emacs-directory "elisp/")
   "The directory holds the Emacs Lisp code.")
 
-(defvar personal-dir "~/.emacs.d/personal/"
+(defvar personal-dir (concat user-emacs-directory "personal/")
   "The directory holds personal configuration.")
 
 (add-to-list 'load-path elisp-dir)

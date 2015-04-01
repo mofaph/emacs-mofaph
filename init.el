@@ -3,7 +3,7 @@
 ;;; mofaph@gmail.com
 ;;; 2009-7-13
 
-(load "~/.emacs.d/personal/global-variable.el")
+(load (concat user-emacs-directory "personal/global-variable.el"))
 
 (require 'conf-basic)
 (require 'conf-ido)
