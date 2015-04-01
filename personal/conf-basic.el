@@ -19,7 +19,7 @@
 ;; Mark
 (setq-default transient-mark-mode t)
 (setq-default set-mark-command-repeat-pop t)
-(setq-default mark-ring-max 32)
+(setq-default mark-ring-max 1024)
 
 ;; 在状态栏显示行号和列号
 (setq-default line-number-mode t)
