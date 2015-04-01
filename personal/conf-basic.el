@@ -62,7 +62,7 @@
 
 ;; 由菜单修改配置的东西将会保存在 custom-file 里
 ;; 这里我设置在 ~/.emacs.d/.custom-file.el
-(setq-default custom-file "~/.emacs.d/.custom-file.el")
+(setq-default custom-file (concat user-emacs-directory "custom-file.el"))
 (if (file-exists-p custom-file) (load custom-file))
 
 ;; 备份设置
