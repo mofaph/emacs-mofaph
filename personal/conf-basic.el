@@ -68,7 +68,7 @@
 ;; 备份设置
 (setq-default make-backup-file t)
 (setq-default version-control t)
-(setq-default backup-directory-alist '(("." . "~/.emacs.d/backup")))
+(setq-default backup-directory-alist '(("." . (concat user-emacs-directory "backups"))))
 (setq-default delete-old-versions t)
 
 ;; 支持emacs和外部程序的粘贴
