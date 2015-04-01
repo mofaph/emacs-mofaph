@@ -13,12 +13,12 @@ bookmark
 custom-file.el
 recentf
 ido.last
+keyfreq
+keyfreq.lock
 
 .dict
 .emacs.desktop
 .emacs.desktop.lock
-.keyfreq
-.keyfreq.lock
 .mc-lists.el
 .smex-items
 
