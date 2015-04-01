@@ -26,7 +26,6 @@
 
 ;;; manual
 
-(require 'conf-qmake-mode)
 (require 'conf-slime)
 (require 'elpa-mirror "elpa-mirror.el" 'dont-singal-error-if-file-not-found)
 
