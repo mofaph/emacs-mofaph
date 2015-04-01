@@ -5,7 +5,6 @@
 ;; (if (fboundp 'recentf-mode) (recentf-mode t))
 
 (global-font-lock-mode t)
-;(global-linum-mode t)
 (global-hi-lock-mode t)
 (global-auto-revert-mode 1)
 (winner-mode 1)
