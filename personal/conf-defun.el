@@ -83,7 +83,7 @@ first non-whitespace char:
 (defun visit-term-buffer ()
   "Create or visit a terminal buffer.
 
-Token from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
+Taken from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
   (interactive)
   (if (not (get-buffer "*ansi-term*"))
       (progn
@@ -98,7 +98,7 @@ Token from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
 (defun random-theme()
   "Random select theme
 
-Token from: https://github.com/baohaojun/system-config/blob/master/.emacs_d/lisp/bhj-defines.el"
+Taken from: https://github.com/baohaojun/system-config/blob/master/.emacs_d/lisp/bhj-defines.el"
   (interactive)
   (dolist (theme custom-enabled-themes)
     (disable-theme theme))
@@ -110,7 +110,7 @@ Token from: https://github.com/baohaojun/system-config/blob/master/.emacs_d/lisp
 (defun rename-current-buffer-file ()
   "Renames current buffer and file it is visiting.
 
-Token from: http://whattheemacsd.com/file-defuns.el-01.html#disqus_thread"
+Taken from: http://whattheemacsd.com/file-defuns.el-01.html#disqus_thread"
   (interactive)
   (let ((name (buffer-name))
         (filename (buffer-file-name)))
@@ -130,7 +130,7 @@ Token from: http://whattheemacsd.com/file-defuns.el-01.html#disqus_thread"
 (defun top-join-line ()
   "Join the current line with the line beneath it.
 
-Token from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
+Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
   (interactive)
   (delete-indentation 1))
 
@@ -140,7 +140,7 @@ Token from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
 (defun find-user-init-file ()
   "Find emacs init file, usually called init.el.
 
-Token from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/"
+Taken from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/"
   (interactive)
   (find-file user-init-file))
 

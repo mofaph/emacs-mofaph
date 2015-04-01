@@ -9,7 +9,7 @@
 (setq org-log-done t)
 (setq org-agenda-files '("~/org/"))
 
-;; Token from Org-mode manual
+;; Taken from Org-mode manual
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c c") 'org-capture)

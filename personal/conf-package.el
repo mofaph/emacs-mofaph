@@ -7,7 +7,7 @@
 (defun fetch-package (package &optional min-version no-refresh)
   "Ask elpa to install given PACKAGE.
 
-Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
+Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
   (if (package-installed-p package min-version)
       t
     (if (or (assoc package package-archive-contents) no-refresh)

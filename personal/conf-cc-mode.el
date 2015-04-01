@@ -34,7 +34,7 @@
                         (setq indent-tabs-mode nil)
                         (c-set-style "gnu")))))))
 
-;; Token from the cc-mode manual
+;; Taken from the cc-mode manual
 ;; Make a non-standard key binding.  We can put this in
 ;; c-mode-base-map because c-mode-map, c++-mode-map, and so on,
 ;; inherit from it.
