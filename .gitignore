@@ -9,16 +9,17 @@ eshell/
 url/
 
 *.elc
-.bookmark
-.custom-file.el
+bookmark
+custom-file.el
+recentf
+ido.last
+
 .dict
 .emacs.desktop
 .emacs.desktop.lock
-.ido.last
 .keyfreq
 .keyfreq.lock
 .mc-lists.el
-.recentf
 .smex-items
 
 ac-comphist.dat
