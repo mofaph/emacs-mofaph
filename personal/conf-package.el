@@ -25,10 +25,7 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
   ;; http://melpa.milkbox.net/
   (setq url-http-attempt-keepalives nil)
 
-  ;; add at the end of list
-  (add-to-list 'package-archives '("melpa-stable"       . "http://melpa-stable.milkbox.net/packages/") t)
-  (add-to-list 'package-archives '("melpa"              . "http://melpa.milkbox.net/packages/") t)
-  (add-to-list 'package-archives '("marmalade"          . "http://marmalade-repo.org/packages/") t)
+  (setq package-archives '(("personal" . "~/opt/personal-elpa/")))
 
   (setq package-enable-at-startup nil)  ; 避免在处理完 init.el 后再次加载扩展包
   (package-initialize)                  ; 由于在启动时就配置包了，所以应该加载包
@@ -70,7 +67,15 @@ Token from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      undo-tree                          ; http://www.dr-qubit.org/emacs.php
                      xcscope                            ; http://cscope.sourceforge.net/
                      ))
-    (fetch-package package)))
+    (fetch-package package))
+
+  ;; add at the end of list
+  (add-to-list 'package-archives '("gnu"                . "http://elpa.gnu.org/packages/") t)
+  (add-to-list 'package-archives '("melpa-stable"       . "http://melpa-stable.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("melpa"              . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("marmalade"          . "http://marmalade-repo.org/packages/") t)
+
+  )
 
 (provide 'conf-package)
 
