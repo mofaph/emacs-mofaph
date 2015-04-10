@@ -32,13 +32,4 @@
                    (not (string-match "exited abnormally" str)))
           (run-at-time 0.0 nil 'delete-windows-on buf))))
 
-;; 高亮 FIXME|WARNING|BUG|NOTE|TODO 关键字
-(dolist (mode (append c-related-mode
-                      lisp-related-mode
-                      '(sh-mode)))
-  (font-lock-add-keywords mode
-                          '(("\\<\\(FIXME\\|WARNING\\|BUG\\|NOTE\\|TODO\\):?\\>"
-                             1
-                             font-lock-warning-face t))))
-
 (provide 'conf-program)

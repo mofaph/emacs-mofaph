@@ -38,6 +38,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      company                            ; http://nschum.de/src/emacs/company-mode/
                      diminish                           ; http://www.eskimo.com/~seldon
                      expand-region                      ; https://github.com/magnars/expand-region.el
+                     fixme-mode                         ; http://github.com/nflath/fixme-mode
                      flx                                ; https://github.com/lewang/flx
                      flx-ido                            ; https://github.com/lewang/flx
                      gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
