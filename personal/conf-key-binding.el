@@ -34,8 +34,8 @@
 ;; C-c l        org-store-link                  conf-org-mode
 ;; C-c C-j      imenu                           conf-program
 ;; C-c SPC      ace-jump-mode                   init-ace-jump-mode
-;; M-S-up       buf-move-up                     init-buffer-move
 ;; M-y          helm-show-kill-ring             init-helm
+;; M-S-up       buf-move-up                     init-buffer-move
 ;; M-S-down     buf-move-down                   init-buffer-move
 ;; M-S-left     buf-move-left                   init-buffer-move
 ;; M-S-right    buf-move-right                  init-buffer-move
@@ -46,7 +46,6 @@
 ;; M-F7         highlight-symbol-prev           init-highlight-symbol
 ;; C-S-F7       highlight-symbol-query-replace  init-highlight-symbol
 ;; C-x w *      highlight-symbol-at-point       init-highlight-symbol
-;; C-M-y        kill-ring-search                init-kill-ring-search
 ;; C-x C-z      magit-status                    init-magit
 ;; C-c m s      magit-status                    init-magit
 ;; C-c m g      magit-grep                      init-magit
@@ -65,7 +64,7 @@
 ;;; M-3         helm-find-files                 init-helm
 ;;; M-4         helm-projectile                 init-projectile
 ;;; M-5         helm-bookmarks                  init-helm
-;;; M-6         tv-view-history                 conf-tags-view
+
 ;;; M-7         company-complete                init-company-mode
 ;;; M-8         helm-gtags-select               init-helm-gtags
 
