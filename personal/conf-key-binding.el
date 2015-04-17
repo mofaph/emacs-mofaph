@@ -58,6 +58,7 @@
 ;; M-up         move-text-up                    init-move-text
 ;; M-down       move-text-down                  init-move-text
 ;; M-R          paredit-raise-sexp              init-paredit
+;; C-x o        switch-window                   init-switch-window
 
 ;;; M-1         helm-imenu                      init-helm
 ;;; M-2         helm-buffers-list               init-helm

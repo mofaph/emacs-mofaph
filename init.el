@@ -37,7 +37,7 @@
 (ido-ubiquitous)
 (require 'init-flx-ido)
 (require 'init-ido-sort-mtime)
-(require 'switch-window)
+(require 'init-switch-window)
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 (require 'lua-mode)
 (require 'fixme-mode)
