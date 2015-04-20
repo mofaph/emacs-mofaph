@@ -24,7 +24,6 @@
 (global-set-key (kbd "C-c h i") 'helm-imenu)
 (global-set-key (kbd "C-c h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-c h m") 'helm-man-woman)
-(global-set-key (kbd "C-c h o") 'helm-occur)
 (global-set-key (kbd "C-c h r") 'helm-register)
 
 (global-unset-key (kbd "M-x"))

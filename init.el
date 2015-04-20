@@ -44,6 +44,7 @@
 
 (require 'init-helm)
 (require 'init-helm-gtags)
+(require 'init-swiper-helm)
 (require 'init-ido-complete-space-or-hyphen)
 (require 'init-ido-vertical-mode)
 (require 'init-undo-tree)

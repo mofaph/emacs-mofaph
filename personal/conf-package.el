@@ -63,6 +63,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      projectile                         ; https://github.com/bbatsov/projectile
                      sicp                               ; http://www.neilvandyke.org/sicp-texi/
                      smartrep                           ; https://github.com/myuhe/smartrep.el
+                     swiper-helm                        ; https://github.com/abo-abo/swiper-helm
                      switch-window                      ; https://github.com/dimitri/switch-window
                      undo-tree                          ; http://www.dr-qubit.org/emacs.php
                      xcscope                            ; http://cscope.sourceforge.net/
