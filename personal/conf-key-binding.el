@@ -9,8 +9,6 @@
      (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)))
 
 (global-set-key (kbd "C-x t")           'untabify)
-(global-set-key (kbd "C-,")             'point-to-register)
-(global-set-key (kbd "C-.")             'jump-to-register)
 (global-set-key (kbd "C-\\")            'delete-trailing-whitespace)
 
 ;;; 第三方扩展或者自定义的扩展的键绑定
@@ -46,6 +44,9 @@
 ;; M-F7         highlight-symbol-prev           init-highlight-symbol
 ;; C-S-F7       highlight-symbol-query-replace  init-highlight-symbol
 ;; C-x w *      highlight-symbol-at-point       init-highlight-symbol
+;; C-t          helm-gtags-dwim                 init-helm-gtags
+;; C-,          helm-gtags-previous-history     init-helm-gtags
+;; C-.          helm-gtags-next-history         init-helm-gtags
 ;; C-x C-z      magit-status                    init-magit
 ;; C-c m s      magit-status                    init-magit
 ;; C-c m g      magit-grep                      init-magit

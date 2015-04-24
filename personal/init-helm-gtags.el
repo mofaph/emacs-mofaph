@@ -33,6 +33,14 @@
 (define-key helm-gtags-mode-map (kbd "C-c g j") 'helm-gtags-select)
 (define-key helm-gtags-mode-map (kbd "C-c g P") 'helm-gtags-parse-file)
 
+;; for convenient
+(global-unset-key (kbd "C-t"))
+(global-unset-key (kbd "C-,"))
+(global-unset-key (kbd "C-."))
+(global-set-key (kbd "C-,") 'helm-gtags-previous-history)
+(global-set-key (kbd "C-.") 'helm-gtags-next-history)
+(global-set-key (kbd "C-t") 'helm-gtags-dwim)
+
 (global-unset-key (kbd "M-8"))
 (global-set-key (kbd "M-8") 'helm-gtags-select)
 
