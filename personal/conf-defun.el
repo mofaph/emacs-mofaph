@@ -193,4 +193,21 @@ Taken from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/
      (t
       (message "Come on! Today is review day.")))))
 
+(defun c-lineup-arglist-tabs-only (ignored)
+  "Line up argument lists by tabs, not spaces"
+  (let* ((anchor (c-langelem-pos c-syntactic-element))
+         (column (c-langelem-2nd-pos c-syntactic-element))
+         (offset (- (1+ column) anchor))
+         (steps (floor offset c-basic-offset)))
+    (* (max steps 1) c-basic-offset)))
+
+(defun linux-tabs-only-hook ()
+  "Linux kernel style"
+  (c-add-style "linux-tabs-only"
+               '("linux" (c-offset-alist (arglist-cont-nonempty
+                                          c-lineup-gcc-asm-reg
+                                          c-lineup-arglist-tabs-only)))))
+
+(add-hook 'c-mode-common-hook #'linux-tabs-only-hook)
+
 (provide 'conf-defun)
