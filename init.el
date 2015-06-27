@@ -23,6 +23,7 @@
 (require 'conf-cmake-mode)
 (require 'conf-find-file)
 (require 'conf-hippie-expand)
+(require 'conf-email)
 
 ;;; manual
 
