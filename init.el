@@ -13,7 +13,6 @@
 (require 'conf-font)
 (require 'conf-misc)
 (require 'conf-program)
-(require 'conf-gui)
 
 (require 'conf-info)
 (require 'conf-dired)
