@@ -2,8 +2,6 @@
 
 (eval-after-load "eldoc" '(diminish 'eldoc-mode))
 (eval-after-load "whitespace"  '(diminish 'whitespace-mode))
-(diminish 'company-mode)
-(diminish 'paredit-mode)
 (diminish 'projectile-mode)
 (diminish 'undo-tree-mode)
 (diminish 'highlight-parentheses-mode)

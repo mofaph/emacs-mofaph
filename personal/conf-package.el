@@ -35,31 +35,22 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      better-defaults                    ; https://github.com/technomancy/better-defaults
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
-                     company                            ; http://nschum.de/src/emacs/company-mode/
                      debbugs                            ; http://elpa.gnu.org/packages/debbugs.html
                      diminish                           ; http://www.eskimo.com/~seldon
                      expand-region                      ; https://github.com/magnars/expand-region.el
                      fixme-mode                         ; http://github.com/nflath/fixme-mode
                      flx                                ; https://github.com/lewang/flx
-                     flx-ido                            ; https://github.com/lewang/flx
                      gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes
                      helm                               ; http://emacs-helm.github.io/helm/
                      helm-gtags                         ; https://github.com/syohex/emacs-helm-gtags
                      helm-projectile                    ; https://github.com/bbatsov/projectile
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
-                     highlight-symbol                   ; http://nschum.de/src/emacs/highlight-symbol/
                      hungry-delete                      ; http://github.com/nflath/hungry-delete
-                     ido-complete-space-or-hyphen       ; https://github.com/doitian/ido-complete-space-or-hyphen/blob/master/ido-complete-space-or-hyphen.el
-                     ido-sort-mtime                     ; https://github.com/pkkm/ido-sort-mtime
-                     ido-ubiquitous                     ; https://github.com/DarwinAwardWinner/ido-ubiquitous
-                     ido-vertical-mode                  ; https://github.com/rson/ido-vertical-mode.el
                      keyfreq                            ; https://github.com/dacap/keyfreq
-                     lua-mode                           ; http://immerrr.github.com/lua-mode/
                      magit                              ; https://github.com/magit/magit
                      move-text                          ; http://www.emacswiki.org/emacs/move-text.el
                      multiple-cursors                   ; https://github.com/magnars/multiple-cursors.el
-                     paredit                            ; http://mumble.net/~campbell/emacs/paredit.el
                      popwin                             ; https://github.com/m2ym/popwin-el
                      projectile                         ; https://github.com/bbatsov/projectile
                      sicp                               ; http://www.neilvandyke.org/sicp-texi/
