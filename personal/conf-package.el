@@ -49,6 +49,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      hungry-delete                      ; http://github.com/nflath/hungry-delete
                      keyfreq                            ; https://github.com/dacap/keyfreq
                      magit                              ; https://github.com/magit/magit
+                     markdown-mode                      ; http://jblevins.org/projects/markdown-mode/
                      move-text                          ; http://www.emacswiki.org/emacs/move-text.el
                      multiple-cursors                   ; https://github.com/magnars/multiple-cursors.el
                      popwin                             ; https://github.com/m2ym/popwin-el
