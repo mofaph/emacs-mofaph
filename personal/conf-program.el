@@ -22,14 +22,4 @@
 ;; man
 (setq Man-switches "-a")
 
-;; 当编译失败时,跳转到第一个错误
-(setq compilation-auto-jump-to-first-error t)
-
-;; 当编译成功时，自动关闭编译消息窗口
-(setq compilation-finish-functions
-      (lambda (buf str)
-        (when (and (string= (buffer-name buf) "*compilation*")
-                   (not (string-match "exited abnormally" str)))
-          (run-at-time 0.0 nil 'delete-windows-on buf))))
-
 (provide 'conf-program)
