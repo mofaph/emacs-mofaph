@@ -1,7 +1,7 @@
 ;; -*- coding: utf-8 -*-
 
+(global-font-lock-mode 0)
 (electric-pair-mode 1)
-(superword-mode 1)
 
 ;; which-function
 (setq which-func-modes t)
