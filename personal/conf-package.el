@@ -39,7 +39,6 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      company
                      company-irony
                      company-irony-c-headers
-                     debbugs                            ; http://elpa.gnu.org/packages/debbugs.html
                      diminish                           ; http://www.eskimo.com/~seldon
                      expand-region                      ; https://github.com/magnars/expand-region.el
                      fixme-mode                         ; http://github.com/nflath/fixme-mode
