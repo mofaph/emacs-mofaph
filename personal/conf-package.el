@@ -35,10 +35,16 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      better-defaults                    ; https://github.com/technomancy/better-defaults
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
+                     cmake-ide
+                     company
+                     company-irony
+                     company-irony-c-headers
                      debbugs                            ; http://elpa.gnu.org/packages/debbugs.html
                      diminish                           ; http://www.eskimo.com/~seldon
                      expand-region                      ; https://github.com/magnars/expand-region.el
                      fixme-mode                         ; http://github.com/nflath/fixme-mode
+                     flycheck
+                     flycheck-irony
                      flx                                ; https://github.com/lewang/flx
                      gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes
@@ -47,6 +53,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      helm-projectile                    ; https://github.com/bbatsov/projectile
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
                      hungry-delete                      ; http://github.com/nflath/hungry-delete
+                     irony
                      keyfreq                            ; https://github.com/dacap/keyfreq
                      magit                              ; https://github.com/magit/magit
                      markdown-mode                      ; http://jblevins.org/projects/markdown-mode/
@@ -54,6 +61,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      multiple-cursors                   ; https://github.com/magnars/multiple-cursors.el
                      popwin                             ; https://github.com/m2ym/popwin-el
                      projectile                         ; https://github.com/bbatsov/projectile
+                     rtags
                      sicp                               ; http://www.neilvandyke.org/sicp-texi/
                      smartrep                           ; https://github.com/myuhe/smartrep.el
                      swiper-helm                        ; https://github.com/abo-abo/swiper-helm

@@ -50,6 +50,7 @@
 (require 'init-smartrep)
 (require 'init-xcscope)
 (require 'init-diminish)
+(require 'init-cmake-ide)
 
 (require 'conf-key-binding)
 (require 'conf-defun)
