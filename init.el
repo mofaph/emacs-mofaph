@@ -49,8 +49,8 @@
 (require 'init-buffer-move)
 (require 'init-smartrep)
 (require 'init-xcscope)
-(require 'init-diminish)
 (require 'init-cmake-ide)
+(require 'init-diminish)
 
 (require 'conf-key-binding)
 (require 'conf-defun)
