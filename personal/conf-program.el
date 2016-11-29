@@ -22,4 +22,6 @@
 ;; man
 (setq Man-switches "-a")
 
+(global-set-key (kbd "C-c o") 'ff-find-other-file)
+
 (provide 'conf-program)
