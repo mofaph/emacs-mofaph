@@ -51,6 +51,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      flx                                ; https://github.com/lewang/flx
                      helm                               ; http://emacs-helm.github.io/helm/
                      helm-projectile                    ; https://github.com/bbatsov/projectile
+                     helm-swoop
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
                      hungry-delete                      ; http://github.com/nflath/hungry-delete
                      irony
