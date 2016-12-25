@@ -34,7 +34,6 @@
 
 (require 'init-helm)
 (require 'init-helm-gtags)
-(require 'init-swiper-helm)
 (require 'init-undo-tree)
 (require 'init-multiple-cursors)
 (require 'init-ace-jump-mode)
