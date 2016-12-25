@@ -55,6 +55,7 @@
 (require 'init-buffer-move)
 (require 'init-smartrep)
 (require 'init-cmake-ide)
+(require 'init-elfeed)
 (require 'init-diminish)
 
 (require 'conf-key-binding)
