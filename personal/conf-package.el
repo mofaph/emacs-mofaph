@@ -41,7 +41,6 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      company-irony-c-headers
                      diminish                           ; http://www.eskimo.com/~seldon
                      expand-region                      ; https://github.com/magnars/expand-region.el
-                     fixme-mode                         ; http://github.com/nflath/fixme-mode
                      flycheck
                      flycheck-irony
                      flx                                ; https://github.com/lewang/flx

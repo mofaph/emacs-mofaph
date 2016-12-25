@@ -30,7 +30,6 @@
 (require 'better-defaults)
 (require 'init-switch-window)
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
-(require 'fixme-mode)
 
 (require 'init-helm)
 (require 'init-helm-gtags)
