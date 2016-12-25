@@ -47,7 +47,6 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes
                      helm                               ; http://emacs-helm.github.io/helm/
-                     helm-gtags                         ; https://github.com/syohex/emacs-helm-gtags
                      helm-projectile                    ; https://github.com/bbatsov/projectile
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
                      hungry-delete                      ; http://github.com/nflath/hungry-delete

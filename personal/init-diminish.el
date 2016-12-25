@@ -8,7 +8,6 @@
 (diminish 'highlight-parentheses-mode)
 (diminish 'abbrev-mode)
 (diminish 'magit-auto-revert-mode)
-(diminish 'helm-gtags-mode)
 (diminish 'helm-mode)
 (diminish 'flycheck-mode)
 (diminish 'irony-mode)
