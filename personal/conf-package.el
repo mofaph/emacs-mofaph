@@ -59,7 +59,6 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      popwin                             ; https://github.com/m2ym/popwin-el
                      projectile                         ; https://github.com/bbatsov/projectile
                      rtags
-                     sicp                               ; http://www.neilvandyke.org/sicp-texi/
                      smartrep                           ; https://github.com/myuhe/smartrep.el
                      switch-window                      ; https://github.com/dimitri/switch-window
                      undo-tree                          ; http://www.dr-qubit.org/emacs.php
