@@ -45,7 +45,6 @@
 (require 'init-keyfreq)
 (require 'init-buffer-move)
 (require 'init-smartrep)
-(require 'init-xcscope)
 (require 'init-cmake-ide)
 (require 'init-diminish)
 
