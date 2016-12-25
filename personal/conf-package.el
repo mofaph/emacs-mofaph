@@ -31,10 +31,15 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
   (package-initialize)                  ; 由于在启动时就配置包了，所以应该加载包
 
   (dolist (package '(
-                     ace-jump-mode                      ; https://github.com/winterTTr/ace-jump-mode
+                     ;; zero config
                      better-defaults                    ; https://github.com/technomancy/better-defaults
-                     buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
+                     gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
+                     gitignore-mode                     ; https://github.com/lunaryorn/git-modes
+
+                     ;; require config
+                     ace-jump-mode                      ; https://github.com/winterTTr/ace-jump-mode
+                     buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      cmake-ide
                      company
                      company-irony
@@ -44,8 +49,6 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      flycheck
                      flycheck-irony
                      flx                                ; https://github.com/lewang/flx
-                     gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
-                     gitignore-mode                     ; https://github.com/lunaryorn/git-modes
                      helm                               ; http://emacs-helm.github.io/helm/
                      helm-projectile                    ; https://github.com/bbatsov/projectile
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
