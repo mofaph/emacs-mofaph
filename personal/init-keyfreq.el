@@ -98,6 +98,9 @@
         yank
         ))
 
+(setq keyfreq-file (concat user-emacs-directory "keyfreq"))
+(setq keyfreq-file-lock (concat user-emacs-directory "keyfreq.lock"))
+
 (unless (file-exists-p (file-truename keyfreq-file))
   (with-temp-buffer
     (insert "()")
