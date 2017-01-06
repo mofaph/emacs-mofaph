@@ -39,6 +39,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
 
                      ;; require config
                      ace-jump-mode                      ; https://github.com/winterTTr/ace-jump-mode
+                     avy
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      cmake-ide
                      company
