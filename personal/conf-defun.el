@@ -210,6 +210,15 @@ Taken from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/
 
 (add-hook 'c-mode-common-hook #'linux-tabs-only-hook)
 
+(eval-after-load "dired"
+  '(progn
+     (define-key dired-mode-map "F" 'my-dired-find-file)
+     (defun my-dired-find-file (&optional arg)
+       "Open each of the marked files, or the file under the point, or when prefix arg, the next N files "
+       (interactive "P")
+       (let* ((fn-list (dired-get-marked-files nil arg)))
+         (mapc 'find-file fn-list)))))
+
 (defun remove-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
   (interactive)
