@@ -210,4 +210,10 @@ Taken from: http://emacsredux.com/blog/2013/05/18/instant-access-to-init-dot-el/
 
 (add-hook 'c-mode-common-hook #'linux-tabs-only-hook)
 
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
 (provide 'conf-defun)
