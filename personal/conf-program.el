@@ -1,6 +1,11 @@
 ;; -*- coding: utf-8 -*-
 
-(global-font-lock-mode 0)
+(defun turn-off-font-lock-mode ()
+  (font-lock-mode 0))
+
+(add-to-list 'prog-mode-hook 'turn-off-font-lock-mode)
+
+(global-font-lock-mode 1)
 (electric-pair-mode 1)
 
 ;; which-function
