@@ -10,6 +10,6 @@
 (setq enable-remote-dir-locals t)
 
 ;; 打开目录时，隐藏文件信息（权限，日期等），可以使用“(”显示详细信息
-(add-to-list 'dired-mode-hook #'dired-hide-details-mode)
+;(add-to-list 'dired-mode-hook #'dired-hide-details-mode)
 
 (provide 'conf-dired)

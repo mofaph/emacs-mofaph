@@ -39,11 +39,11 @@
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 
 (require 'init-helm)
-(require 'init-helm-swoop)
+;(require 'init-helm-swoop)
 (require 'init-undo-tree)
 (require 'init-multiple-cursors)
 (require 'init-ace-jump-mode)
-(require 'init-avy)
+;(require 'init-avy)
 (require 'init-popwin)
 (require 'init-projectile)
 (require 'init-hungry-delete)
