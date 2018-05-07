@@ -15,8 +15,7 @@
 (global-set-key (kbd "M-1") 'helm-imenu)
 (global-set-key (kbd "M-2") 'helm-mini)
 (global-set-key (kbd "M-3") 'helm-find-files)
-;;; M-4 helm-projectile
-(global-set-key (kbd "M-5") 'helm-bookmarks)
+(global-set-key (kbd "M-4") 'helm-bookmarks)
 
 (global-set-key (kbd "C-c h a") 'helm-apropos)
 (global-set-key (kbd "C-c h f") 'helm-for-files)

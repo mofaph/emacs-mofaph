@@ -11,6 +11,19 @@
 (global-set-key (kbd "C-x t")           'untabify)
 (global-set-key (kbd "C-\\")            'delete-trailing-whitespace)
 
+(global-set-key (kbd "M-5") 'rgrep)
+(global-set-key (kbd "M-6") 'point-to-register)
+(global-set-key (kbd "M-7") 'jump-to-register)
+
+(defun find-tag-select-at-point ()
+  "Find tag select at point"
+  (interactive)
+  (find-tag (thing-at-point 'symbol 'no-properties)))
+
+(global-set-key (kbd "M-8") 'find-tag-select-at-point)
+(global-set-key (kbd "M-9") 'recompile)
+(global-set-key (kbd "M-0") 'compile)
+
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
 ;; key          command                         file
