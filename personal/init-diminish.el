@@ -9,7 +9,5 @@
 (diminish 'abbrev-mode)
 (diminish 'magit-auto-revert-mode)
 (diminish 'helm-mode)
-(diminish 'flycheck-mode)
-(diminish 'irony-mode)
 
 (provide 'init-diminish)
