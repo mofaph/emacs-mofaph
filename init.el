@@ -43,7 +43,7 @@
 (require 'init-undo-tree)
 (require 'init-multiple-cursors)
 (require 'init-ace-jump-mode)
-;(require 'init-avy)
+(require 'init-avy)
 (require 'init-popwin)
 (require 'init-projectile)
 (require 'init-hungry-delete)
