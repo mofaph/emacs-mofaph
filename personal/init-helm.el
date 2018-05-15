@@ -13,7 +13,7 @@
       helm-ff-file-name-history-use-recentf t)
 
 (global-set-key (kbd "M-1") 'helm-imenu)
-(global-set-key (kbd "M-2") 'helm-mini)
+(global-set-key (kbd "M-2") 'helm-buffers-list)
 (global-set-key (kbd "M-3") 'helm-find-files)
 (global-set-key (kbd "M-4") 'helm-bookmarks)
 
