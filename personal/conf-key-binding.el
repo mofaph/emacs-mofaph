@@ -11,9 +11,9 @@
 (global-set-key (kbd "C-x t")           'untabify)
 (global-set-key (kbd "C-\\")            'delete-trailing-whitespace)
 
-(global-set-key (kbd "M-5") 'rgrep)
-(global-set-key (kbd "M-6") 'point-to-register)
-(global-set-key (kbd "M-7") 'jump-to-register)
+(global-set-key (kbd "M-5") 'point-to-register)
+(global-set-key (kbd "M-6") 'jump-to-register)
+(global-set-key (kbd "M-7") 'rgrep)
 
 (defun find-tag-select-at-point ()
   "Find tag select at point"
