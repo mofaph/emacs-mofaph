@@ -24,6 +24,8 @@
 (global-set-key (kbd "M-9") 'recompile)
 (global-set-key (kbd "M-0") 'compile)
 
+(global-set-key (kbd "C-.") 'set-mark-command)
+
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
 ;; key          command                         file
