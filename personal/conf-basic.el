@@ -36,6 +36,7 @@
 ;; 制表符
 (setq-default tab-width 8)
 (setq-default indent-tabs-mode nil)
+(setq tab-always-indent 'complete) ; 首先缩进，然后补全
 (setq x-stretch-cursor t)
 
 ;; 每次卷动一行
