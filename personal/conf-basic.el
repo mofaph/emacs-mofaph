@@ -19,7 +19,9 @@
 ;; Mark
 (setq-default transient-mark-mode t)
 (setq-default set-mark-command-repeat-pop t)
-(setq-default mark-ring-max 1024)
+; 设置一个小的值，太大的话记不了那么多
+(setq-default mark-ring-max 2)
+(setq-default global-mark-ring-max 2)
 
 ;; 在状态栏显示行号和列号
 (setq-default line-number-mode t)
