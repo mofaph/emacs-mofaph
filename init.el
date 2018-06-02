@@ -62,6 +62,8 @@
 (require 'conf-defun)
 (require 'conf-session)
 
+(load-theme 'sanityinc-solarized-dark)
+
 (run-at-time 5 nil 'next-review-day)
 
 ;; Local Variables:
