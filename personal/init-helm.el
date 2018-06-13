@@ -16,6 +16,7 @@
 (global-set-key (kbd "M-2") 'helm-buffers-list)
 (global-set-key (kbd "M-3") 'helm-find-files)
 (global-set-key (kbd "M-4") 'helm-bookmarks)
+(global-set-key (kbd "M-8") 'helm-occur)
 
 (global-set-key (kbd "C-c h a") 'helm-apropos)
 (global-set-key (kbd "C-c h f") 'helm-for-files)

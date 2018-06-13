@@ -20,7 +20,7 @@
   (interactive)
   (find-tag (thing-at-point 'symbol 'no-properties)))
 
-(global-set-key (kbd "M-8") 'find-tag-select-at-point)
+(global-set-key (kbd "C-t") 'find-tag-select-at-point)
 (global-set-key (kbd "M-9") 'recompile)
 (global-set-key (kbd "M-0") 'compile)
 
