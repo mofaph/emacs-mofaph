@@ -4,6 +4,10 @@
 
 ;; (if (fboundp 'recentf-mode) (recentf-mode t))
 
+(recentf-mode 1)
+(global-unset-key (kbd "M-l"))
+(global-set-key (kbd "M-l") 'recentf-open-files)
+
 (global-font-lock-mode t)
 (global-hi-lock-mode t)
 (global-auto-revert-mode 1)
