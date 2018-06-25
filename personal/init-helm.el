@@ -33,6 +33,4 @@
 (global-unset-key (kbd "M-y"))
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
-(helm-mode 1)
-
 (provide 'init-helm)
