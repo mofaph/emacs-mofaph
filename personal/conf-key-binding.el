@@ -29,6 +29,17 @@
 (global-unset-key (kbd "M-e"))
 (global-set-key (kbd "M-e") 'eshell)
 
+(defun find-file-at-point-no-confirm ()
+  "find file at point with no confirm
+
+If put cursor at the blank line, it will just open the
+default-directory in dired buffer."
+  (interactive)
+  (find-file (concat default-directory (thing-at-point 'filename 'no-properties))))
+
+(global-unset-key (kbd "M-o"))
+(global-set-key (kbd "M-o") 'find-file-at-point-no-confirm)
+
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
 ;; key          command                         file
