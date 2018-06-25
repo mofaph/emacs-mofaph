@@ -26,6 +26,9 @@
 
 (global-set-key (kbd "C-.") 'set-mark-command)
 
+(global-unset-key (kbd "M-e"))
+(global-set-key (kbd "M-e") 'eshell)
+
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
 ;; key          command                         file
