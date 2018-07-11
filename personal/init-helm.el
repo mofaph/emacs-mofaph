@@ -12,6 +12,11 @@
       helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
       helm-ff-file-name-history-use-recentf t)
 
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "C-j") 'helm-select-action)
+(define-key helm-map (kbd "C-\.") 'helm-toggle-visible-mark)
+
 (global-set-key (kbd "M-1") 'helm-imenu)
 (global-set-key (kbd "M-2") 'helm-buffers-list)
 (global-set-key (kbd "M-3") 'helm-find-files)
