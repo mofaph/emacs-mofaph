@@ -40,6 +40,12 @@ default-directory in dired buffer."
 (global-unset-key (kbd "M-o"))
 (global-set-key (kbd "M-o") 'find-file-at-point-no-confirm)
 
+(global-unset-key (kbd "M-n"))
+(global-set-key (kbd "M-n") 'next-buffer)
+
+(global-unset-key (kbd "M-p"))
+(global-set-key (kbd "M-p") 'previous-buffer)
+
 ;;; 第三方扩展或者自定义的扩展的键绑定
 
 ;; key          command                         file
