@@ -33,9 +33,6 @@
 
 (require 'conf-package)
 
-(require 'better-defaults)
-(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
-
 (require 'init-helm)
 (require 'init-avy)
 (require 'init-magit)

@@ -32,10 +32,6 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
 
   (dolist (package '(
                      ;; zero config
-                     better-defaults                    ; https://github.com/technomancy/better-defaults
-                     c-eldoc                            ; http://github.com/nflath/c-eldoc
-                     gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
-                     gitignore-mode                     ; https://github.com/lunaryorn/git-modes
                      markdown-mode                      ; http://jblevins.org/projects/markdown-mode/
 
                      ;; require config
