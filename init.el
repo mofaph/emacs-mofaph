@@ -18,8 +18,6 @@
 ;; 只使用 emacs-china.org 的镜像作为 elpa 仓库
 (add-to-list 'package-archives '("gnu"                . "http://elpa.emacs-china.org/gnu/") t)
 (add-to-list 'package-archives '("melpa-stable"       . "http://elpa.emacs-china.org/melpa-stable/") t)
-(add-to-list 'package-archives '("melpa"              . "http://elpa.emacs-china.org/melpa/") t)
-(add-to-list 'package-archives '("marmalade"          . "http://elpa.emacs-china.org/marmalade/") t)
 
 (load (concat user-emacs-directory "personal/global-variable.el"))
 
@@ -42,8 +40,8 @@
 
 ;;; package.el
 
-(require 'init-helm)
 (require 'init-avy)
+(require 'init-helm)
 (require 'init-magit)
 (require 'init-cmake-ide)
 

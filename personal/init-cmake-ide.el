@@ -7,9 +7,6 @@
 (setq rtags-autostart-diagnostics t)
 (rtags-enable-standard-keybindings)
 
-(require 'rtags-helm)
-(setq rtags-use-helm t)
-
 ;; CMake automation with cmake-ide
 
 (cmake-ide-setup)
