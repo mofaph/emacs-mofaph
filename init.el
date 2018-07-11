@@ -10,6 +10,17 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; fix a package.el bug
+;; https://github.com/bbatsov/prelude/blob/master/prelude/prelude-packages.el
+;; http://melpa.milkbox.net/
+(setq url-http-attempt-keepalives nil)
+
+;; 只使用 emacs-china.org 的镜像作为 elpa 仓库
+(add-to-list 'package-archives '("gnu"                . "http://elpa.emacs-china.org/gnu/") t)
+(add-to-list 'package-archives '("melpa-stable"       . "http://elpa.emacs-china.org/melpa-stable/") t)
+(add-to-list 'package-archives '("melpa"              . "http://elpa.emacs-china.org/melpa/") t)
+(add-to-list 'package-archives '("marmalade"          . "http://elpa.emacs-china.org/marmalade/") t)
+
 (load (concat user-emacs-directory "personal/global-variable.el"))
 
 (require 'conf-basic)
@@ -30,8 +41,6 @@
 (require 'elpa-mirror "elpa-mirror.el" 'dont-singal-error-if-file-not-found)
 
 ;;; package.el
-
-(require 'conf-package)
 
 (require 'init-helm)
 (require 'init-avy)
