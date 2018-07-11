@@ -38,8 +38,7 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes
 
                      ;; require config
-                     ace-jump-mode                      ; https://github.com/winterTTr/ace-jump-mode
-                     ;avy
+                     avy
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      cmake-ide
                      elfeed
