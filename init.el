@@ -22,7 +22,6 @@
 (require 'conf-info)
 (require 'conf-dired)
 (require 'conf-cc-mode)
-(require 'conf-org-mode)
 (require 'conf-hippie-expand)
 (require 'conf-email)
 
@@ -35,26 +34,12 @@
 (require 'conf-package)
 
 (require 'better-defaults)
-(require 'init-switch-window)
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode) ; c-eldoc
 
 (require 'init-helm)
-(require 'init-undo-tree)
-(require 'init-multiple-cursors)
-(require 'init-ace-jump-mode)
 (require 'init-avy)
-(require 'init-popwin)
-(require 'init-projectile)
-(require 'init-hungry-delete)
-(require 'init-move-text)
-(require 'init-expand-region)
-(require 'init-highlight-parentheses)
 (require 'init-magit)
-(require 'init-keyfreq)
-(require 'init-buffer-move)
-(require 'init-smartrep)
 (require 'init-cmake-ide)
-(require 'init-elfeed)
 
 (require 'conf-key-binding)
 (require 'conf-defun)

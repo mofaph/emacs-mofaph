@@ -36,29 +36,14 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      c-eldoc                            ; http://github.com/nflath/c-eldoc
                      gitconfig-mode                     ; https://github.com/lunaryorn/git-modes
                      gitignore-mode                     ; https://github.com/lunaryorn/git-modes
+                     markdown-mode                      ; http://jblevins.org/projects/markdown-mode/
 
                      ;; require config
                      avy
-                     buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      cmake-ide
-                     elfeed
-                     expand-region                      ; https://github.com/magnars/expand-region.el
-                     flx                                ; https://github.com/lewang/flx
                      helm                               ; http://emacs-helm.github.io/helm/
-                     helm-projectile                    ; https://github.com/bbatsov/projectile
-                     highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
-                     hungry-delete                      ; http://github.com/nflath/hungry-delete
-                     keyfreq                            ; https://github.com/dacap/keyfreq
                      magit                              ; https://github.com/magit/magit
-                     markdown-mode                      ; http://jblevins.org/projects/markdown-mode/
-                     move-text                          ; http://www.emacswiki.org/emacs/move-text.el
-                     multiple-cursors                   ; https://github.com/magnars/multiple-cursors.el
-                     popwin                             ; https://github.com/m2ym/popwin-el
-                     projectile                         ; https://github.com/bbatsov/projectile
                      rtags
-                     smartrep                           ; https://github.com/myuhe/smartrep.el
-                     switch-window                      ; https://github.com/dimitri/switch-window
-                     undo-tree                          ; http://www.dr-qubit.org/emacs.php
                      ))
     (fetch-package package))
 
