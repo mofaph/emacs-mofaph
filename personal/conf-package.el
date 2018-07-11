@@ -27,6 +27,12 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
 
   (setq package-archives '(("personal" . "~/opt/personal-elpa/")))
 
+  ;; add at the end of list
+  (add-to-list 'package-archives '("gnu"                . "http://elpa.emacs-china.org/gnu/") t)
+  (add-to-list 'package-archives '("melpa-stable"       . "http://elpa.emacs-china.org/melpa-stable/") t)
+  (add-to-list 'package-archives '("melpa"              . "http://elpa.emacs-china.org/melpa/") t)
+  (add-to-list 'package-archives '("marmalade"          . "http://elpa.emacs-china.org/marmalade/") t)
+
   (setq package-enable-at-startup nil)  ; 避免在处理完 init.el 后再次加载扩展包
   (package-initialize)                  ; 由于在启动时就配置包了，所以应该加载包
 
@@ -40,14 +46,9 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      helm                               ; http://emacs-helm.github.io/helm/
                      magit                              ; https://github.com/magit/magit
                      rtags
+                     color-theme-sanityinc-solarized
                      ))
     (fetch-package package))
-
-  ;; add at the end of list
-  (add-to-list 'package-archives '("gnu"                . "http://elpa.emacs-china.org/gnu/") t)
-  (add-to-list 'package-archives '("melpa-stable"       . "http://elpa.emacs-china.org/melpa-stable/") t)
-  (add-to-list 'package-archives '("melpa"              . "http://elpa.emacs-china.org/melpa/") t)
-  (add-to-list 'package-archives '("marmalade"          . "http://elpa.emacs-china.org/marmalade/") t)
 
   )
 
