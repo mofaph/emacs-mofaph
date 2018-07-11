@@ -42,19 +42,13 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      ;avy
                      buffer-move                        ; http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el
                      cmake-ide
-                     company
-                     company-irony
-                     company-irony-c-headers
                      elfeed
                      expand-region                      ; https://github.com/magnars/expand-region.el
-                     flycheck
-                     flycheck-irony
                      flx                                ; https://github.com/lewang/flx
                      helm                               ; http://emacs-helm.github.io/helm/
                      helm-projectile                    ; https://github.com/bbatsov/projectile
                      highlight-parentheses              ; http://nschum.de/src/emacs/highlight-parentheses/
                      hungry-delete                      ; http://github.com/nflath/hungry-delete
-                     irony
                      keyfreq                            ; https://github.com/dacap/keyfreq
                      magit                              ; https://github.com/magit/magit
                      markdown-mode                      ; http://jblevins.org/projects/markdown-mode/
