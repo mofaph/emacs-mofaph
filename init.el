@@ -56,7 +56,6 @@
 (require 'init-smartrep)
 (require 'init-cmake-ide)
 (require 'init-elfeed)
-(require 'init-diminish)
 
 (require 'conf-key-binding)
 (require 'conf-defun)

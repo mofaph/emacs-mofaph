@@ -45,7 +45,6 @@ Taken from: https://github.com/purcell/emacs.d/blob/master/init-elpa.el"
                      company
                      company-irony
                      company-irony-c-headers
-                     diminish                           ; http://www.eskimo.com/~seldon
                      elfeed
                      expand-region                      ; https://github.com/magnars/expand-region.el
                      flycheck
