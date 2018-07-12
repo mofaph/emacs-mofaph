@@ -46,10 +46,6 @@
 ;; 基本设置
 ;; ----------------------------------------
 
-;; 设置个人信息
-(setq user-full-name "Mofaph Michael")
-(setq user-mail-address "mofaph@gmail.com")
-
 ;; 初始化设置
 (setq-default inhibit-startup-screen t)
 (setq-default initial-scratch-message nil)
@@ -438,15 +434,6 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 ;; 动，左手可以连续地按下 g a，而 M-g M-l 的按键序列是，右手按下 Alt
 ;; 左手按下 g，然后左手按下 Alt，右手按下 l，操作起来能够明显感到切换。
 ;; ----------------------------------------
-
-;; 用 Ctl 加上鼠标滚轮操作来设置字体大小
-(cond
- ((eq system-type 'gnu/linux)
-     (global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
-     (global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease))
- ((eq system-type 'windows-nt)
-     (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
-     (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)))
 
 (global-unset-key (kbd "C-."))
 (global-set-key (kbd "C-.") 'set-mark-command)
