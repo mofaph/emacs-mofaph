@@ -353,6 +353,16 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (require 'magit)
 (global-set-key (kbd "C-c m s") 'magit-status)
 
+;; 使 Magit 不要覆盖自定义的快捷键
+(define-key magit-mode-map (kbd "M-1") 'imenu)
+(define-key magit-mode-map (kbd "M-2") 'ido-switch-buffer)
+(define-key magit-mode-map (kbd "M-3") 'ido-find-file)
+(define-key magit-mode-map (kbd "M-4") 'bookmark-jump)
+(define-key magit-mode-map (kbd "M-n") 'next-buffer)
+(define-key magit-mode-map (kbd "M-p") 'previous-buffer)
+(define-key magit-mode-map (kbd "M-o") 'find-file-at-point-no-confirm)
+(define-key magit-mode-map (kbd "M-k") 'kill-buffer-no-comfirm)
+
 ;; ----------------------------------------
 ;; cmake-ide rtags
 ;;
