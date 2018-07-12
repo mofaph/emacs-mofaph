@@ -95,7 +95,8 @@
 ;; 首先缩进，然后补全
 (setq tab-always-indent 'complete)
 
-;; 每次卷动一行
+;; 默认行为是，当光标在屏幕底部最后一行时，按下下一行时，屏幕会卷动平
+;; 个屏幕；改变这个行为，每次只卷动一行。
 (setq-default scroll-conservatively 100)
 
 ;; 总是以一个换行符结束文件
@@ -472,6 +473,15 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (global-unset-key (kbd "M-0"))
 (global-set-key (kbd "M-0") 'compile)
 
+;; ----------------------------------------
+;; 以下是自定义的小函数的快捷键绑定
+;; ----------------------------------------
+
+;; ----------------------------------------
+;; C-t: 查找光标所在符号的定义
+;; ----------------------------------------
+
+;;;###autoload
 (defun find-tag-select-at-point ()
   "Find tag select at point"
   (interactive)
@@ -480,6 +490,11 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (global-unset-key (kbd "C-t"))
 (global-set-key (kbd "C-t") 'find-tag-select-at-point)
 
+;; ----------------------------------------
+;; C-j: 当光标在当前行，自动在下一行打开新行，同时缩进
+;; ----------------------------------------
+
+;;;###autoload
 (defun open-newline-indent ()
   "Open new line and indent."
   (interactive)
@@ -495,6 +510,11 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
                       '(asm-mode-hook sh-mode-hook)))
   (add-hook hook (lambda () (local-set-key (kbd "C-j") 'open-newline-indent))))
 
+;; ----------------------------------------
+;; M-j: 当光标在当前行，自动在上一行打开新行，同时缩进
+;; ----------------------------------------
+
+;;;###autoload
 (defun open-newline-above ()
   "open a new line above current line."
   (interactive)
@@ -509,6 +529,11 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
                       '(asm-mode-hook sh-mode-hook)))
   (add-hook hook (lambda () (local-set-key (kbd "M-j") 'open-newline-above))))
 
+;; ----------------------------------------
+;; C-a: 增强默认的移动到行首
+;; ----------------------------------------
+
+;;;###autoload
 (defun move-beginning-of-line-enhance ()
   "Enhance the default move-beginning-of-line.
 
@@ -531,6 +556,11 @@ first non-whitespace char:
 (global-unset-key (kbd "C-a"))
 (global-set-key (kbd "C-a") 'move-beginning-of-line-enhance)
 
+;; ----------------------------------------
+;; C-x C-c: 取消退出的快捷键
+;; ----------------------------------------
+
+;;;###autoload
 (defun give-tips-when-want-quit-emacs ()
   "Prevent ancident hit C-x C-c."
   (interactive)
@@ -538,6 +568,10 @@ first non-whitespace char:
 
 (global-unset-key (kbd "C-x C-c"))
 (global-set-key (kbd "C-x C-c") 'give-tips-when-want-quit-emacs)
+
+;; ----------------------------------------
+;; C-c t: 打开模拟终端的缓冲区
+;; ----------------------------------------
 
 ;;;###autoload
 (defun visit-term-buffer ()
@@ -555,6 +589,10 @@ Taken from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
 (global-unset-key (kbd "C-c t"))
 (global-set-key (kbd "C-c t") 'visit-term-buffer)
 
+;; ----------------------------------------
+;; C-^: 将当前行和上一行合并
+;; ----------------------------------------
+
 ;;;###autoload
 (defun top-join-line ()
   "Join the current line with the line beneath it.
@@ -566,6 +604,11 @@ Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
 (global-unset-key (kbd "C-^"))
 (global-set-key (kbd "C-^") 'top-join-line)
 
+;; ----------------------------------------
+;; M-k: 关闭缓冲区，不用确认
+;; ----------------------------------------
+
+;;;###autoload
 (defun kill-buffer-no-comfirm ()
   "Kill buffer, no comfirm."
   (interactive)
@@ -574,18 +617,11 @@ Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
 (global-unset-key (kbd "M-k"))
 (global-set-key (kbd "M-k") 'kill-buffer-no-comfirm)
 
-(defun remove-dos-eol ()
-  "Do not show ^M in files containing mixed UNIX and DOS line endings."
-  (interactive)
-  (setq buffer-display-table (make-display-table))
-  (aset buffer-display-table ?\^M []))
+;; ----------------------------------------
+;; M-t: 在最近选中的两个缓冲区中轮流切换
+;; ----------------------------------------
 
-;; 打开文件后，自动不显示 Windows 的行末符（^M）
-;(add-hook 'find-file-hooks 'remove-dos-eol)
-
-;; 在 Magit 模式中，自动不显示 Windows 的行末符（^M）
-(add-hook 'magit-status-sections-hook 'remove-dos-eol)
-
+;;;###autoload
 (defun switch-to-last-buffer ()
   "Switch to previously open buffer.
 
@@ -598,6 +634,11 @@ taken from emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"
 (global-unset-key (kbd "M-t"))
 (global-set-key (kbd "M-t") 'switch-to-last-buffer)
 
+;; ----------------------------------------
+;; M-o: 打开光标所在的文件名，默认是当前目录，不用确认
+;; ----------------------------------------
+
+;;;###autoload
 (defun find-file-at-point-no-confirm ()
   "find file at point with no confirm
 
@@ -608,6 +649,22 @@ default-directory in dired buffer."
 
 (global-unset-key (kbd "M-o"))
 (global-set-key (kbd "M-o") 'find-file-at-point-no-confirm)
+
+;; ----------------------------------------
+;; 以下是定义的小函数没有快捷键绑定，它们只在各种钩子中运行
+;; ----------------------------------------
+
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+;; 打开文件后，自动不显示 Windows 的行末符（^M）
+(add-hook 'find-file-hooks 'remove-dos-eol)
+
+;; 在 Magit 模式中，自动不显示 Windows 的行末符（^M）
+(add-hook 'magit-status-sections-hook 'remove-dos-eol)
 
 ;; ----------------------------------------
 ;; 主题设置
