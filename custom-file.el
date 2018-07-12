@@ -20,4 +20,4 @@
  '(magit-diff-highlight-hunk-body nil)
  '(package-selected-packages
    (quote
-    (markdown-mode color-theme-sanityinc-solarized rtags cmake-ide avy magit))))
+    (use-package markdown-mode color-theme-sanityinc-solarized rtags cmake-ide avy magit))))

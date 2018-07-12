@@ -19,6 +19,177 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/") t)
 
 ;; ----------------------------------------
+;; use-package
+;; ----------------------------------------
+
+(eval-when-compile
+  (require 'use-package)
+  (setq use-package-verbose t))
+
+;; ----------------------------------------
+;; recentf
+;; ----------------------------------------
+
+;; 保存最近打开的文件，M-l 打开最近打开的文件列表
+(use-package recentf
+  :bind
+  (("M-l" . recentf-open-files))
+  :config
+  (recentf-mode 1))
+
+;; ----------------------------------------
+;; dired
+;; ----------------------------------------
+
+(use-package dired
+  :init
+
+  ;; 在 dired 模式下，标记删除时，移动到回收站。这样减少发生误操作的风险
+  (setq delete-by-moving-to-trash t)
+
+  ;; 让 dired 可以递归的拷贝和删除目录
+  (setq-default dired-recursive-copies 'top
+                dired-recursive-deletes 'top)
+
+  ;; 在 tramp 中使用 dired 时，允许使用远程机器的 .dir-locals.el 文件的配置
+  (setq enable-remote-dir-locals t))
+
+;; ----------------------------------------
+;; imenu
+;; ----------------------------------------
+
+;; 文件改动后，告诉 imenu 自动扫描生成新的索引
+(use-package imenu
+  :init
+  (setq imenu-auto-rescan t)
+  :bind
+  ("M-1" . imenu))
+
+;; ----------------------------------------
+;; ido-mode
+;; ----------------------------------------
+
+(use-package ido
+  :config
+  (ido-mode 1)
+  :bind
+  ("M-2" . ido-switch-buffer)
+  ("M-3" . ido-find-file))
+
+;; ----------------------------------------
+;; term
+;; ----------------------------------------
+
+(use-package term
+  :bind (("C-c t" . visit-term-buffer)
+         :map term-mode-map
+         ("M-p" . previous-buffer)
+         ("M-n" . next-buffer)
+         ("M-k" . kill-buffer-no-comfirm)
+         :map term-raw-map
+         ("M-p" . previous-buffer)
+         ("M-n" . next-buffer)
+         ("M-k" . kill-buffer-no-comfirm)))
+
+;; ----------------------------------------
+;; avy
+;;
+;; 在屏幕中快速的跳转到指定的位置
+;; ----------------------------------------
+
+(use-package avy
+  :bind
+  (("M-g M-g" . avy-goto-word-1)
+   ("M-g M-a" . avy-goto-line)
+   ("M-g M-q" . avy-pop-mark)
+   ("M-g M-w" . avy-copy-line)
+   ("M-g M-r" . avy-copy-region)
+   ("M-g M-d" . avy-move-line)))
+
+;; 不使用 helm，因为它的 minibuffer 的使用和 Emacs 原生的不一致。
+;; 例如，在 minibuffer 中，TAB 一般是补全，但是 helm 没有遵循这种习惯。
+
+;; 使用 Emacs 自带的 ido-mode 来进行 buffer 的切换和文件的打开
+
+;; ----------------------------------------
+;; Magit
+;; ----------------------------------------
+
+(require 'magit)
+(global-set-key (kbd "C-c m s") 'magit-status)
+
+;; 使 Magit 不要覆盖自定义的快捷键
+(define-key magit-mode-map (kbd "C-M-1") 'magit-section-show-level-1-all)
+(define-key magit-mode-map (kbd "C-M-2") 'magit-section-show-level-2-all)
+(define-key magit-mode-map (kbd "C-M-3") 'magit-section-show-level-3-all)
+(define-key magit-mode-map (kbd "C-M-4") 'magit-section-show-level-4-all)
+(define-key magit-mode-map (kbd "M-1") 'imenu)
+(define-key magit-mode-map (kbd "M-2") 'ido-switch-buffer)
+(define-key magit-mode-map (kbd "M-3") 'ido-find-file)
+(define-key magit-mode-map (kbd "M-4") 'bookmark-jump)
+(define-key magit-mode-map (kbd "M-n") 'next-buffer)
+(define-key magit-mode-map (kbd "M-p") 'previous-buffer)
+(define-key magit-mode-map (kbd "M-o") 'find-file-at-point-no-confirm)
+(define-key magit-mode-map (kbd "M-k") 'kill-buffer-no-comfirm)
+(define-key magit-mode-map (kbd "M-e") 'eshell)
+(define-key magit-mode-map (kbd "C-.") 'set-mark-command)
+
+;; 使用 use-package 配置 magit，不能正确显示 magit-status
+;; 原因未知，暂时不用 use-package 配置
+
+;; (use-package magit
+;;   :after (magit-popup)
+;;   :config
+;;   (magit-status-mode 1)
+;;   :bind
+;;   (("C-c m s" . magit-status))
+;;   ;; 使 Magit 不要覆盖自定义的快捷键
+;;   :bind
+;;   (:map magit-mode-map
+;;         ("C-M-1" . magit-section-show-level-1-all)
+;;         ("C-M-2" . magit-section-show-level-2-all)
+;;         ("C-M-3" . magit-section-show-level-3-all)
+;;         ("C-M-4" . magit-section-show-level-4-all)
+;;         ("M-1" . imenu)
+;;         ("M-2" . ido-switch-buffer)
+;;         ("M-3" . ido-find-file)
+;;         ("M-4" . bookmark-jump)
+;;         ("M-p" . previous-buffer)
+;;         ("M-n" . next-buffer)
+;;         ("M-o" . find-file-at-point-no-confirm)
+;;         ("M-k" . kill-buffer-no-comfirm)
+;;         ("M-e" . eshell)
+;;         ("C-." . set-mark-command)))
+
+;; (use-package magit-popup :defer t)
+
+;; ----------------------------------------
+;; cmake-ide rtags
+;;
+;; 配置阅读 C/C++ 代码时的查看定义和查看引用
+;;
+;; https://syamajala.github.io/c-ide.html
+;; ----------------------------------------
+
+(use-package rtags
+  :init
+  (setq rtags-completions-enabled t)
+  (setq rtags-autostart-diagnostics t)
+  :config
+  (rtags-enable-standard-keybindings))
+
+(use-package cmake-ide
+  :after (rtags)
+  :config (cmake-ide-setup))
+
+;; Using cmake-ide
+
+;; To have cmake-ide automatically create a compilation commands file in your
+;; project root create a .dir-locals.el containing the following
+
+;; ((nil . ((cmake-ide-build-dir . "<absolute_path_to_project_build_directory>"))
+
+;; ----------------------------------------
 ;; 全局变量，自定义加载 el 文件的目录
 ;; ----------------------------------------
 
@@ -253,11 +424,6 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 ;; 常用模式设置
 ;; ----------------------------------------
 
-;; 保存最近打开的文件，M-l 打开最近打开的文件列表
-(recentf-mode 1)
-(global-unset-key (kbd "M-l"))
-(global-set-key (kbd "M-l") 'recentf-open-files)
-
 ;; 启用语法高亮
 (global-font-lock-mode 1)
 
@@ -290,29 +456,6 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 ;; 例如： stat(1) stat(2)
 (setq Man-switches "-a")
 
-;; 文件改动后，告诉 imenu 自动扫描生成新的索引
-(setq imenu-auto-rescan t)
-(global-set-key (kbd "M-1") 'imenu)
-
-;; ----------------------------------------
-;; ido-mode
-;; ----------------------------------------
-
-(require 'ido)
-(ido-mode 1)
-(global-set-key (kbd "M-2") 'ido-switch-buffer)
-(global-set-key (kbd "M-3") 'ido-find-file)
-
-;; 在 dired 模式下，标记删除时，移动到回收站。这样减少发生误操作的风险
-(setq delete-by-moving-to-trash t)
-
-;; 让 dired 可以递归的拷贝和删除目录
-(setq-default dired-recursive-copies 'top
-              dired-recursive-deletes 'top)
-
-;; 在 tramp 中使用 dired 时，允许使用远程机器的 .dir-locals.el 文件的配置
-(setq enable-remote-dir-locals t)
-
 ;; 设置类 C 模式的编码风格
 (setq c-default-style '((awk-mode       . "awk")
                         (c-mode         . "linux")
@@ -335,86 +478,6 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
   (subword-mode 1))
 
 (add-hook 'c-mode-common-hook 'setup-c-mode-common-hook)
-
-;; ----------------------------------------
-;; avy
-;;
-;; 在屏幕中快速的跳转到指定的位置
-;; ----------------------------------------
-
-(require 'avy)
-
-;; 输入一个单词的首字母，如果有多个单词有相同的首字母，那么屏幕会使用
-;; “a s ds fg“这样的字母区分，按下这些字母，则会跳转到这些光标位置
-(global-set-key (kbd "M-g M-g") 'avy-goto-word-1)
-
-;; 一行的行首显示“a s d f”等字母，按下这些字母，跳转到这些光标的位置
-(global-set-key (kbd "M-g M-a") 'avy-goto-line)
-
-;; 快速复制或者移动行或者区域到光标所在位置
-(global-set-key (kbd "M-g M-w") 'avy-copy-line)
-(global-set-key (kbd "M-g M-r") 'avy-copy-region)
-
-;; 快速移动一行到光标所在位置
-(global-set-key (kbd "M-g M-d") 'avy-move-line)
-
-;; 回到光标跳转之前的位置
-(global-set-key (kbd "M-g M-q") 'avy-pop-mark)
-
-;; 不使用 helm，因为它的 minibuffer 的使用和 Emacs 原生的不一致。
-;; 例如，在 minibuffer 中，TAB 一般是补全，但是 helm 没有遵循这种习惯。
-
-;; 使用 Emacs 自带的 ido-mode 来进行 buffer 的切换和文件的打开
-
-;; ----------------------------------------
-;; Magit
-;; ----------------------------------------
-
-(require 'magit)
-(global-set-key (kbd "C-c m s") 'magit-status)
-
-;; 使 Magit 不要覆盖自定义的快捷键
-(define-key magit-mode-map (kbd "C-M-1") 'magit-section-show-level-1-all)
-(define-key magit-mode-map (kbd "C-M-2") 'magit-section-show-level-2-all)
-(define-key magit-mode-map (kbd "C-M-3") 'magit-section-show-level-3-all)
-(define-key magit-mode-map (kbd "C-M-4") 'magit-section-show-level-4-all)
-(define-key magit-mode-map (kbd "M-1") 'imenu)
-(define-key magit-mode-map (kbd "M-2") 'ido-switch-buffer)
-(define-key magit-mode-map (kbd "M-3") 'ido-find-file)
-(define-key magit-mode-map (kbd "M-4") 'bookmark-jump)
-(define-key magit-mode-map (kbd "M-n") 'next-buffer)
-(define-key magit-mode-map (kbd "M-p") 'previous-buffer)
-(define-key magit-mode-map (kbd "M-o") 'find-file-at-point-no-confirm)
-(define-key magit-mode-map (kbd "M-k") 'kill-buffer-no-comfirm)
-(define-key magit-mode-map (kbd "M-e") 'eshell)
-(define-key magit-mode-map (kbd "C-.") 'set-mark-command)
-
-;; ----------------------------------------
-;; cmake-ide rtags
-;;
-;; 配置阅读 C/C++ 代码时的查看定义和查看引用
-;;
-;; https://syamajala.github.io/c-ide.html
-;; ----------------------------------------
-
-(require 'rtags)
-
-;; Source code navigation using RTags
-
-(setq rtags-completions-enabled t)
-(setq rtags-autostart-diagnostics t)
-(rtags-enable-standard-keybindings)
-
-;; CMake automation with cmake-ide
-
-(cmake-ide-setup)
-
-;; Using cmake-ide
-
-;; To have cmake-ide automatically create a compilation commands file in your
-;; project root create a .dir-locals.el containing the following
-
-;; ((nil . ((cmake-ide-build-dir . "<absolute_path_to_project_build_directory>"))
 
 ;; ----------------------------------------
 ;; key binding
