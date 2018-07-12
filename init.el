@@ -55,6 +55,10 @@
 (setq-default initial-scratch-message nil)
 (setq-default initial-major-mode 'text-mode)
 
+;; 使用 text-mode 时每 70 个字符自动缩进
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(setq-default fill-column 70)
+
 ;; 隐藏工具栏和滚动条
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -64,53 +68,55 @@
 (setq-default display-time-24hr-format t)
 (setq-default display-time-day-and-date nil)
 
-;; Mark
+;; 选中的区域高亮
 (setq-default transient-mark-mode t)
+
+;; 设置保存光标位置为环形方式，周而复始地循环
 (setq-default set-mark-command-repeat-pop t)
-(setq-default mark-ring-max 1024)
+
+;; 设置保存最大的光标数目，设置一个小的数目，太大反而不好用
+(setq-default mark-ring-max 8)
 
 ;; 在状态栏显示行号和列号
 (setq-default line-number-mode t)
 (setq-default column-number-mode t)
 
-;; 关闭烦人的出错时的提示声
+;; 关闭出错时的提示声
 (setq-default visible-bell t)
 
 ;; 使用 "y/n" 代替 "yes/no"
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; 制表符
+;; 设置制表符的长度显示为 8 个空格
 (setq-default tab-width 8)
+
+;; 不使用制表符进行缩进
 (setq-default indent-tabs-mode nil)
+
+;; 制表符的显示为一个拉长的光标
 (setq x-stretch-cursor t)
-(setq tab-always-indent 'complete) ; 首先缩进，然后补全
+
+;; 首先缩进，然后补全
+(setq tab-always-indent 'complete)
 
 ;; 每次卷动一行
 (setq-default scroll-conservatively 100)
 
-;; 行末空白
-; (setq-default show-trailing-whitespace 1)
-; (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 ;; 总是以一个换行符结束文件
 (setq-default require-final-newline t)
 
-;; isearch
+;; 在使用 isearch 搜索时，允许使用 C-v/C-l 卷动屏幕
 (setq isearch-allow-scroll t)
 (put 'view-lossage 'isearch-scroll t)
 
-;; 设置书签文件，Emacs 默认的位置是 ~/.emacs.bmk
+;; 设置书签文件保存的位置为 ~/.emacs.d/bookmark
 (setq-default bookmark-default-file (concat user-emacs-directory "bookmark"))
-(setq-default bookmark-save-flag 1) ; 立即保存书签
 
-;; 设置缩略词的文件
-(setq-default abbrev-file-name (concat user-emacs-directory "abbrev_defs"))
-(setq-default abbrev-mode t)
-(if (file-exists-p abbrev-file-name) (read-abbrev-file abbrev-file-name))
-(setq-default save-abbrevs t)
+;; 立即保存书签
+(setq-default bookmark-save-flag 1)
 
 ;; 由菜单修改配置的东西将会保存在 custom-file 里
-;; 这里我设置在 ~/.emacs.d/.custom-file.el
+;; 这里设置在 ~/.emacs.d/.custom-file.el
 (setq-default custom-file (concat user-emacs-directory "custom-file.el"))
 (if (file-exists-p custom-file) (load custom-file))
 
@@ -129,18 +135,18 @@
   (setq-default show-paren-style 'parentheses))
 
 ;; 设置一个大的 kill-ring
-(setq-default kill-ring-max 200)
+(setq-default kill-ring-max 1024)
 
 ;; 光标靠近时，鼠标不动
 (mouse-avoidance-mode 'none)
+
+;; 不要在鼠标点击的那个地方插入剪贴板内容
+(setq-default mouse-yank-at-point t)
 
 ;; 禁止光标和屏幕闪烁
 (when (fboundp 'blink-cursor-mode)
   (blink-cursor-mode -1)
   (setq-default visible-bell nil))
-
-;; 不要在鼠标点击的那个地方插入剪贴板内容
-(setq-default mouse-yank-at-point t)
 
 ;; 递归使用 minibuffer
 (setq-default enable-recursive-minibuffers t)
@@ -150,10 +156,6 @@
 
 ;; 加载默认的库，default.el
 (setq-default inhibit-default-init t)
-
-;; 并且使 text-mode 每 70 个字符自动缩进
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-(setq-default fill-column 70)
 
 ;; 比较差异文件时启动 -u 模式
 (setq-default diff-switches "-u")
@@ -168,6 +170,10 @@
 (put 'scroll-left 'disabled nil)
 (put 'narrow-to-page 'disabled nil)
 (put 'erase-buffer 'disabled nil)
+
+;; ----------------------------------------
+;; 中英文字体设置
+;; ----------------------------------------
 
 ;;; http://emacser.com/torture-emacs.htm
 
@@ -246,6 +252,15 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
         (qiang-set-font English-font-list ":pixelsize=12"
                         Chinese-font-list 12)))))
 
+;; ----------------------------------------
+;; 常用模式设置
+;; ----------------------------------------
+
+;; 保存最近打开的文件，M-l 打开最近打开的文件列表
+(recentf-mode 1)
+(global-unset-key (kbd "M-l"))
+(global-set-key (kbd "M-l") 'recentf-open-files)
+
 ;; 启用语法高亮
 (global-font-lock-mode 1)
 
@@ -274,13 +289,13 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (setq which-func-modes t)
 (which-function-mode t)
 
-;; 文件改动后，自动扫描生成新的索引
-(setq imenu-auto-rescan t)
-(global-set-key (kbd "M-1") 'imenu)
-
 ;; 查看 unix 手册页时，显示所有符合条件的手册页
 ;; 例如： stat(1) stat(2)
 (setq Man-switches "-a")
+
+;; 文件改动后，告诉 imenu 自动扫描生成新的索引
+(setq imenu-auto-rescan t)
+(global-set-key (kbd "M-1") 'imenu)
 
 ;; ----------------------------------------
 ;; ido-mode
@@ -332,13 +347,21 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 
 (require 'avy)
 
+;; 输入一个单词的首字母，如果有多个单词有相同的首字母，那么屏幕会使用
+;; “a s ds fg“这样的字母区分，按下这些字母，则会跳转到这些光标位置
 (global-set-key (kbd "M-g M-g") 'avy-goto-word-1)
+
+;; 一行的行首显示“a s d f”等字母，按下这些字母，跳转到这些光标的位置
 (global-set-key (kbd "M-g M-a") 'avy-goto-line)
 
+;; 快速复制或者移动行或者区域到光标所在位置
 (global-set-key (kbd "M-g M-w") 'avy-copy-line)
-(global-set-key (kbd "M-g M-d") 'avy-move-line)
 (global-set-key (kbd "M-g M-r") 'avy-copy-region)
 
+;; 快速移动一行到光标所在位置
+(global-set-key (kbd "M-g M-d") 'avy-move-line)
+
+;; 回到光标跳转之前的位置
 (global-set-key (kbd "M-g M-q") 'avy-pop-mark)
 
 ;; 不使用 helm，因为它的 minibuffer 的使用和 Emacs 原生的不一致。
@@ -354,6 +377,10 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (global-set-key (kbd "C-c m s") 'magit-status)
 
 ;; 使 Magit 不要覆盖自定义的快捷键
+(define-key magit-mode-map (kbd "C-M-1") 'magit-section-show-level-1-all)
+(define-key magit-mode-map (kbd "C-M-2") 'magit-section-show-level-2-all)
+(define-key magit-mode-map (kbd "C-M-3") 'magit-section-show-level-3-all)
+(define-key magit-mode-map (kbd "C-M-4") 'magit-section-show-level-4-all)
 (define-key magit-mode-map (kbd "M-1") 'imenu)
 (define-key magit-mode-map (kbd "M-2") 'ido-switch-buffer)
 (define-key magit-mode-map (kbd "M-3") 'ido-find-file)
@@ -362,9 +389,13 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (define-key magit-mode-map (kbd "M-p") 'previous-buffer)
 (define-key magit-mode-map (kbd "M-o") 'find-file-at-point-no-confirm)
 (define-key magit-mode-map (kbd "M-k") 'kill-buffer-no-comfirm)
+(define-key magit-mode-map (kbd "M-e") 'eshell)
+(define-key magit-mode-map (kbd "C-.") 'set-mark-command)
 
 ;; ----------------------------------------
 ;; cmake-ide rtags
+;;
+;; 配置阅读 C/C++ 代码时的查看定义和查看引用
 ;;
 ;; https://syamajala.github.io/c-ide.html
 ;; ----------------------------------------
@@ -388,9 +419,24 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 
 ;; ((nil . ((cmake-ide-build-dir . "<absolute_path_to_project_build_directory>"))
 
-
 ;; ----------------------------------------
-;; Key binding
+;; key binding
+;;
+;; 自定义快捷键，包括：
+;;     1. 将一个内建的命令重新绑定到另外一个快捷键
+;;     2. 定义一些小函数，封装内建函数，绑定到一个快捷键
+;;
+;; 快捷键绑定的原则：与原生 Emacs 的快捷键绑定风格保持一致，将自己常用
+;; 的命令，尽量绑定到按键最少的快捷键。如果实在需要多个按键，那么绑定
+;; 到可以连续操作的方式。
+;;
+;; 例如，M-2 切换缓冲区就只需要按一次，右手拇指按下 Alt，左手按下 2；
+;; 而原生的切换缓冲区的快捷键时 C-x b，这样需要两次按键，C-x 一次，b
+;; 一次，减慢了速度，同时影响编辑体验。
+;;
+;; M-g M-a 就比 M-g M-l 要好，因为 M-g M-a 可以连续操作，右按下 Alt 不
+;; 动，左手可以连续地按下 g a，而 M-g M-l 的按键序列是，右手按下 Alt
+;; 左手按下 g，然后左手按下 Alt，右手按下 l，操作起来能够明显感到切换。
 ;; ----------------------------------------
 
 ;; 用 Ctl 加上鼠标滚轮操作来设置字体大小
@@ -402,28 +448,60 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
      (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
      (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)))
 
-(global-set-key (kbd "C-x t")           'untabify)
-(global-set-key (kbd "C-\\")            'delete-trailing-whitespace)
+(global-unset-key (kbd "C-."))
+(global-set-key (kbd "C-.") 'set-mark-command)
 
-(global-set-key (kbd "M-5") 'rgrep)
-(global-set-key (kbd "M-6") 'point-to-register)
-(global-set-key (kbd "M-7") 'jump-to-register)
+(global-unset-key (kbd "M-n"))
+(global-set-key (kbd "M-n") 'next-buffer)
+
+(global-unset-key (kbd "M-p"))
+(global-set-key (kbd "M-p") 'previous-buffer)
+
+(global-unset-key (kbd "M-e"))
+(global-set-key (kbd "M-e") 'eshell)
+
+;; 暂时禁用
+(global-unset-key (kbd "C-\\"))
+(global-set-key (kbd "C-\\") 'delete-trailing-whitespace)
+
+(global-unset-key (kbd "M-4"))
+(global-set-key (kbd "M-4") 'bookmark-jump)
+
+(global-unset-key (kbd "M-5"))
+(global-set-key (kbd "M-5") 'point-to-register)
+
+(global-unset-key (kbd "M-6"))
+(global-set-key (kbd "M-6") 'jump-to-register)
+
+(global-unset-key (kbd "M-7"))
+(global-set-key (kbd "M-7") 'rgrep)
+
+(global-unset-key (kbd "M-8"))
+(global-set-key (kbd "M-8") 'occur)
+
+(global-unset-key (kbd "M-9"))
+(global-set-key (kbd "M-9") 'recompile)
+
+(global-unset-key (kbd "M-0"))
+(global-set-key (kbd "M-0") 'compile)
 
 (defun find-tag-select-at-point ()
   "Find tag select at point"
   (interactive)
   (find-tag (thing-at-point 'symbol 'no-properties)))
-(global-set-key (kbd "M-8") 'find-tag-select-at-point)
 
-(global-set-key (kbd "M-9") 'recompile)
-(global-set-key (kbd "M-0") 'compile)
+(global-unset-key (kbd "C-t"))
+(global-set-key (kbd "C-t") 'find-tag-select-at-point)
 
 (defun open-newline-indent ()
   "Open new line and indent."
   (interactive)
   (move-end-of-line 1)
-  (newline-and-indent))
+  (open-line 1)
+  (forward-char 1)
+  (indent-according-to-mode))
 
+(global-unset-key (kbd "C-j"))
 (global-set-key (kbd "C-j") 'open-newline-indent)
 
 (dolist (hook (append c-related-mode-hook lisp-related-mode-hook
@@ -437,6 +515,7 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
   (open-line 1)
   (indent-according-to-mode))
 
+(global-unset-key (kbd "M-j"))
 (global-set-key (kbd "M-j") 'open-newline-above)
 
 (dolist (hook (append c-related-mode-hook lisp-related-mode-hook
@@ -462,6 +541,7 @@ first non-whitespace char:
      ((/= column 0) (move-beginning-of-line nil))
      (t (back-to-indentation)))))
 
+(global-unset-key (kbd "C-a"))
 (global-set-key (kbd "C-a") 'move-beginning-of-line-enhance)
 
 (defun give-tips-when-want-quit-emacs ()
@@ -469,6 +549,7 @@ first non-whitespace char:
   (interactive)
   (message "Please using save-buffers-kill-terminal to quit Emacs."))
 
+(global-unset-key (kbd "C-x C-c"))
 (global-set-key (kbd "C-x C-c") 'give-tips-when-want-quit-emacs)
 
 ;;;###autoload
@@ -484,6 +565,7 @@ Taken from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
         (ansi-term (getenv "SHELL")))
     (switch-to-buffer-other-window "*ansi-term*")))
 
+(global-unset-key (kbd "C-c t"))
 (global-set-key (kbd "C-c t") 'visit-term-buffer)
 
 ;;;###autoload
@@ -494,6 +576,7 @@ Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
   (interactive)
   (delete-indentation 1))
 
+(global-unset-key (kbd "C-^"))
 (global-set-key (kbd "C-^") 'top-join-line)
 
 (defun kill-buffer-no-comfirm ()
@@ -503,6 +586,53 @@ Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
 
 (global-unset-key (kbd "M-k"))
 (global-set-key (kbd "M-k") 'kill-buffer-no-comfirm)
+
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+;; 打开文件后，自动不显示 Windows 的行末符（^M）
+;(add-hook 'find-file-hooks 'remove-dos-eol)
+
+;; 在 Magit 模式中，自动不显示 Windows 的行末符（^M）
+(add-hook 'magit-status-sections-hook 'remove-dos-eol)
+
+(defun switch-to-last-buffer ()
+  "Switch to previously open buffer.
+
+Repeated invocations toggle between the two most recently open buffers.
+
+taken from emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(global-unset-key (kbd "M-t"))
+(global-set-key (kbd "M-t") 'switch-to-last-buffer)
+
+(defun find-file-at-point-no-confirm ()
+  "find file at point with no confirm
+
+If put cursor at the blank line, it will just open the
+default-directory in dired buffer."
+  (interactive)
+  (find-file (concat default-directory (thing-at-point 'filename 'no-properties))))
+
+(global-unset-key (kbd "M-o"))
+(global-set-key (kbd "M-o") 'find-file-at-point-no-confirm)
+
+;; ----------------------------------------
+;; 主题设置
+;; ----------------------------------------
+
+;; 加载主题
+;; 背景色是墨绿色，这样不会感觉到刺眼
+(load-theme 'sanityinc-solarized-dark)
+
+;; ----------------------------------------
+;; 启动后在 mini-buffer 显示下次检视配置的时间
+;; ----------------------------------------
 
 (defun next-review-day ()
   "Next .emacs.d review day."
@@ -534,88 +664,6 @@ Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
 
      (t
       (message "Come on! Today is review day.")))))
-
-(defun remove-dos-eol ()
-  "Do not show ^M in files containing mixed UNIX and DOS line endings."
-  (interactive)
-  (setq buffer-display-table (make-display-table))
-  (aset buffer-display-table ?\^M []))
-
-;; 打开文件后，自动不显示 Windows 的行末符（^M）
-;(add-hook 'find-file-hooks 'remove-dos-eol)
-
-;; 在 Magit 模式中，自动不显示 Windows 的行末符（^M）
-(add-hook 'magit-status-sections-hook 'remove-dos-eol)
-
-;; 加载主题
-;; 背景色是墨绿色，这样不会感觉到刺眼
-(load-theme 'sanityinc-solarized-dark)
-
-;; ----------------------------------------
-;; key binding
-;;
-;; 自定义快捷键
-;; ----------------------------------------
-
-(defun switch-to-last-buffer ()
-  "Switch to previously open buffer.
-
-Repeated invocations toggle between the two most recently open buffers.
-
-taken from emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"
-  (interactive)
-  (switch-to-buffer (other-buffer (current-buffer) 1)))
-
-(global-set-key (kbd "M-t") 'switch-to-last-buffer)
-
-;; 用 Ctl 加上鼠标滚轮操作来设置字体大小
-(cond
- ((eq system-type 'gnu/linux)
-     (global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
-     (global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease))
- ((eq system-type 'windows-nt)
-     (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
-     (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)))
-
-(defun find-tag-select-at-point ()
-  "Find tag select at point"
-  (interactive)
-  (find-tag (thing-at-point 'symbol 'no-properties)))
-
-(global-set-key (kbd "C-t") 'find-tag-select-at-point)
-(global-set-key (kbd "C-.") 'set-mark-command)
-(global-set-key (kbd "C-x t") 'untabify)
-(global-set-key (kbd "C-\\") 'delete-trailing-whitespace)
-
-(global-unset-key (kbd "M-e"))
-(global-set-key (kbd "M-e") 'eshell)
-
-(defun find-file-at-point-no-confirm ()
-  "find file at point with no confirm
-
-If put cursor at the blank line, it will just open the
-default-directory in dired buffer."
-  (interactive)
-  (find-file (concat default-directory (thing-at-point 'filename 'no-properties))))
-
-(global-unset-key (kbd "M-o"))
-(global-set-key (kbd "M-o") 'find-file-at-point-no-confirm)
-
-(global-unset-key (kbd "M-n"))
-(global-set-key (kbd "M-n") 'next-buffer)
-
-(global-unset-key (kbd "M-p"))
-(global-set-key (kbd "M-p") 'previous-buffer)
-
-(global-set-key (kbd "M-4") 'bookmark-jump)
-(global-set-key (kbd "M-5") 'point-to-register)
-(global-set-key (kbd "M-6") 'jump-to-register)
-(global-set-key (kbd "M-7") 'rgrep)
-(global-set-key (kbd "M-8") 'occur)
-(global-set-key (kbd "M-9") 'recompile)
-(global-set-key (kbd "M-0") 'compile)
-
-(load-theme 'sanityinc-solarized-dark)
 
 (run-at-time 5 nil 'next-review-day)
 
