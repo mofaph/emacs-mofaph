@@ -6,6 +6,7 @@
  ;; If there is more than one, they won't work right.
  '(helm-selection-line ((t (:inherit highlight :distant-foreground "black"))))
  '(magit-item-highlight ((t (:inherit nil))))
+ '(magit-item-mark ((t (:inherit nil))))
  '(magit-key-mode-args-face ((t nil))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -17,4 +18,4 @@
     ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(package-selected-packages
    (quote
-    (markdown-mode color-theme-sanityinc-solarized rtags cmake-ide avy helm magit))))
+    (markdown-mode color-theme-sanityinc-solarized rtags cmake-ide avy magit))))
