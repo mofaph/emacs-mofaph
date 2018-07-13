@@ -504,6 +504,10 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 ;; M-g M-a 就比 M-g M-l 要好，因为 M-g M-a 可以连续操作，右按下 Alt 不
 ;; 动，左手可以连续地按下 g a，而 M-g M-l 的按键序列是，右手按下 Alt
 ;; 左手按下 g，然后左手按下 Alt，右手按下 l，操作起来能够明显感到切换。
+;;
+;; 可以考虑的绑定按键：
+;;     M-a M-c M-i M-u
+;;     C-, C-; C-' C-`
 ;; ----------------------------------------
 
 (global-unset-key (kbd "C-."))
@@ -775,6 +779,8 @@ default-directory in dired buffer."
 
 ;; ----------------------------------------
 ;; 主题设置
+;;
+;; 在 customize 配置项之后，不会询问是否以后使用相同的主题
 ;; ----------------------------------------
 
 ;; 加载主题
