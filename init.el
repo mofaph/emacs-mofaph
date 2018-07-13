@@ -345,16 +345,18 @@
   ;; 设置一个大的 kill-ring
   (setq-default kill-ring-max 1024))
 
-;; 默认行为是，当光标在屏幕底部最后一行时，按下下一行时，屏幕会卷动平
-;; 个屏幕；改变这个行为，每次只卷动一行。
-(setq-default scroll-conservatively 100)
+;; 屏幕滚动相关设置
+(progn
+  ;; 默认行为是，当光标在屏幕底部最后一行时，按下下一行时，屏幕会卷动平
+  ;; 个屏幕；改变这个行为，每次只卷动一行。
+  (setq-default scroll-conservatively 100)
+
+  ;; 在使用 isearch 搜索时，允许使用 C-v/C-l 卷动屏幕
+  (setq isearch-allow-scroll t)
+  (put 'view-lossage 'isearch-scroll t))
 
 ;; 总是以一个换行符结束文件
 (setq-default require-final-newline t)
-
-;; 在使用 isearch 搜索时，允许使用 C-v/C-l 卷动屏幕
-(setq isearch-allow-scroll t)
-(put 'view-lossage 'isearch-scroll t)
 
 ;; 括号匹配时显示另外一边的括号，而不是跳转到另一个括号
 (when (fboundp 'show-paren-mode)
