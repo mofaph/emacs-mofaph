@@ -289,10 +289,33 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (setq-default fill-column 70)
 
-;; 隐藏工具栏和滚动条
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;; 鼠标，界面相关配置
+(progn
+  ;; 隐藏工具栏和滚动条
+  (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+  (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+  (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+  ;; 光标靠近时，鼠标不动
+  (mouse-avoidance-mode 'none)
+
+  ;; 不要在鼠标点击的那个地方插入剪贴板内容
+  (setq-default mouse-yank-at-point t)
+
+  ;; 禁止光标和屏幕闪烁
+  (when (fboundp 'blink-cursor-mode)
+    (blink-cursor-mode -1)
+    (setq-default visible-bell nil))
+
+  ;; 支持emacs和外部程序的粘贴
+  (setq-default x-select-enable-clipboard t)
+
+  ;; 在状态栏显示行号和列号
+  (setq-default line-number-mode t)
+  (setq-default column-number-mode t)
+
+  ;; 在标题栏显示 buffer 的名字
+  (setq-default frame-title-format '(buffer-file-name "%f" ("%b"))))
 
 ;; 选中的区域高亮
 (setq-default transient-mark-mode t)
@@ -302,10 +325,6 @@
 
 ;; 设置保存最大的光标数目，设置一个小的数目，太大反而不好用
 (setq-default mark-ring-max 8)
-
-;; 在状态栏显示行号和列号
-(setq-default line-number-mode t)
-(setq-default column-number-mode t)
 
 ;; 设置制表符的长度显示为 8 个空格
 (setq-default tab-width 8)
@@ -330,9 +349,6 @@
 (setq isearch-allow-scroll t)
 (put 'view-lossage 'isearch-scroll t)
 
-;; 支持emacs和外部程序的粘贴
-(setq-default x-select-enable-clipboard t)
-
 ;; 括号匹配时显示另外一边的括号，而不是跳转到另一个括号
 (when (fboundp 'show-paren-mode)
   (show-paren-mode t)
@@ -341,22 +357,8 @@
 ;; 设置一个大的 kill-ring
 (setq-default kill-ring-max 1024)
 
-;; 光标靠近时，鼠标不动
-(mouse-avoidance-mode 'none)
-
-;; 不要在鼠标点击的那个地方插入剪贴板内容
-(setq-default mouse-yank-at-point t)
-
-;; 禁止光标和屏幕闪烁
-(when (fboundp 'blink-cursor-mode)
-  (blink-cursor-mode -1)
-  (setq-default visible-bell nil))
-
 ;; 递归使用 minibuffer
 (setq-default enable-recursive-minibuffers t)
-
-;; 在标题栏显示 buffer 的名字
-(setq-default frame-title-format '(buffer-file-name "%f" ("%b")))
 
 ;; 比较差异文件时启动 -u 模式
 (setq-default diff-switches "-u")
