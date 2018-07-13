@@ -543,6 +543,12 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 (global-unset-key (kbd "M-0"))
 (global-set-key (kbd "M-0") 'compile)
 
+(global-unset-key (kbd "<f6>"))
+(global-set-key (kbd "<f6>") 'backward-paragraph)
+
+(global-unset-key (kbd "<f8>"))
+(global-set-key (kbd "<f8>") 'forward-paragraph)
+
 ;; ----------------------------------------
 ;; 以下是自定义的小函数的快捷键绑定
 ;; ----------------------------------------
@@ -718,6 +724,38 @@ default-directory in dired buffer."
 
 (global-unset-key (kbd "M-o"))
 (global-set-key (kbd "M-o") 'find-file-at-point-no-confirm)
+
+;; ----------------------------------------
+;; F7/C-z: 光标不动，向上卷动一行
+;; ----------------------------------------
+
+;;;###autoload
+(defun scroll-up-oneline ()
+  "scroll up one line"
+  (interactive)
+  (scroll-up-command 1))
+
+(global-unset-key (kbd "<f7>"))
+(global-set-key (kbd "<f7>") 'scroll-up-oneline)
+
+(global-unset-key (kbd "C-z"))
+(global-set-key (kbd "C-z") 'scroll-up-oneline)
+
+;; ----------------------------------------
+;; F5/M-z: 光标不动，向下卷动一行
+;; ----------------------------------------
+
+;;;###autoload
+(defun scroll-down-oneline ()
+  "scroll down one line"
+  (interactive)
+  (scroll-down-command 1))
+
+(global-unset-key (kbd "<f5>"))
+(global-set-key (kbd "<f5>") 'scroll-down-oneline)
+
+(global-unset-key (kbd "M-z"))
+(global-set-key (kbd "M-z") 'scroll-down-oneline)
 
 ;; ----------------------------------------
 ;; 以下是定义的小函数没有快捷键绑定，它们只在各种钩子中运行
