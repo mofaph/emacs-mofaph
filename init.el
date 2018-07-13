@@ -331,14 +331,19 @@
   ;; 首先缩进，然后补全
   (setq tab-always-indent 'complete))
 
-;; 选中的区域高亮
-(setq-default transient-mark-mode t)
+;; mark, kill ring
+(progn
+  ;; 设置保存光标位置为环形方式，周而复始地循环
+  (setq-default set-mark-command-repeat-pop t)
 
-;; 设置保存光标位置为环形方式，周而复始地循环
-(setq-default set-mark-command-repeat-pop t)
+  ;; 设置保存最大的光标数目，设置一个小的数目，太大反而不好用
+  (setq-default mark-ring-max 8)
 
-;; 设置保存最大的光标数目，设置一个小的数目，太大反而不好用
-(setq-default mark-ring-max 8)
+  ;; 选中的区域高亮
+  (setq-default transient-mark-mode t)
+
+  ;; 设置一个大的 kill-ring
+  (setq-default kill-ring-max 1024))
 
 ;; 默认行为是，当光标在屏幕底部最后一行时，按下下一行时，屏幕会卷动平
 ;; 个屏幕；改变这个行为，每次只卷动一行。
@@ -355,9 +360,6 @@
 (when (fboundp 'show-paren-mode)
   (show-paren-mode t)
   (setq-default show-paren-style 'parentheses))
-
-;; 设置一个大的 kill-ring
-(setq-default kill-ring-max 1024)
 
 ;; 递归使用 minibuffer
 (setq-default enable-recursive-minibuffers t)
