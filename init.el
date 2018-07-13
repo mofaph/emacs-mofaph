@@ -317,6 +317,20 @@
   ;; 在标题栏显示 buffer 的名字
   (setq-default frame-title-format '(buffer-file-name "%f" ("%b"))))
 
+;; 制表符相关设置
+(progn
+  ;; 设置制表符的长度显示为 8 个空格
+  (setq-default tab-width 8)
+
+  ;; 不使用制表符进行缩进
+  (setq-default indent-tabs-mode nil)
+
+  ;; 制表符的显示为一个拉长的光标
+  (setq x-stretch-cursor t)
+
+  ;; 首先缩进，然后补全
+  (setq tab-always-indent 'complete))
+
 ;; 选中的区域高亮
 (setq-default transient-mark-mode t)
 
@@ -325,18 +339,6 @@
 
 ;; 设置保存最大的光标数目，设置一个小的数目，太大反而不好用
 (setq-default mark-ring-max 8)
-
-;; 设置制表符的长度显示为 8 个空格
-(setq-default tab-width 8)
-
-;; 不使用制表符进行缩进
-(setq-default indent-tabs-mode nil)
-
-;; 制表符的显示为一个拉长的光标
-(setq x-stretch-cursor t)
-
-;; 首先缩进，然后补全
-(setq tab-always-indent 'complete)
 
 ;; 默认行为是，当光标在屏幕底部最后一行时，按下下一行时，屏幕会卷动平
 ;; 个屏幕；改变这个行为，每次只卷动一行。
