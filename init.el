@@ -169,53 +169,29 @@
 ;; Magit
 ;; ----------------------------------------
 
-(require 'magit)
-(global-set-key (kbd "C-c m s") 'magit-status)
-
-;; 使 Magit 不要覆盖自定义的快捷键
-(define-key magit-mode-map (kbd "C-M-1") 'magit-section-show-level-1-all)
-(define-key magit-mode-map (kbd "C-M-2") 'magit-section-show-level-2-all)
-(define-key magit-mode-map (kbd "C-M-3") 'magit-section-show-level-3-all)
-(define-key magit-mode-map (kbd "C-M-4") 'magit-section-show-level-4-all)
-(define-key magit-mode-map (kbd "M-1") 'imenu)
-(define-key magit-mode-map (kbd "M-2") 'ido-switch-buffer)
-(define-key magit-mode-map (kbd "M-3") 'ido-find-file)
-(define-key magit-mode-map (kbd "M-4") 'bookmark-jump)
-(define-key magit-mode-map (kbd "M-n") 'next-buffer)
-(define-key magit-mode-map (kbd "M-p") 'previous-buffer)
-(define-key magit-mode-map (kbd "M-o") 'find-file-at-point-no-confirm)
-(define-key magit-mode-map (kbd "M-k") 'kill-buffer-no-comfirm)
-(define-key magit-mode-map (kbd "M-e") 'eshell)
-(define-key magit-mode-map (kbd "C-.") 'set-mark-command)
-
-;; 使用 use-package 配置 magit，不能正确显示 magit-status
-;; 原因未知，暂时不用 use-package 配置
-
-;; (use-package magit
-;;   :after (magit-popup)
-;;   :config
-;;   (magit-status-mode 1)
-;;   :bind
-;;   (("C-c m s" . magit-status))
-;;   ;; 使 Magit 不要覆盖自定义的快捷键
-;;   :bind
-;;   (:map magit-mode-map
-;;         ("C-M-1" . magit-section-show-level-1-all)
-;;         ("C-M-2" . magit-section-show-level-2-all)
-;;         ("C-M-3" . magit-section-show-level-3-all)
-;;         ("C-M-4" . magit-section-show-level-4-all)
-;;         ("M-1" . imenu)
-;;         ("M-2" . ido-switch-buffer)
-;;         ("M-3" . ido-find-file)
-;;         ("M-4" . bookmark-jump)
-;;         ("M-p" . previous-buffer)
-;;         ("M-n" . next-buffer)
-;;         ("M-o" . find-file-at-point-no-confirm)
-;;         ("M-k" . kill-buffer-no-comfirm)
-;;         ("M-e" . eshell)
-;;         ("C-." . set-mark-command)))
-
-;; (use-package magit-popup :defer t)
+(use-package magit
+  ;; 需要保留这个 :init 部分的设置，不然不能工作
+  :init
+  (require 'magit)
+  :bind
+  (("C-c m s" . magit-status))
+  ;; 使 Magit 不要覆盖自定义的快捷键
+  :bind
+  (:map magit-mode-map
+        ("C-M-1" . magit-section-show-level-1-all)
+        ("C-M-2" . magit-section-show-level-2-all)
+        ("C-M-3" . magit-section-show-level-3-all)
+        ("C-M-4" . magit-section-show-level-4-all)
+        ("M-1" . imenu)
+        ("M-2" . ido-switch-buffer)
+        ("M-3" . ido-find-file)
+        ("M-4" . bookmark-jump)
+        ("M-p" . previous-buffer)
+        ("M-n" . next-buffer)
+        ("M-o" . find-file-at-point-no-confirm)
+        ("M-k" . kill-buffer-no-comfirm)
+        ("M-e" . eshell)
+        ("C-." . set-mark-command)))
 
 ;; ----------------------------------------
 ;; cmake-ide rtags
