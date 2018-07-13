@@ -257,7 +257,10 @@
 ;; 基本设置
 ;; ----------------------------------------
 
+;; ----------------------------------------
 ;; 启动后显示的缓冲区相关设置
+;; ----------------------------------------
+
 (progn
   ;; 禁止显示欢迎页面
   (setq-default inhibit-startup-screen t)
@@ -268,7 +271,10 @@
   ;; 草稿缓冲区默认使用文本模式
   (setq-default initial-major-mode 'text-mode))
 
+;; ----------------------------------------
 ;; 鼠标，界面相关配置
+;; ----------------------------------------
+
 (progn
   ;; 隐藏工具栏和滚动条
   (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -296,7 +302,10 @@
   ;; 在标题栏显示 buffer 的名字
   (setq-default frame-title-format '(buffer-file-name "%f" ("%b"))))
 
+;; ----------------------------------------
 ;; 制表符相关设置
+;; ----------------------------------------
+
 (progn
   ;; 设置制表符的长度显示为 8 个空格
   (setq-default tab-width 8)
@@ -310,7 +319,10 @@
   ;; 首先缩进，然后补全
   (setq tab-always-indent 'complete))
 
+;; ----------------------------------------
 ;; mark, kill ring
+;; ----------------------------------------
+
 (progn
   ;; 设置保存光标位置为环形方式，周而复始地循环
   (setq-default set-mark-command-repeat-pop t)
@@ -324,7 +336,10 @@
   ;; 设置一个大的 kill-ring
   (setq-default kill-ring-max 1024))
 
+;; ----------------------------------------
 ;; 屏幕滚动相关设置
+;; ----------------------------------------
+
 (progn
   ;; 默认行为是，当光标在屏幕底部最后一行时，按下下一行时，屏幕会卷动平
   ;; 个屏幕；改变这个行为，每次只卷动一行。
@@ -334,7 +349,10 @@
   (setq isearch-allow-scroll t)
   (put 'view-lossage 'isearch-scroll t))
 
+;; ----------------------------------------
 ;; 缓冲区相关设置
+;; ----------------------------------------
+
 (progn
   ;; 总是以一个换行符结束文件
   (setq-default require-final-newline t)
@@ -350,7 +368,10 @@
   ;; 递归使用 minibuffer
   (setq-default enable-recursive-minibuffers t))
 
+;; ----------------------------------------
 ;; 杂项设置
+;; ----------------------------------------
+
 (progn
   ;; 比较差异文件时启动 -u 模式
   (setq-default diff-switches "-u")
@@ -358,7 +379,10 @@
   ;; 使用 text-mode 时每 70 个字符自动缩进
   (add-hook 'text-mode-hook 'turn-on-auto-fill))
 
+;; ----------------------------------------
 ;; 取消原本不开启的命令
+;; ----------------------------------------
+
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
