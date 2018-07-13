@@ -276,14 +276,16 @@
 ;; 基本设置
 ;; ----------------------------------------
 
-;; 禁止显示欢迎页面
-(setq-default inhibit-startup-screen t)
+;; 启动后显示的缓冲区相关设置
+(progn
+  ;; 禁止显示欢迎页面
+  (setq-default inhibit-startup-screen t)
 
-;; 初始化的草稿缓冲区不输出模板消息
-(setq-default initial-scratch-message nil)
+  ;; 初始化的草稿缓冲区不输出模板消息
+  (setq-default initial-scratch-message nil)
 
-;; 草稿缓冲区默认使用文本模式
-(setq-default initial-major-mode 'text-mode)
+  ;; 草稿缓冲区默认使用文本模式
+  (setq-default initial-major-mode 'text-mode))
 
 ;; 使用 text-mode 时每 70 个字符自动缩进
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
