@@ -165,11 +165,6 @@
    ("M-g M-r" . avy-copy-region)
    ("M-g M-d" . avy-move-line)))
 
-;; 不使用 helm，因为它的 minibuffer 的使用和 Emacs 原生的不一致。
-;; 例如，在 minibuffer 中，TAB 一般是补全，但是 helm 没有遵循这种习惯。
-
-;; 使用 Emacs 自带的 ido-mode 来进行 buffer 的切换和文件的打开
-
 ;; ----------------------------------------
 ;; Magit
 ;; ----------------------------------------
