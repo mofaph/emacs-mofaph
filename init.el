@@ -287,9 +287,6 @@
   ;; 草稿缓冲区默认使用文本模式
   (setq-default initial-major-mode 'text-mode))
 
-;; 使用 text-mode 时每 70 个字符自动缩进
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-
 ;; 鼠标，界面相关配置
 (progn
   ;; 隐藏工具栏和滚动条
@@ -372,8 +369,13 @@
   ;; 递归使用 minibuffer
   (setq-default enable-recursive-minibuffers t))
 
-;; 比较差异文件时启动 -u 模式
-(setq-default diff-switches "-u")
+;; 杂项设置
+(progn
+  ;; 比较差异文件时启动 -u 模式
+  (setq-default diff-switches "-u")
+
+  ;; 使用 text-mode 时每 70 个字符自动缩进
+  (add-hook 'text-mode-hook 'turn-on-auto-fill))
 
 ;; 取消原本不开启的命令
 (put 'narrow-to-region 'disabled nil)
