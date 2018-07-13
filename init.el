@@ -32,11 +32,25 @@
 
 ;; ----------------------------------------
 ;; use-package
+;;
+;; :preface 在其他所有的之前执行
+;; :init   在插件加载之前执行
+;; :config 在插件加载之后执行
+;; :bind 绑定按键，执行顺序待确认
 ;; ----------------------------------------
 
 (eval-when-compile
   (require 'use-package)
   (setq use-package-verbose t))
+
+;; ----------------------------------------
+;; bookmark
+;; ----------------------------------------
+
+(use-package bookmark
+  :init
+  ;; 修改书签首，立即保存
+  (setq-default bookmark-save-flag 1))
 
 ;; ----------------------------------------
 ;; recentf
@@ -262,9 +276,13 @@
 ;; 基本设置
 ;; ----------------------------------------
 
-;; 初始化设置
+;; 禁止显示欢迎页面
 (setq-default inhibit-startup-screen t)
+
+;; 初始化的草稿缓冲区不输出模板消息
 (setq-default initial-scratch-message nil)
+
+;; 草稿缓冲区默认使用文本模式
 (setq-default initial-major-mode 'text-mode)
 
 ;; 使用 text-mode 时每 70 个字符自动缩进
@@ -311,15 +329,6 @@
 ;; 在使用 isearch 搜索时，允许使用 C-v/C-l 卷动屏幕
 (setq isearch-allow-scroll t)
 (put 'view-lossage 'isearch-scroll t)
-
-;; 立即保存书签
-(setq-default bookmark-save-flag 1)
-
-;; 备份设置
-(setq-default make-backup-file t)
-(setq-default version-control t)
-(setq-default backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
-(setq-default delete-old-versions t)
 
 ;; 支持emacs和外部程序的粘贴
 (setq-default x-select-enable-clipboard t)
