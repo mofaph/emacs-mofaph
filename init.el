@@ -289,7 +289,6 @@
 
 ;; 使用 text-mode 时每 70 个字符自动缩进
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
-(setq-default fill-column 70)
 
 ;; 鼠标，界面相关配置
 (progn
@@ -357,16 +356,21 @@
   (setq isearch-allow-scroll t)
   (put 'view-lossage 'isearch-scroll t))
 
-;; 总是以一个换行符结束文件
-(setq-default require-final-newline t)
+;; 缓冲区相关设置
+(progn
+  ;; 总是以一个换行符结束文件
+  (setq-default require-final-newline t)
 
-;; 括号匹配时显示另外一边的括号，而不是跳转到另一个括号
-(when (fboundp 'show-paren-mode)
-  (show-paren-mode t)
-  (setq-default show-paren-style 'parentheses))
+  ;; 括号匹配时显示另外一边的括号，而不是跳转到另一个括号
+  (when (fboundp 'show-paren-mode)
+    (show-paren-mode t)
+    (setq-default show-paren-style 'parentheses))
 
-;; 递归使用 minibuffer
-(setq-default enable-recursive-minibuffers t)
+  ;; 自动折行的每行字符数设置为 70 字节
+  (setq-default fill-column 70)
+
+  ;; 递归使用 minibuffer
+  (setq-default enable-recursive-minibuffers t))
 
 ;; 比较差异文件时启动 -u 模式
 (setq-default diff-switches "-u")
