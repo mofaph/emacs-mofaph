@@ -104,6 +104,39 @@
          ("M-k" . kill-buffer-no-comfirm)))
 
 ;; ----------------------------------------
+;; cc-mode
+;; ----------------------------------------
+
+(use-package cc-mode
+  :preface
+
+  ;; Taken from the cc-mode manual
+  ;; Make a non-standard key binding.  We can put this in
+  ;; c-mode-base-map because c-mode-map, c++-mode-map, and so on,
+  ;; inherit from it.
+  (defun setup-c-initialization-hook ()
+    (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
+
+  (defun setup-c-mode-common-hook ()
+    (c-toggle-hungry-state 1)
+    (subword-mode 1))
+
+  :init
+
+  ;; 设置类 C 模式的编码风格
+  (setq c-default-style
+        '((awk-mode  . "awk")
+          (java-mode . "java")
+          (c-mode    . "linux")
+          (c++-mode  . "stroustrup")
+          (objc-mode . "cc-mode")
+          (other     . "linux")))
+
+  :config
+  (add-hook 'c-initialization-hook 'setup-c-initialization-hook)
+  (add-hook 'c-mode-common-hook 'setup-c-mode-common-hook))
+
+;; ----------------------------------------
 ;; avy
 ;;
 ;; 在屏幕中快速的跳转到指定的位置
@@ -443,29 +476,6 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 ;; 查看 unix 手册页时，显示所有符合条件的手册页
 ;; 例如： stat(1) stat(2)
 (setq Man-switches "-a")
-
-;; 设置类 C 模式的编码风格
-(setq c-default-style '((awk-mode       . "awk")
-                        (c-mode         . "linux")
-                        (c++-mode       . "stroustrup")
-                        (objc-mode      . "cc-mode")
-                        (java-mode      . "java")
-                        (other          . "gnu")))
-
-;; Taken from the cc-mode manual
-;; Make a non-standard key binding.  We can put this in
-;; c-mode-base-map because c-mode-map, c++-mode-map, and so on,
-;; inherit from it.
-(defun setup-c-initialization-hook ()
-  (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
-
-(add-hook 'c-initialization-hook 'setup-c-initialization-hook)
-
-(defun setup-c-mode-common-hook ()
-  (c-toggle-hungry-state 1)
-  (subword-mode 1))
-
-(add-hook 'c-mode-common-hook 'setup-c-mode-common-hook)
 
 ;; ----------------------------------------
 ;; key binding
