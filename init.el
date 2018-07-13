@@ -3,6 +3,9 @@
 ;;; mofaph@gmail.com
 ;;; 2009-7-13
 
+;; ----------------------------------------
+;; package.el
+;; ----------------------------------------
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -17,6 +20,15 @@
 
 ;; 只使用 emacs-china.org 的镜像作为 elpa 仓库
 (add-to-list 'package-archives '("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/") t)
+
+;; ----------------------------------------
+;; 加载使用 customize 配置系统生成的配置
+;; ----------------------------------------
+
+;; 由菜单修改配置的东西将会保存在 custom-file 里
+;; 这里设置在 ~/.emacs.d/custom-file.el
+(setq-default custom-file (concat user-emacs-directory "custom-file.el"))
+(if (file-exists-p custom-file) (load custom-file))
 
 ;; ----------------------------------------
 ;; use-package
@@ -231,10 +243,6 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-;; 设置时间格式
-(setq-default display-time-24hr-format t)
-(setq-default display-time-day-and-date nil)
-
 ;; 选中的区域高亮
 (setq-default transient-mark-mode t)
 
@@ -247,12 +255,6 @@
 ;; 在状态栏显示行号和列号
 (setq-default line-number-mode t)
 (setq-default column-number-mode t)
-
-;; 关闭出错时的提示声
-(setq-default visible-bell t)
-
-;; 使用 "y/n" 代替 "yes/no"
-(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; 设置制表符的长度显示为 8 个空格
 (setq-default tab-width 8)
@@ -277,16 +279,8 @@
 (setq isearch-allow-scroll t)
 (put 'view-lossage 'isearch-scroll t)
 
-;; 设置书签文件保存的位置为 ~/.emacs.d/bookmark
-(setq-default bookmark-default-file (concat user-emacs-directory "bookmark"))
-
 ;; 立即保存书签
 (setq-default bookmark-save-flag 1)
-
-;; 由菜单修改配置的东西将会保存在 custom-file 里
-;; 这里设置在 ~/.emacs.d/.custom-file.el
-(setq-default custom-file (concat user-emacs-directory "custom-file.el"))
-(if (file-exists-p custom-file) (load custom-file))
 
 ;; 备份设置
 (setq-default make-backup-file t)
@@ -322,14 +316,8 @@
 ;; 在标题栏显示 buffer 的名字
 (setq-default frame-title-format '(buffer-file-name "%f" ("%b")))
 
-;; 加载默认的库，default.el
-(setq-default inhibit-default-init t)
-
 ;; 比较差异文件时启动 -u 模式
 (setq-default diff-switches "-u")
-
-;; 提示文件结尾的空行
-(setq-default indicate-empty-lines 1)
 
 ;; 取消原本不开启的命令
 (put 'narrow-to-region 'disabled nil)
@@ -602,14 +590,13 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 
 When the cursor looks like:
 
-`'    hello w|orld`'
+'    hello w|orld'
 
-you pressed `'C-a`', and the cursor move to the real beginning of line.
-
-If you pressed `'C-a`' again, you will get the cursor at the
+You pressed C-a, and the cursor move to the real beginning of
+line.  If you pressed C-a again, you will get the cursor at the
 first non-whitespace char:
 
-`'    |hello world`'"
+'    |hello world'"
   (interactive)
   (let ((column (- (point) (point-at-bol))))
     (cond
