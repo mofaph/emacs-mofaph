@@ -119,6 +119,15 @@
          ("M-k" . kill-buffer-no-comfirm)))
 
 ;; ----------------------------------------
+;; man
+;; ----------------------------------------
+
+(use-package man
+  :bind (:map Man-mode-map
+              ("M-p" . previous-buffer)
+              ("M-n" . next-buffer)))
+
+;; ----------------------------------------
 ;; cc-mode
 ;; ----------------------------------------
 
@@ -135,6 +144,10 @@
   (defun setup-c-mode-common-hook ()
     (c-toggle-hungry-state 1)
     (subword-mode 1))
+
+  :bind
+  (:map c-mode-map
+        ("M-e" . eshell))
 
   :init
 
