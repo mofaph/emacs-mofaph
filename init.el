@@ -436,10 +436,6 @@
 (setq which-func-modes t)
 (which-function-mode t)
 
-;; 查看 unix 手册页时，显示所有符合条件的手册页
-;; 例如： stat(1) stat(2)
-(setq Man-switches "-a")
-
 ;; ----------------------------------------
 ;; key binding
 ;;
