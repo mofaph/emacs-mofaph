@@ -40,6 +40,7 @@
 ;; ----------------------------------------
 
 (eval-when-compile
+  (require 'bind-key)
   (require 'use-package)
   (setq use-package-verbose t))
 
@@ -450,48 +451,25 @@
 ;;     C-, C-; C-' C-`
 ;; ----------------------------------------
 
-(global-unset-key (kbd "C-."))
-(global-set-key (kbd "C-.") 'set-mark-command)
+(bind-key* "C-h B" 'describe-personal-keybindings)
 
-(global-unset-key (kbd "M-n"))
-(global-set-key (kbd "M-n") 'next-buffer)
-
-(global-unset-key (kbd "M-p"))
-(global-set-key (kbd "M-p") 'previous-buffer)
-
-(global-unset-key (kbd "M-e"))
-(global-set-key (kbd "M-e") 'eshell)
-
-;; 暂时禁用
-(global-unset-key (kbd "C-\\"))
-(global-set-key (kbd "C-\\") 'delete-trailing-whitespace)
-
-(global-unset-key (kbd "M-4"))
-(global-set-key (kbd "M-4") 'bookmark-jump)
-
-(global-unset-key (kbd "M-5"))
-(global-set-key (kbd "M-5") 'point-to-register)
-
-(global-unset-key (kbd "M-6"))
-(global-set-key (kbd "M-6") 'jump-to-register)
-
-(global-unset-key (kbd "M-7"))
-(global-set-key (kbd "M-7") 'rgrep)
-
-(global-unset-key (kbd "M-8"))
-(global-set-key (kbd "M-8") 'occur)
-
-(global-unset-key (kbd "M-9"))
-(global-set-key (kbd "M-9") 'recompile)
-
-(global-unset-key (kbd "M-0"))
-(global-set-key (kbd "M-0") 'compile)
-
-(global-unset-key (kbd "<f6>"))
-(global-set-key (kbd "<f6>") 'backward-paragraph)
-
-(global-unset-key (kbd "<f8>"))
-(global-set-key (kbd "<f8>") 'forward-paragraph)
+(bind-key* "C-." 'set-mark-command)
+(bind-key* "M-p" 'previous-buffer)
+(bind-key* "M-n" 'next-buffer)
+(bind-key* "M-e" 'eshell)
+(bind-key* "C-\\" 'delete-trailing-whitespace)
+(bind-key* "M-1" 'imenu)
+(bind-key* "M-2" 'ido-switch-buffer)
+(bind-key* "M-3" 'ido-find-file)
+(bind-key* "M-4" 'bookmark-jump)
+(bind-key* "M-5" 'point-to-register)
+(bind-key* "M-6" 'jump-to-register)
+(bind-key* "M-7" 'rgrep)
+(bind-key* "M-8" 'occur)
+(bind-key* "M-9" 'recompile)
+(bind-key* "M-0" 'compile)
+(bind-key* "<f6>" 'backward-paragraph)
+(bind-key* "<f8>" 'forward-paragraph)
 
 ;; ----------------------------------------
 ;; 以下是自定义的小函数的快捷键绑定
@@ -507,8 +485,7 @@
   (interactive)
   (find-tag (thing-at-point 'symbol 'no-properties)))
 
-(global-unset-key (kbd "C-t"))
-(global-set-key (kbd "C-t") 'find-tag-select-at-point)
+(bind-key* "C-t" 'find-tag-select-at-point)
 
 ;; ----------------------------------------
 ;; C-j: 当光标在当前行，自动在下一行打开新行，同时缩进
@@ -523,8 +500,7 @@
   (forward-char 1)
   (indent-according-to-mode))
 
-(global-unset-key (kbd "C-j"))
-(global-set-key (kbd "C-j") 'open-newline-indent)
+(bind-key* "C-j" 'open-newline-indent)
 
 (dolist (hook (append c-related-mode-hook lisp-related-mode-hook
                       '(asm-mode-hook sh-mode-hook)))
@@ -542,8 +518,7 @@
   (open-line 1)
   (indent-according-to-mode))
 
-(global-unset-key (kbd "M-j"))
-(global-set-key (kbd "M-j") 'open-newline-above)
+(bind-key* "M-j" 'open-newline-above)
 
 (dolist (hook (append c-related-mode-hook lisp-related-mode-hook
                       '(asm-mode-hook sh-mode-hook)))
@@ -572,8 +547,7 @@ first non-whitespace char:
      ((/= column 0) (move-beginning-of-line nil))
      (t (back-to-indentation)))))
 
-(global-unset-key (kbd "C-a"))
-(global-set-key (kbd "C-a") 'move-beginning-of-line-enhance)
+(bind-key* "C-a" 'move-beginning-of-line-enhance)
 
 ;; ----------------------------------------
 ;; C-x C-c: 取消退出的快捷键
@@ -585,8 +559,7 @@ first non-whitespace char:
   (interactive)
   (message "Please using save-buffers-kill-terminal to quit Emacs."))
 
-(global-unset-key (kbd "C-x C-c"))
-(global-set-key (kbd "C-x C-c") 'give-tips-when-want-quit-emacs)
+(bind-key* "C-x C-c" 'give-tips-when-want-quit-emacs)
 
 ;; ----------------------------------------
 ;; C-c t: 打开模拟终端的缓冲区
@@ -605,8 +578,7 @@ Taken from: http://emacsredux.com/blog/2013/03/29/terminal-at-your-fingertips/"
         (ansi-term (getenv "SHELL")))
     (switch-to-buffer-other-window "*ansi-term*")))
 
-(global-unset-key (kbd "C-c t"))
-(global-set-key (kbd "C-c t") 'visit-term-buffer)
+(bind-key* "C-c t" 'visit-term-buffer)
 
 ;; ----------------------------------------
 ;; C-^: 将当前行和上一行合并
@@ -620,8 +592,7 @@ Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
   (interactive)
   (delete-indentation 1))
 
-(global-unset-key (kbd "C-^"))
-(global-set-key (kbd "C-^") 'top-join-line)
+(bind-key* "C-^" 'top-join-line)
 
 ;; ----------------------------------------
 ;; M-k: 关闭缓冲区，不用确认
@@ -633,8 +604,7 @@ Taken from: http://emacsredux.com/blog/2013/05/30/joining-lines/"
   (interactive)
   (kill-buffer nil))
 
-(global-unset-key (kbd "M-k"))
-(global-set-key (kbd "M-k") 'kill-buffer-no-comfirm)
+(bind-key* "M-k" 'kill-buffer-no-comfirm)
 
 ;; ----------------------------------------
 ;; M-t: 在最近选中的两个缓冲区中轮流切换
@@ -650,8 +620,7 @@ taken from emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
 
-(global-unset-key (kbd "M-t"))
-(global-set-key (kbd "M-t") 'switch-to-last-buffer)
+(bind-key* "M-t" 'switch-to-last-buffer)
 
 ;; ----------------------------------------
 ;; M-o: 打开光标所在的文件名，默认是当前目录，不用确认
@@ -666,8 +635,7 @@ default-directory in dired buffer."
   (interactive)
   (find-file (concat default-directory (thing-at-point 'filename 'no-properties))))
 
-(global-unset-key (kbd "M-o"))
-(global-set-key (kbd "M-o") 'find-file-at-point-no-confirm)
+(bind-key* "M-o" 'find-file-at-point-no-confirm)
 
 ;; ----------------------------------------
 ;; F7/C-z: 光标不动，向上卷动一行
@@ -679,11 +647,8 @@ default-directory in dired buffer."
   (interactive)
   (scroll-up-command 1))
 
-(global-unset-key (kbd "<f7>"))
-(global-set-key (kbd "<f7>") 'scroll-up-oneline)
-
-(global-unset-key (kbd "C-z"))
-(global-set-key (kbd "C-z") 'scroll-up-oneline)
+(bind-key* "<f7>" 'scroll-up-oneline)
+(bind-key* "C-z" 'scroll-up-oneline)
 
 ;; ----------------------------------------
 ;; F5/M-z: 光标不动，向下卷动一行
@@ -695,11 +660,8 @@ default-directory in dired buffer."
   (interactive)
   (scroll-down-command 1))
 
-(global-unset-key (kbd "<f5>"))
-(global-set-key (kbd "<f5>") 'scroll-down-oneline)
-
-(global-unset-key (kbd "M-z"))
-(global-set-key (kbd "M-z") 'scroll-down-oneline)
+(bind-key* "<f5>" 'scroll-down-oneline)
+(bind-key* "M-z" 'scroll-down-oneline)
 
 ;; ----------------------------------------
 ;; 以下是定义的小函数没有快捷键绑定，它们只在各种钩子中运行
