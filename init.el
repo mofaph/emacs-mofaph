@@ -423,7 +423,6 @@
 ;;
 ;; 可以考虑的绑定按键：
 ;;     M-a M-c M-i M-u
-;;     C-, C-; C-' C-`
 ;; ----------------------------------------
 
 (bind-key* "C-h B" 'describe-personal-keybindings)
