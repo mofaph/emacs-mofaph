@@ -22,3 +22,40 @@
    (set-font "monofur" "vera Sans YuanTi Mono" 20 20))
   (darwin
    (set-font "monofur" "STHeiti" 20 20)))
+
+;; ----------------------------------------
+;; 启动后在 mini-buffer 显示下次检视配置的时间
+;; ----------------------------------------
+
+(defun next-review-day ()
+  "Next .emacs.d review day."
+
+  (lexical-let ((year (string-to-number (format-time-string "%Y" (current-time))))
+                (review-day1 101)
+                (review-day2 401)
+                (review-day3 701)
+                (review-day4 1001)
+                (max-review-day 1232)
+                (review-current-day (string-to-number (format-time-string "%m%d" (current-time)))))
+
+    (cond
+     ((and (> review-current-day review-day1)
+           (< review-current-day review-day2))
+      (message "Next review day is %d-04-01" year))
+
+     ((and (> review-current-day review-day2)
+           (< review-current-day review-day3))
+      (message "Next review day is %d-07-01" year))
+
+     ((and (> review-current-day review-day3)
+           (< review-current-day review-day4))
+      (message "Next review day is %d-10-01" year))
+
+     ((and (> review-current-day review-day4)
+           (< review-current-day max-review-day))
+      (message "Next review day is %d-01-01" (1+ year)))
+
+     (t
+      (message "Come on! Today is review day.")))))
+
+(run-at-time 5 nil 'next-review-day)
