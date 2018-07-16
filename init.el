@@ -62,14 +62,11 @@
 
 (use-package dired
   :init
-
   ;; 在 dired 模式下，标记删除时，移动到回收站。这样减少发生误操作的风险
   (setq delete-by-moving-to-trash t)
-
   ;; 让 dired 可以递归的拷贝和删除目录
   (setq-default dired-recursive-copies 'top
                 dired-recursive-deletes 'top)
-
   ;; 在 tramp 中使用 dired 时，允许使用远程机器的 .dir-locals.el 文件的配置
   (setq enable-remote-dir-locals t))
 
@@ -125,24 +122,19 @@
 
 (use-package cc-mode
   :preface
-
   ;; Taken from the cc-mode manual
   ;; Make a non-standard key binding.  We can put this in
   ;; c-mode-base-map because c-mode-map, c++-mode-map, and so on,
   ;; inherit from it.
   (defun setup-c-initialization-hook ()
     (define-key c-mode-base-map (kbd "RET") 'c-context-line-break))
-
   (defun setup-c-mode-common-hook ()
     (c-toggle-hungry-state 1)
     (subword-mode 1))
-
   :bind
   (:map c-mode-map
         ("M-e" . eshell))
-
   :init
-
   ;; 设置类 C 模式的编码风格
   (setq c-default-style
         '((awk-mode  . "awk")
@@ -151,7 +143,6 @@
           (c++-mode  . "stroustrup")
           (objc-mode . "cc-mode")
           (other     . "linux")))
-
   :config
   (add-hook 'c-initialization-hook 'setup-c-initialization-hook)
   (add-hook 'c-mode-common-hook 'setup-c-mode-common-hook))
@@ -286,25 +277,19 @@
   (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
   (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
   (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-
   ;; 光标靠近时，鼠标不动
   (mouse-avoidance-mode 'none)
-
   ;; 不要在鼠标点击的那个地方插入剪贴板内容
   (setq-default mouse-yank-at-point t)
-
   ;; 禁止光标和屏幕闪烁
   (when (fboundp 'blink-cursor-mode)
     (blink-cursor-mode -1)
     (setq-default visible-bell nil))
-
   ;; 支持emacs和外部程序的粘贴
   (setq-default x-select-enable-clipboard t)
-
   ;; 在状态栏显示行号和列号
   (setq-default line-number-mode t)
   (setq-default column-number-mode t)
-
   ;; 在标题栏显示 buffer 的名字
   (setq-default frame-title-format '(buffer-file-name "%f" ("%b"))))
 
@@ -315,13 +300,10 @@
 (progn
   ;; 设置制表符的长度显示为 8 个空格
   (setq-default tab-width 8)
-
   ;; 不使用制表符进行缩进
   (setq-default indent-tabs-mode nil)
-
   ;; 制表符的显示为一个拉长的光标
   (setq x-stretch-cursor t)
-
   ;; 首先缩进，然后补全
   (setq tab-always-indent 'complete))
 
@@ -332,13 +314,10 @@
 (progn
   ;; 设置保存光标位置为环形方式，周而复始地循环
   (setq-default set-mark-command-repeat-pop t)
-
   ;; 设置保存最大的光标数目，设置一个小的数目，太大反而不好用
   (setq-default mark-ring-max 8)
-
   ;; 选中的区域高亮
   (setq-default transient-mark-mode t)
-
   ;; 设置一个大的 kill-ring
   (setq-default kill-ring-max 1024))
 
@@ -350,7 +329,6 @@
   ;; 默认行为是，当光标在屏幕底部最后一行时，按下下一行时，屏幕会卷动平
   ;; 个屏幕；改变这个行为，每次只卷动一行。
   (setq-default scroll-conservatively 100)
-
   ;; 在使用 isearch 搜索时，允许使用 C-v/C-l 卷动屏幕
   (setq isearch-allow-scroll t)
   (put 'view-lossage 'isearch-scroll t))
@@ -362,15 +340,12 @@
 (progn
   ;; 总是以一个换行符结束文件
   (setq-default require-final-newline t)
-
   ;; 括号匹配时显示另外一边的括号，而不是跳转到另一个括号
   (when (fboundp 'show-paren-mode)
     (show-paren-mode t)
     (setq-default show-paren-style 'parentheses))
-
   ;; 自动折行的每行字符数设置为 70 字节
   (setq-default fill-column 70)
-
   ;; 递归使用 minibuffer
   (setq-default enable-recursive-minibuffers t))
 
@@ -381,7 +356,6 @@
 (progn
   ;; 比较差异文件时启动 -u 模式
   (setq-default diff-switches "-u")
-
   ;; 使用 text-mode 时每 70 个字符自动缩进
   (add-hook 'text-mode-hook 'turn-on-auto-fill))
 
@@ -676,7 +650,6 @@ default-directory in dired buffer."
 
 ;; 打开文件后，自动不显示 Windows 的行末符（^M）
 (add-hook 'find-file-hooks 'remove-dos-eol)
-
 ;; 在 Magit 模式中，自动不显示 Windows 的行末符（^M）
 (add-hook 'magit-status-sections-hook 'remove-dos-eol)
 
