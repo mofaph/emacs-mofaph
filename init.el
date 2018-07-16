@@ -10,11 +10,6 @@
 ;; 初始化 package.el，需要放到安装包的配置之前
 (package-initialize)
 
-;; fix a package.el bug
-;; https://github.com/bbatsov/prelude/blob/master/prelude/prelude-packages.el
-;; http://melpa.milkbox.net/
-(setq url-http-attempt-keepalives nil)
-
 ;; 只使用 emacs-china.org 的镜像作为 elpa 仓库
 (add-to-list 'package-archives '("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/") t)
 
