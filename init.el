@@ -433,6 +433,7 @@
 (bind-key* "M-n" 'next-buffer)
 (bind-key* "M-e" 'eshell)
 (bind-key* "C-\\" 'delete-trailing-whitespace)
+(bind-key* "M-\\" 'cycle-spacing)
 (bind-key* "M-1" 'imenu)
 (bind-key* "M-2" 'ido-switch-buffer)
 (bind-key* "M-3" 'ido-find-file)
