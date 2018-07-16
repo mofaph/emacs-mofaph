@@ -7,10 +7,7 @@
 ;; package.el
 ;; ----------------------------------------
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;; 初始化 package.el，需要放到安装包的配置之前
 (package-initialize)
 
 ;; fix a package.el bug
