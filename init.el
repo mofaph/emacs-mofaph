@@ -219,12 +219,11 @@
   :after (rtags)
   :config (cmake-ide-setup))
 
-;; Using cmake-ide
-
-;; To have cmake-ide automatically create a compilation commands file in your
-;; project root create a .dir-locals.el containing the following
-
-;; ((nil . ((cmake-ide-build-dir . "<absolute_path_to_project_build_directory>"))
+;; 要让 cmake-ide 自动创建编译命令，需要在项目的顶层目录下，创建一个
+;; .dir-locals.el 文件，注意最后不要包括斜杠（/）
+;;
+;; ((nil . ((cmake-ide-project-dir . "/path/to/project/root")
+;;          (cmake-ide-build-dir . "/path/to/project/build/root"))))
 
 ;; ----------------------------------------
 ;; 全局变量，自定义加载 el 文件的目录
