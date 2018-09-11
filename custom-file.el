@@ -6,7 +6,8 @@
  ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "light blue"))))
  '(magit-diff-added ((t (:foreground "green"))))
- '(magit-diff-removed ((t (:foreground "red")))))
+ '(magit-diff-removed ((t (:foreground "red"))))
+ '(which-func ((t nil))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
