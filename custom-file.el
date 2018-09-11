@@ -7,6 +7,8 @@
  '(cursor ((t (:background "light blue"))))
  '(magit-diff-added ((t (:foreground "green"))))
  '(magit-diff-removed ((t (:foreground "red"))))
+ '(magit-item-highlight ((t (:inherit nil))))
+ '(magit-tag ((t nil)))
  '(which-func ((t nil))))
 
 (custom-set-variables
