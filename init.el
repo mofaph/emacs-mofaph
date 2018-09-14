@@ -339,6 +339,8 @@
 ;; ----------------------------------------
 
 (progn
+  ;; 使用 y/n 替代 yes/no
+  (fset 'yes-or-no-p 'y-or-n-p)
   ;; 比较差异文件时启动 -u 模式
   (setq-default diff-switches "-u")
   ;; 使用 text-mode 时每 70 个字符自动缩进
