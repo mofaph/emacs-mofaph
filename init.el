@@ -53,7 +53,7 @@
 (use-package recentf
   :bind
   (("M-l" . recentf-open-files))
-  :config
+  :init
   (recentf-mode 1))
 
 ;; ----------------------------------------
