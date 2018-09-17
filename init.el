@@ -99,22 +99,13 @@
 (use-package term
   :bind (("C-c t" . visit-term-buffer)
          :map term-mode-map
-         ("M-p" . previous-buffer)
-         ("M-n" . next-buffer)
+         ("M-p" . previous-error)
+         ("M-n" . next-error)
          ("M-k" . kill-buffer-no-comfirm)
          :map term-raw-map
-         ("M-p" . previous-buffer)
-         ("M-n" . next-buffer)
+         ("M-p" . previous-error)
+         ("M-n" . next-error)
          ("M-k" . kill-buffer-no-comfirm)))
-
-;; ----------------------------------------
-;; man
-;; ----------------------------------------
-
-(use-package man
-  :bind (:map Man-mode-map
-              ("M-p" . previous-buffer)
-              ("M-n" . next-buffer)))
 
 ;; ----------------------------------------
 ;; cc-mode
@@ -193,8 +184,8 @@
         ("M-2" . ido-switch-buffer)
         ("M-3" . ido-find-file)
         ("M-4" . bookmark-jump)
-        ("M-p" . previous-buffer)
-        ("M-n" . next-buffer)
+        ("M-p" . previous-error)
+        ("M-n" . next-error)
         ("M-o" . find-file-at-point-no-confirm)
         ("M-k" . kill-buffer-no-comfirm)
         ("M-e" . eshell)
@@ -415,8 +406,8 @@
 (bind-key* "C-h B" 'describe-personal-keybindings)
 
 (bind-key* "C-." 'set-mark-command)
-(bind-key* "M-p" 'previous-buffer)
-(bind-key* "M-n" 'next-buffer)
+(bind-key* "M-p" 'previous-error)
+(bind-key* "M-n" 'next-error)
 (bind-key* "M-e" 'eshell)
 (bind-key* "C-\\" 'delete-trailing-whitespace)
 (bind-key* "M-\\" 'cycle-spacing)
