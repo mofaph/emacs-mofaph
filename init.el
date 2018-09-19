@@ -422,7 +422,9 @@
 (bind-key* "M-9" 'recompile)
 (bind-key* "M-0" 'compile)
 (bind-key* "<f6>" 'backward-paragraph)
+(bind-key* "<insertchar>" 'backward-paragraph)
 (bind-key* "<f8>" 'forward-paragraph)
+(bind-key* "<deletechar>" 'forward-paragraph)
 
 ;; ----------------------------------------
 ;; 自定义函数绑定快捷键需要覆盖的模式
@@ -626,6 +628,7 @@ default-directory in dired buffer."
 
 (bind-key* "<f7>" 'scroll-up-oneline)
 (bind-key* "C-z" 'scroll-up-oneline)
+(bind-key* "<end>" 'scroll-up-oneline)
 
 ;; ----------------------------------------
 ;; F5/M-z: 光标不动，向下卷动一行
@@ -639,6 +642,7 @@ default-directory in dired buffer."
 
 (bind-key* "<f5>" 'scroll-down-oneline)
 (bind-key* "M-z" 'scroll-down-oneline)
+(bind-key* "<home>" 'scroll-down-oneline)
 
 ;; ----------------------------------------
 ;; 以下是定义的小函数没有快捷键绑定，它们只在各种钩子中运行
