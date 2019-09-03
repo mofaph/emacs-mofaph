@@ -418,8 +418,6 @@
 (bind-key* "M-c" 'split-window-below)
 (bind-key* "M-i" 'split-window-right)
 
-(bind-key* "M-p" 'previous-error)
-(bind-key* "M-n" 'next-error)
 (bind-key* "M-e" 'eshell)
 (bind-key* "C-\\" 'set-mark-command)
 (bind-key* "M-\\" 'cycle-spacing)
@@ -631,6 +629,7 @@ taken from emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"
 
 (bind-key* "<f7>" 'scroll-up-oneline)
 (bind-key* "C-z" 'scroll-up-oneline)
+(bind-key* "M-n" 'scroll-up-oneline)
 (bind-key* "<end>" 'scroll-up-oneline)
 
 ;; ----------------------------------------
@@ -645,6 +644,7 @@ taken from emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"
 
 (bind-key* "<f5>" 'scroll-down-oneline)
 (bind-key* "M-z" 'scroll-down-oneline)
+(bind-key* "M-p" 'scroll-down-oneline)
 (bind-key* "<home>" 'scroll-down-oneline)
 
 ;; ----------------------------------------
