@@ -1,8 +1,20 @@
 
-* TODO 按位置列出函数位置
+* TODO tags tree | jump tree
 
-* TODO tags tree
+类似 undo-tree 一样，列出符号跳转的历史树。在一个点中，可以显示关于这
+个符号的信息（所在文件的位置）。
 
-* TODO 窗口管理
+* TODO 将指定窗口固定，其他的操作不会影响这个窗口
 
-* TODO 收发邮件
+* TODO 像 tmux 一样的窗口布局调整风格（C-b SPC）
+
+* TODO 像 tmux 一样的窗口缩放（C-b z）
+
+* TODO 每个项目一个书签（bookmark）
+
+默认书签是全局性的，需要一个可以操作多个书签的功能。可以搜索指定的书签，
+列出指定书签的内容。
+
+* TODO pluscal-mode/tla+-mode
+
+用来写 PlusCal/TLA+ 的模式，对 PlusCal/TLA+ 的语法敏感。
