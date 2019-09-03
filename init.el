@@ -398,12 +398,14 @@
 ;; M-g M-a 就比 M-g M-l 要好，因为 M-g M-a 可以连续操作，右按下 Alt 不
 ;; 动，左手可以连续地按下 g a，而 M-g M-l 的按键序列是，右手按下 Alt
 ;; 左手按下 g，然后左手按下 Alt，右手按下 l，操作起来能够明显感到切换。
-;;
-;; 可以考虑的绑定按键：
-;;     M-a M-c M-i M-u
 ;; ----------------------------------------
 
 (bind-key* "C-h B" 'describe-personal-keybindings)
+
+(bind-key* "M-a" 'delete-other-windows)
+(bind-key* "M-u" 'delete-window)
+(bind-key* "M-c" 'split-window-below)
+(bind-key* "M-i" 'split-window-right)
 
 (bind-key* "M-p" 'previous-error)
 (bind-key* "M-n" 'next-error)
