@@ -1,10 +1,10 @@
 ;;; cmake-ide-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "cmake-ide" "cmake-ide.el" (22632 56988 262769
-;;;;;;  718000))
+;;;### (autoloads nil "cmake-ide" "cmake-ide.el" (23902 19801 707093
+;;;;;;  533000))
 ;;; Generated autoloads from cmake-ide.el
 
 (autoload 'cmake-ide-setup "cmake-ide" "\
@@ -19,9 +19,9 @@ Run CMake if the compilation database JSON file is not found.
 
 (autoload 'cmake-ide-run-cmake "cmake-ide" "\
 Run CMake and set compiler flags for auto-completion and flycheck.
-This works by calling cmake in a temporary directory (or cmake-ide-build-dir)
-and parsing the JSON file deposited there with the compiler
-flags.
+This works by calling cmake in a temporary directory (or `cmake-ide-build-dir')
+ and parsing the JSON file deposited there with the compiler
+ flags.
 
 \(fn)" t nil)
 
