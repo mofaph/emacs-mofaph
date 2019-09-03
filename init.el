@@ -602,19 +602,10 @@ taken from emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/"
 (bind-key* "M-t" 'switch-to-last-buffer)
 
 ;; ----------------------------------------
-;; M-o: 打开光标所在的文件名，默认是当前目录，不用确认
+;; M-o: 跳转到下一个窗口
 ;; ----------------------------------------
 
-;;;###autoload
-(defun find-file-at-point-no-confirm ()
-  "find file at point with no confirm
-
-If put cursor at the blank line, it will just open the
-default-directory in dired buffer."
-  (interactive)
-  (find-file (concat default-directory (thing-at-point 'filename 'no-properties))))
-
-(bind-key* "M-o" 'find-file-at-point-no-confirm)
+(bind-key* "M-o" 'other-window)
 
 ;; ----------------------------------------
 ;; F7/C-z: 光标不动，向上卷动一行
