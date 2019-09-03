@@ -189,7 +189,7 @@
         ("M-o" . find-file-at-point-no-confirm)
         ("M-k" . kill-buffer-no-comfirm)
         ("M-e" . eshell)
-        ("C-." . set-mark-command)))
+        ("C-\\" . set-mark-command)))
 
 ;; ----------------------------------------
 ;; cmake-ide rtags
@@ -405,11 +405,10 @@
 
 (bind-key* "C-h B" 'describe-personal-keybindings)
 
-(bind-key* "C-." 'set-mark-command)
 (bind-key* "M-p" 'previous-error)
 (bind-key* "M-n" 'next-error)
 (bind-key* "M-e" 'eshell)
-(bind-key* "C-\\" 'delete-trailing-whitespace)
+(bind-key* "C-\\" 'set-mark-command)
 (bind-key* "M-\\" 'cycle-spacing)
 (bind-key* "M-1" 'imenu)
 (bind-key* "M-2" 'ido-switch-buffer)
