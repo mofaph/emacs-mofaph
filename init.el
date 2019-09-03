@@ -108,6 +108,17 @@
          ("M-k" . kill-buffer-no-comfirm)))
 
 ;; ----------------------------------------
+;; grep
+;; ----------------------------------------
+
+(use-package grep
+  :bind (:map grep-mode-map
+              ("n" . compilation-next-error)
+              ("p" . compilation-previous-error)
+              ("f" . next-error-no-select)
+              ("b" . previous-error-no-select)))
+
+;; ----------------------------------------
 ;; cc-mode
 ;; ----------------------------------------
 
