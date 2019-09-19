@@ -418,6 +418,12 @@
 (bind-key* "M-c" 'split-window-below)
 (bind-key* "M-i" 'split-window-right)
 
+(bind-key* "C-M-s ." 'isearch-forward-symbol-at-point)
+(bind-key* "C-M-s _" 'isearch-forward-symbol)
+(bind-key* "C-M-s w" 'isearch-forward-word)
+(bind-key* "C-M-s h ." 'highlight-symbol-at-point)
+(bind-key* "C-M-s h u" 'unhighlight-regexp)
+(bind-key* "M-s" 'save-buffer)
 (bind-key* "M-e" 'eshell)
 (bind-key* "C-\\" 'set-mark-command)
 (bind-key* "M-\\" 'cycle-spacing)
