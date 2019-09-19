@@ -141,10 +141,10 @@
   (setq c-default-style
         '((awk-mode  . "awk")
           (java-mode . "java")
-          (c-mode    . "linux")
+          (c-mode    . "stroustrup")
           (c++-mode  . "stroustrup")
           (objc-mode . "cc-mode")
-          (other     . "linux")))
+          (other     . "stroustrup")))
   :config
   (add-hook 'c-initialization-hook 'setup-c-initialization-hook)
   (add-hook 'c-mode-common-hook 'setup-c-mode-common-hook))
